@@ -4,7 +4,9 @@ const searchEndpoint = "https://apploqic.my/index.php?endpoint=search&name=";
 
 let allBusinesses = [];
 let currentPage = 1;
+let totalPages = 1;
 const perPage = 10;
+let activeSearchTerm = "";
 
 // Elements
 const businessContainer = document.getElementById("businessContainer");
@@ -22,10 +24,12 @@ const modalCreated = document.getElementById("modalCreated");
 const modalUpdated = document.getElementById("modalUpdated");
 const modalClose = document.querySelector(".close");
 
-// Load Businesses
+// 🧠 Load Businesses (supports pagination + search)
 function loadBusinesses(searchTerm = "", page = 1) {
-  let url = "";
+  activeSearchTerm = searchTerm; // remember current search
+  currentPage = page;
 
+  let url = "";
   if (searchTerm) {
     url = `${searchEndpoint}${encodeURIComponent(searchTerm)}&page=${page}`;
   } else {
@@ -37,21 +41,31 @@ function loadBusinesses(searchTerm = "", page = 1) {
     .then(data => {
       console.log("API response:", data);
 
-      // get the data array
+      // Extract the business data
       allBusinesses = data.businesses || data.data || [];
-      currentPage = page;
 
-      // get total pages from API (fallback if not available)
-      const totalPages = data.total_pages || Math.ceil(data.total_results / (data.results_per_page || 10));
-      renderPage(allBusinesses, totalPages);
+      // Determine total pages robustly
+      const totalResults =
+        data.total_results || data.total || allBusinesses.length;
+      const resultsPerPage =
+        data.results_per_page || data.per_page || perPage;
+
+      totalPages =
+        data.total_pages || Math.ceil(totalResults / resultsPerPage);
+
+      console.log(
+        `Total results: ${totalResults}, Results per page: ${resultsPerPage}, Total pages: ${totalPages}`
+      );
+
+      renderPage(allBusinesses);
     })
     .catch(err => {
       console.error("Error fetching businesses:", err);
     });
 }
 
-// Render a single page of businesses
-function renderPage(pageBusinesses, totalPages = 1) {
+// 🧩 Render businesses on screen
+function renderPage(pageBusinesses) {
   businessContainer.innerHTML = "";
 
   if (!pageBusinesses.length) {
@@ -60,7 +74,7 @@ function renderPage(pageBusinesses, totalPages = 1) {
     return;
   }
 
-  // Render each business card
+  // Render cards
   pageBusinesses.forEach(b => {
     const imgSrc = b.business_img
       ? `https://apploqic.my/images/${b.business_img}`
@@ -78,28 +92,44 @@ function renderPage(pageBusinesses, totalPages = 1) {
     businessContainer.appendChild(card);
   });
 
-  // Setup pagination
-  renderPagination(totalPages);
+  renderPagination();
 }
 
-// Render pagination buttons
-function renderPagination(totalPages) {
+// 🧭 Render pagination with Next/Prev
+function renderPagination() {
   paginationContainer.innerHTML = "";
 
+  // Previous button
+  const prevBtn = document.createElement("button");
+  prevBtn.textContent = "⟨ Prev";
+  prevBtn.disabled = currentPage === 1;
+  prevBtn.addEventListener("click", () => {
+    if (currentPage > 1) loadBusinesses(activeSearchTerm, currentPage - 1);
+  });
+  paginationContainer.appendChild(prevBtn);
+
+  // Page buttons
   for (let i = 1; i <= totalPages; i++) {
     const btn = document.createElement("button");
     btn.textContent = i;
     btn.classList.toggle("active", i === currentPage);
     btn.addEventListener("click", () => {
-      const term = searchInput.value.trim();
-      loadBusinesses(term, i); // fetch the next page directly from backend
+      loadBusinesses(activeSearchTerm, i);
     });
     paginationContainer.appendChild(btn);
   }
+
+  // Next button
+  const nextBtn = document.createElement("button");
+  nextBtn.textContent = "Next ⟩";
+  nextBtn.disabled = currentPage === totalPages;
+  nextBtn.addEventListener("click", () => {
+    if (currentPage < totalPages) loadBusinesses(activeSearchTerm, currentPage + 1);
+  });
+  paginationContainer.appendChild(nextBtn);
 }
 
-
-// Show Modal with Details
+// 🎯 Show Modal with Details
 function showModal(business) {
   modalTitle.textContent = business.business_name;
   modalImage.src = business.business_img
@@ -113,11 +143,11 @@ function showModal(business) {
 }
 
 // Close modal
-modalClose.onclick = () => modal.style.display = "none";
-window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
+modalClose.onclick = () => (modal.style.display = "none");
+window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
 
-// 🧾 Event: View Details Button
-businessContainer.addEventListener("click", (e) => {
+// Event: View Details Button
+businessContainer.addEventListener("click", e => {
   if (e.target.tagName === "BUTTON") {
     const id = e.target.dataset.id;
     const business = allBusinesses.find(b => b.id == id);
@@ -128,8 +158,8 @@ businessContainer.addEventListener("click", (e) => {
 // 🔍 Search button
 searchBtn.addEventListener("click", () => {
   const term = searchInput.value.trim();
-  loadBusinesses(term);
+  loadBusinesses(term, 1); // always start search at page 1
 });
 
-// Initial load
+// 🚀 Initial load
 loadBusinesses("", 1);
