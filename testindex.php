@@ -9,27 +9,27 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Business Directory</title>
 
-  <!-- ✅ Bootstrap CSS -->
+  <!-- Bootstrap CSS -->
   <link 
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
     rel="stylesheet" 
   />
 
-  <!-- ✅ Bootstrap Icons -->
+  <!-- Bootstrap Icons -->
   <link 
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" 
     rel="stylesheet" 
   />
 
   <style>
-    /* 🌐 Base Page */
+    /* Base Page */
     body {
       font-family: Arial, Helvetica, sans-serif;
       margin: 0;
       background-color: #E0F2FE;
     }
 
-    /* 🦸 Hero Section */
+    /* Hero Section */
     .hero {
       min-height: 40vh;
       padding-top: 7rem;
@@ -70,7 +70,7 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     }
 
-    /* 🧱 Business Cards */
+    /* Business Cards */
     .card {
       border: none;
       border-radius: 1rem;
@@ -90,7 +90,7 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
       object-fit: fill;
     }
 
-    /* 🧭 Navbar */
+    /* Navbar */
     .navbar {
       transition: top 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
       top: 0; /* initial position */
@@ -117,7 +117,7 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
       }
     }
 
-    /* 🪟 Glass Modal */
+    /* Glass Modal */
     .glass-modal {
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
@@ -134,7 +134,7 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
       transform: translateY(0);
     }
 
-    /* ✨ Glass Button */
+    /* Glass Button */
     .btn-glass {
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
@@ -155,7 +155,7 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
 </head>
 <body>
 
-  <!-- 🌐 NAVBAR -->
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top transparent-navbar">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
@@ -190,7 +190,7 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
     </div>
   </nav>
 
-  <!-- 🦸 HERO SECTION -->
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="container">
       <h1>Apploqic Business Directory</h1>
@@ -198,12 +198,12 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
     </div>
   </section>
 
-  <!-- 🧱 CONTENT SECTION -->
+  <!-- CONTENT SECTION -->
   <div class="container py-4">
     <div class="container bg-white border border-secondary-subtle rounded-4 shadow-sm p-4 p-md-5 my-5">
       <h2 class="mb-4">Featured Businesses</h2>
 
-      <!-- 🔍 Search Bar -->
+      <!-- Search Bar -->
       <div class="row justify-content-center mb-4">
         <div class="col-md-8 col-lg-6">
           <div class="input-group shadow-sm">
@@ -222,17 +222,17 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
         </div>
       </div>
 
-      <!-- 🧱 Business Cards -->
+      <!-- Business Cards -->
       <div id="businessList" class="row g-3"></div>
 
-      <!-- 🧭 Pagination -->
+      <!-- Pagination -->
       <nav>
         <ul id="pagination" class="pagination justify-content-center mt-4"></ul>
       </nav>
     </div>
   </div>
 
-  <!-- 📞 CONTACT MODAL -->
+  <!-- CONTACT MODAL -->
   <div 
     class="modal fade" 
     id="contactModal" 
@@ -274,12 +274,12 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
     </div>
   </div>
 
-  <!-- 🦶 FOOTER -->
+  <!-- FOOTER -->
   <footer class="text-center text-white py-4 mt-5" style="background: #0b2e6b;">
     &copy; <?= date('Y') ?> Apploqic Business Directory. All rights reserved.
   </footer>
 
-  <!-- ✅ Scripts -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="main.js"></script>
 </body>
