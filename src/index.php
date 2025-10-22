@@ -19,17 +19,32 @@
     <div id="paginationContainer" class="pagination"></div>
 
     <!-- Modal for business details -->
-    <div id="detailModal" class="modal">
+    <div id="detailsModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2 id="modalTitle"></h2>
+            <p><strong>ID:</strong> <span id="modalId"></span></p>
             <img id="modalImage" alt="Business Image">
-            <p><strong>Contact:</strong><span id="modalContact"></span></p>
-            <p><strong>Description:</strong><span id="modalDescription"></span></p>
-            <p><strong>Created at:</strong><span id="modalCreated"></span></p>
-            <p><strong>Updated at:</strong><span id="modalUpdated"></span></p>
+            <p><strong>Contact:</strong> <span id="modalContact"></span></p>
+            <p><strong>Description:</strong> <span id="modalDescription"></span></p>
+            <p><strong>Created at:</strong> <span id="modalCreated"></span></p>
+            <p><strong>Updated at:</strong> <span id="modalUpdated"></span></p>
         </div>
+        <button id="deleteBtn" style="background:red;color:white;">Delete</button>
     </div>
+
+    <section id="deleteBusinessSection">
+    <h2>Delete Business</h2>
+    <form id="deleteBusinessForm">
+        <label for="deleteId">Business ID:</label>
+        <input type="number" id="deleteId" name="deleteId" placeholder="Enter Business ID" required>
+
+        <button type="submit">Delete</button>
+    </form>
+
+    <p id="deleteMessage"></p>
+    </section>
+
     <script src="main.js"></script>
 </body>
 </html>
