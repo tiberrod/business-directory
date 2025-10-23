@@ -1,4 +1,3 @@
-// create-business.js
 const form = document.getElementById("createBusinessForm");
 const messageBox = document.getElementById("messageBox");
 const apiUrl = "https://apploqic.my/index.php?endpoint=business";
@@ -33,11 +32,6 @@ form.addEventListener("submit", async (e) => {
 
       // Optionally reset the form
       form.reset();
-
-      // Optional redirect back to listing after short delay
-      setTimeout(() => {
-        window.location.href = "index.php";
-      }, 1500);
 
     } else {
       showMessage(`⚠️ ${result.message || "Failed to create business."}`, "error");

@@ -25,7 +25,7 @@ const modalCreated = document.getElementById("modalCreated");
 const modalUpdated = document.getElementById("modalUpdated");
 const modalClose = document.querySelector(".close");
 
-// 🧠 Load Businesses (supports pagination + search)
+// Load Businesses (supports pagination + search)
 function loadBusinesses(searchTerm = "", page = 1) {
   activeSearchTerm = searchTerm; // remember current search
   currentPage = page;
@@ -65,7 +65,7 @@ function loadBusinesses(searchTerm = "", page = 1) {
     });
 }
 
-// 🧩 Render businesses on screen
+// Render businesses on screen
 function renderPage(pageBusinesses) {
   businessContainer.innerHTML = "";
 
@@ -96,7 +96,7 @@ function renderPage(pageBusinesses) {
   renderPagination();
 }
 
-// 🧭 Render pagination with Next/Prev
+// Render pagination with Next/Prev
 function renderPagination() {
   paginationContainer.innerHTML = "";
 
@@ -130,7 +130,7 @@ function renderPagination() {
   paginationContainer.appendChild(nextBtn);
 }
 
-// 🎯 Show Modal with Details
+//  Show Modal with Details
 function showModal(business) {
   console.log("Modal ID element:", modalId);
   modalTitle.textContent = business.business_name;
@@ -144,8 +144,6 @@ function showModal(business) {
   modalUpdated.textContent = business.updated_at || "-";
   modal.style.display = "block";
 }
-
-
 
 // Close modal
 modalClose.onclick = () => (modal.style.display = "none");
@@ -162,86 +160,64 @@ businessContainer.addEventListener("click", e => {
 }
 });
 
-// 🔍 Search button
+// Search button
 searchBtn.addEventListener("click", () => {
   const term = searchInput.value.trim();
   loadBusinesses(term, 1); // always start search at page 1
 });
 
-// 🚀 Initial load
+// Initial load
 loadBusinesses("", 1);
 
-// Delete Elements
-const deleteBusinessForm = document.getElementById("deleteBusinessForm");
-const deleteIdInput = document.getElementById("deleteId");
-const deleteMessage = document.getElementById("deleteMessage");
-
-deleteBusinessForm.addEventListener("submit", async (e) => {
-  e.preventDefault(); // prevent page reload
-
-  const businessId = deleteIdInput.value.trim();
-  if (!businessId) {
-    deleteMessage.textContent = "⚠️ Please enter a Business ID.";
-    return;
-  }
-
-  // Confirm deletion
-  const confirmDelete = confirm(`Are you sure you want to delete business ID ${businessId}?`);
-  if (!confirmDelete) return;
-
-  try {
-    const response = await fetch("https://apploqic.my/index.php?endpoint=business", {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ id: businessId }),
-    });
-
-    const result = await response.json();
-    console.log("Delete response:", result);
-
-    if (result.status === 200) {
-      deleteMessage.textContent = "✅ Business deleted successfully.";
-      deleteIdInput.value = ""; // clear input
-
-      // Reload the business list
-      loadBusinesses();
-    } else {
-      deleteMessage.textContent = `⚠️ ${result.message || "Failed to delete business."}`;
-    }
-  } catch (error) {
-    console.error("Error deleting business:", error);
-    deleteMessage.textContent = "❌ Network or server error.";
-  }
-});
 
 // Modal Delete Button
 const deleteBtn = document.getElementById("deleteBtn");
 
 deleteBtn.addEventListener("click", async () => {
   const id = modalId.textContent.trim();
-  if (!id || id === "-") return alert("Invalid business ID.");
+  if (!id || id === "-") {
+    alert("⚠️ Invalid or missing Business ID.");
+    return;
+  }
 
-  if (!confirm(`Are you sure you want to delete business ID ${id}?`)) return;
+  if (!confirm(`Are you sure you want to delete Business ID ${id}?`)) {
+    return;
+  }
+
+  deleteBtn.disabled = true;
+  deleteBtn.textContent = "Deleting...";
 
   try {
     const response = await fetch("https://apploqic.my/index.php?endpoint=business", {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ id }),
+      body: JSON.stringify({ id: id }),
     });
 
     const result = await response.json();
+    console.log("Delete response:", result);
+
     if (result.status === 200) {
       alert("✅ Business deleted successfully.");
-      modal.style.display = "none";
-      loadBusinesses(); // Refresh the list
+      modal.style.display = "none"; // close modal
+      loadBusinesses(); // refresh the list
     } else {
-      alert(`⚠️ ${result.message}`);
+      alert(`⚠️ ${result.message || "Failed to delete business."}`);
     }
   } catch (error) {
-    alert("❌ Network error while deleting business.");
+    console.error("Error deleting business:", error);
+    alert("❌ Network or server error while deleting business.");
+  } finally {
+    deleteBtn.disabled = false;
+    deleteBtn.textContent = "Delete Business";
   }
 });
+
+// Close button closes the modal
+const closeBtn = document.getElementById("closeBtn");
+
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
 

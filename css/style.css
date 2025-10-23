@@ -139,3 +139,104 @@ h1 {
   font-size: 22px;
   cursor: pointer;
 }
+
+/* ===== Delete Button (in Modal) ===== */
+.delete-btn {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 10px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #c62828;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.delete-btn:hover {
+  background-color: #b71c1c;
+}
+
+.delete-btn:disabled {
+  background-color: #e57373;
+  cursor: not-allowed;
+}
+
+/* ===== Modal Action Buttons ===== */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+/* Close Modal Button */
+.close-btn {
+  flex: 1;
+  background-color: #9e9e9e;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.25s ease;
+}
+
+.close-btn:hover {
+  background-color: #757575;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: #2e3b55;
+  color: white;
+  padding: 0.8rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-btn {
+  background-color: #4f5d75;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.nav-btn:hover {
+  background-color: #637498;
+}
+
+.nav-btn.active {
+  background-color: #1b263b;
+  font-weight: bold;
+}

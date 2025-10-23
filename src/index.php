@@ -7,7 +7,16 @@
     <link rel="stylesheet" href="../css/style.css"/>
 </head>
 <body>
-    <h1>Apploqic Business Directory</h1>
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar">
+    <div class="navbar-container">
+        <h1 class="navbar-logo">Business Directory Admin</h1>
+        <ul class="navbar-links">
+        <li><button class="nav-btn" id="createBusinessBtn">Create Business</button></li>
+        <li><button class="nav-btn" id="updateBusinessBtn">Update Business</button></li>
+        </ul>
+    </div>
+    </nav>
 
     <div class="search-bar">
         <input type="text" id="searchInput" placeholder="Search business by name...">
@@ -22,6 +31,7 @@
     <div id="detailsModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
+
             <h2 id="modalTitle"></h2>
             <p><strong>ID:</strong> <span id="modalId"></span></p>
             <img id="modalImage" alt="Business Image">
@@ -29,22 +39,14 @@
             <p><strong>Description:</strong> <span id="modalDescription"></span></p>
             <p><strong>Created at:</strong> <span id="modalCreated"></span></p>
             <p><strong>Updated at:</strong> <span id="modalUpdated"></span></p>
+
+            <!-- Buttons Row -->
+            <div class="modal-actions">
+            <button id="deleteBtn" class="delete-btn">Delete Business</button>
+            <button id="closeBtn" class="close-btn">Close</button>
+            </div>
         </div>
-        <button id="deleteBtn" style="background:red;color:white;">Delete</button>
     </div>
-
-    <section id="deleteBusinessSection">
-    <h2>Delete Business</h2>
-    <form id="deleteBusinessForm">
-        <label for="deleteId">Business ID:</label>
-        <input type="number" id="deleteId" name="deleteId" placeholder="Enter Business ID" required>
-
-        <button type="submit">Delete</button>
-    </form>
-
-    <p id="deleteMessage"></p>
-    </section>
-
     <script src="main.js"></script>
 </body>
 </html>
