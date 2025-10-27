@@ -152,6 +152,52 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
       color: #1E3A8A;
       border-color: rgba(255, 255, 255, 0.5);
     }
+
+    /* Highlighted Scroll Buttons */
+    .scroll-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.8);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+      transition: background 0.3s ease;
+      z-index: 10;
+    }
+
+    .scroll-btn:hover {
+      background: rgba(255, 255, 255, 1);
+    }
+
+    .scroll-btn.left {
+      left: -15px;
+    }
+
+    .scroll-btn.right {
+      right: -15px;
+    }
+
+    /* Scroll Container */
+    #highlightedContainer::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    #highlightedContainer::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 4px;
+    }
+
+    #highlightedContainer::-webkit-scrollbar-thumb:hover {
+      background: #999;
+    }
+
   </style>
 </head>
 <body>
@@ -202,6 +248,28 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
   <!-- CONTENT SECTION -->
   <div class="container py-4">
     <div class="container bg-white border border-secondary-subtle rounded-4 shadow-sm p-4 p-md-5 my-5">
+    <!-- HIGHLIGHTED BUSINESSES SECTION -->
+    <div class="container my-5">
+      <h2 class="mb-4">Highlighted Businesses</h2>
+
+      <div class="position-relative">
+        <!-- Left Scroll Button -->
+        <button class="scroll-btn left" id="scrollLeftBtn">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+
+        <!-- Scrollable Highlight Container -->
+        <div id="highlightedContainer" class="d-flex overflow-auto gap-3 pb-3 px-1">
+          <!-- Highlighted business cards will be inserted here by JS -->
+        </div>
+
+        <!-- Right Scroll Button -->
+        <button class="scroll-btn right" id="scrollRightBtn">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
       <h2 class="mb-4">Featured Businesses</h2>
 
       <!-- Search Bar -->

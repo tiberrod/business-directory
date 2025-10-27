@@ -125,5 +125,19 @@ searchInput.addEventListener('keypress', (e) => {
   }
 });
 
+// Horizontal Scroll Controls
+const highlightContainer = document.getElementById('highlightedContainer');
+const scrollLeftBtn = document.getElementById('scrollLeftBtn');
+const scrollRightBtn = document.getElementById('scrollRightBtn');
+
+scrollLeftBtn.addEventListener('click', () => {
+  highlightContainer.scrollBy({ left: -300, behavior: 'smooth' });
+});
+
+scrollRightBtn.addEventListener('click', () => {
+  highlightContainer.scrollBy({ left: 300, behavior: 'smooth' });
+});
+
+
 // Initial Load
 fetchBusinesses();
