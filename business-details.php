@@ -59,7 +59,7 @@ $businessImage = !empty($biz['business_img_url'])
         min-height: 40vh;
         position: relative;
         background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-                    url('images/bg2.jpg') center center / cover no-repeat;
+                    url('images/Banner2.png') center center / cover no-repeat;
         color: white;
         text-align: center;
         padding: 5rem 1rem;
@@ -191,7 +191,7 @@ $businessImage = !empty($biz['business_img_url'])
                     <p><?= htmlspecialchars($biz['business_contact']) ?></p>
                 </div>
 
-                <a href="testindex.php" class="btn btn-outline-primary back-btn w-100">
+                <a href="index.php" class="btn btn-outline-primary back-btn w-100">
                     <i class="bi bi-arrow-left"></i> Back to Directory
                 </a>
             </div>

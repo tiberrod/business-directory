@@ -36,7 +36,7 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
       position: relative;
       background:
         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url('images/kinabalu.jpg') center center / cover no-repeat;
+        url('images/Banner2.png') center center / cover no-repeat;
       color: white;
       text-align: center;
       padding: 5rem 1rem;
@@ -84,6 +84,7 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
 
     .business-img {
       width: 100%;
+      aspect-ratio: 1 / 1;
       height: 200px;
       border-top-left-radius: 1rem;
       border-top-right-radius: 1rem;
@@ -223,7 +224,7 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
       </div>
 
       <!-- Business Cards -->
-      <div id="businessList" class="row g-3"></div>
+      <div id="businessList" class="row"></div>
 
       <!-- Pagination -->
       <nav>

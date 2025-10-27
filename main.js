@@ -44,7 +44,7 @@ function fetchBusinesses(page = 1) {
     })
     .catch(err => {
       console.error('Error fetching:', err);
-      businessList.innerHTML = `<p class="text-center text-danger">Failed to load data.</p>`;
+      businessList.innerHTML = `<p class="text-center text-danger">Failed to load data. (Server down or internet connection distrupted.)</p>`;
       pagination.innerHTML = "";
     });
 }
