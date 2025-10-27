@@ -1,7 +1,7 @@
-// 🌐 Base URL
+// Base URL
 const baseApiUrl = "https://apploqic.my/index.php";
 
-// 🌟 Elements
+// Elements
 const businessList = document.getElementById('businessList');
 const pagination = document.getElementById('pagination');
 const searchInput = document.getElementById('searchInput');
@@ -9,7 +9,7 @@ const searchBtn = document.getElementById('searchBtn');
 
 let currentPage = 1;
 
-// 🧭 Navbar scroll effect
+// Navbar scroll effect
 window.addEventListener('scroll', () => {
   const navbar = document.querySelector('.navbar');
   if (window.scrollY > 50) {
@@ -19,7 +19,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// 📡 Fetch Businesses
+// Fetch Businesses
 function fetchBusinesses(page = 1) {
   const searchTerm = searchInput.value.trim();
   let url = searchTerm
@@ -49,76 +49,74 @@ function fetchBusinesses(page = 1) {
     });
 }
 
-// 🧱 Render Business Cards
+// Render Business Cards
 function renderBusinesses(businesses) {
-    businessList.innerHTML = businesses.map(biz => `
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100 shadow-sm border border-secondary-subtle rounded-4 d-flex flex-column">
-          <img src="${biz.business_img ? biz.business_img_url : 'images/preview.png'}" 
-               class="business-img" 
-               alt="${biz.business_name}">
-          <div class="card-body text-center">
-            <h5 class="card-title">${biz.business_name}</h5>
-            <div class="mt-auto">
-              <a href="business-details.php?id=${biz.id}" 
-                 class="btn btn-primary btn-sm w-100">
-                 View Details
-              </a>
-            </div>
+  businessList.innerHTML = businesses.map(biz => `
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card h-100 shadow-sm border border-secondary-subtle rounded-4 d-flex flex-column">
+        <img src="${biz.business_img ? biz.business_img_url : 'images/preview.png'}" 
+             class="business-img" 
+             alt="${biz.business_name}">
+        <div class="card-body text-center">
+          <h5 class="card-title">${biz.business_name}</h5>
+          <div class="mt-auto">
+            <a href="business-details.php?id=${biz.id}" 
+               class="btn btn-primary btn-sm w-100">
+               View Details
+            </a>
           </div>
         </div>
       </div>
-    `).join('');
+    </div>
+  `).join('');
 }  
-  
 
-// 🧭 Render Pagination
+// Render Pagination
 function renderPagination(total, page, perPage) {
-    const totalPages = Math.ceil(total / perPage);
-    pagination.innerHTML = "";
-  
-    // ⬅️ Previous Button
-    pagination.innerHTML += `
-      <li class="page-item ${page === 1 ? 'disabled' : ''}">
-        <a class="page-link" href="#" data-page="${page - 1}" aria-label="Previous">
-          &laquo; Prev
-        </a>
-      </li>
-    `;
-  
-    // 📄 Page Number Buttons
-    for (let i = 1; i <= totalPages; i++) {
-      pagination.innerHTML += `
-        <li class="page-item ${i === page ? 'active' : ''}">
-          <a class="page-link" href="#" data-page="${i}">${i}</a>
-        </li>
-      `;
-    }
-  
-    // ➡️ Next Button
-    pagination.innerHTML += `
-      <li class="page-item ${page === totalPages ? 'disabled' : ''}">
-        <a class="page-link" href="#" data-page="${page + 1}" aria-label="Next">
-          Next &raquo;
-        </a>
-      </li>
-    `;
-  
-    // 🧭 Attach Click Events
-    pagination.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        const pageNum = parseInt(link.getAttribute('data-page'));
-        if (!isNaN(pageNum) && pageNum >= 1 && pageNum <= totalPages && pageNum !== page) {
-          currentPage = pageNum;
-          fetchBusinesses(pageNum);
-        }
-      });
-    });
-  }
-  
+  const totalPages = Math.ceil(total / perPage);
+  pagination.innerHTML = "";
 
-// 🔎 Press "Enter" to search
+  // Previous Button
+  pagination.innerHTML += `
+    <li class="page-item ${page === 1 ? 'disabled' : ''}">
+      <a class="page-link" href="#" data-page="${page - 1}" aria-label="Previous">
+        &laquo; Prev
+      </a>
+    </li>
+  `;
+
+  // Page Number Buttons
+  for (let i = 1; i <= totalPages; i++) {
+    pagination.innerHTML += `
+      <li class="page-item ${i === page ? 'active' : ''}">
+        <a class="page-link" href="#" data-page="${i}">${i}</a>
+      </li>
+    `;
+  }
+
+  // Next Button
+  pagination.innerHTML += `
+    <li class="page-item ${page === totalPages ? 'disabled' : ''}">
+      <a class="page-link" href="#" data-page="${page + 1}" aria-label="Next">
+        Next &raquo;
+      </a>
+    </li>
+  `;
+
+  // Attach Click Events
+  pagination.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const pageNum = parseInt(link.getAttribute('data-page'));
+      if (!isNaN(pageNum) && pageNum >= 1 && pageNum <= totalPages && pageNum !== page) {
+        currentPage = pageNum;
+        fetchBusinesses(pageNum);
+      }
+    });
+  });
+}
+
+// Press "Enter" to search
 searchInput.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
     e.preventDefault();
@@ -127,6 +125,5 @@ searchInput.addEventListener('keypress', (e) => {
   }
 });
 
-
-// 🚀 Initial Load
+// Initial Load
 fetchBusinesses();
