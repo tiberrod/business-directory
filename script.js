@@ -38,13 +38,29 @@ function fetchBusinesses(page = 1) {
         renderBusinesses(businesses);
         renderPagination(total, pageNum, perPage);
       } else {
-        businessList.innerHTML = `<p class="text-center text-muted">No businesses found.</p>`;
+        businessList.innerHTML = `
+          <div class="text-center mt-5 fade-in">
+            <img src="images/iconEncourage.png" 
+                 alt="No data" 
+                 class="img-fluid mb-3" 
+                 style="max-width: 200px; opacity: 0.8;">
+            <h5 class="text-muted">No businesses found yet.</h5>
+            <p class="text-secondary">Be the first to showcase your business! 🌟</p>
+            <a href="" class="btn btn-primary mt-2">
+              Post Your Business
+            </a>
+          </div>
+        `;
         pagination.innerHTML = "";
       }
     })
     .catch(err => {
       console.error('Error fetching:', err);
-      businessList.innerHTML = `<p class="text-center text-danger">Failed to load data. (Server down or internet connection distrupted.)</p>`;
+      businessList.innerHTML = `
+        <p class="text-center text-danger mt-5">
+          Failed to load data.<br>
+          (Server down or internet connection disrupted.)
+        </p>`;
       pagination.innerHTML = "";
     });
 }
