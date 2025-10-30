@@ -248,45 +248,62 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
   <!-- CONTENT SECTION -->
   <div class="container py-4">
     <div class="container bg-white border border-secondary-subtle rounded-4 shadow-sm p-4 p-md-5 my-5">
-    <!-- HIGHLIGHTED BUSINESSES SECTION -->
-    <div class="container my-5">
-      <h2 class="mb-4">Highlighted Businesses</h2>
+      <!-- HIGHLIGHTED BUSINESSES SECTION -->
+      <div class="container my-5">
+        <h2 class="mb-4">Highlighted Businesses</h2>
 
-      <div class="position-relative">
-        <!-- Left Scroll Button -->
-        <button class="scroll-btn left" id="scrollLeftBtn">
-          <i class="bi bi-chevron-left"></i>
-        </button>
+        <div class="position-relative">
+          <!-- Left Scroll Button -->
+          <button class="scroll-btn left" id="scrollLeftBtn">
+            <i class="bi bi-chevron-left"></i>
+          </button>
 
-        <!-- Scrollable Highlight Container -->
-        <div id="highlightedContainer" class="d-flex overflow-auto gap-3 pb-3 px-1">
-          <!-- Highlighted business cards will be inserted here by JS -->
+          <!-- Scrollable Highlight Container -->
+          <div id="highlightedContainer" class="d-flex overflow-auto gap-3 pb-3 px-1">
+            <!-- Highlighted business cards will be inserted here by JS -->
+          </div>
+
+          <!-- Right Scroll Button -->
+          <button class="scroll-btn right" id="scrollRightBtn">
+            <i class="bi bi-chevron-right"></i>
+          </button>
         </div>
-
-        <!-- Right Scroll Button -->
-        <button class="scroll-btn right" id="scrollRightBtn">
-          <i class="bi bi-chevron-right"></i>
-        </button>
       </div>
-    </div>
 
       <h2 class="mb-4">Featured Businesses</h2>
 
-      <!-- Search Bar -->
+      <!-- Category Filter + Search Bar -->
       <div class="row justify-content-center mb-4">
-        <div class="col-md-8 col-lg-6">
-          <div class="input-group shadow-sm">
-            <span class="input-group-text bg-white border-end-0">
-              <i class="bi bi-search text-secondary"></i>
-            </span>
-            <input 
-              id="searchInput" 
-              type="search" 
-              class="form-control border-start-0" 
-              placeholder="Search businesses..." 
-              aria-label="Search businesses"
-            />
-            <button id="searchBtn" class="btn btn-primary">Search</button>
+        <div class="col-md-10 col-lg-8">
+          <div class="row g-2">
+            <!-- Category Dropdown -->
+            <div class="col-md-4">
+              <select id="categorySelect" class="form-select shadow-sm">
+                <option value="">All Categories</option>
+                <option value="Restaurant">Restaurant</option>
+                <option value="Retail">Retail</option>
+                <option value="IT Service">IT Service</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Education">Education</option>
+              </select>
+            </div>
+
+            <!-- Search Input -->
+            <div class="col-md-8">
+              <div class="input-group shadow-sm">
+                <span class="input-group-text bg-white border-end-0">
+                  <i class="bi bi-search text-secondary"></i>
+                </span>
+                <input 
+                  id="searchInput" 
+                  type="search" 
+                  class="form-control border-start-0" 
+                  placeholder="Search businesses..." 
+                  aria-label="Search businesses"
+                />
+                <button id="searchBtn" class="btn btn-primary">Search</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -350,6 +367,6 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+  <script src="scriptv1.js"></script>
 </body>
 </html>
