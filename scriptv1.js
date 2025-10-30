@@ -11,7 +11,7 @@ const pagination = document.getElementById('pagination');
 const searchInput = document.getElementById('searchInput');
 const searchBtn = document.getElementById('searchBtn');
 const categorySelect = document.getElementById('categorySelect');
-const highlightContainer = document.getElementById('highlightedContainer');
+const featuredContainer = document.getElementById('featuredContainer');
 const scrollLeftBtn = document.getElementById('scrollLeftBtn');
 const scrollRightBtn = document.getElementById('scrollRightBtn');
 
@@ -26,16 +26,16 @@ window.addEventListener('scroll', () => {
 });
 
 // ================================
-//  Fetch Highlighted Businesses
+//  Fetch Featured Businesses
 // ================================
-function fetchHighlightedBusinesses() {
+function fetchFeaturedBusinesses() {
   fetch(`${baseApiUrl}?endpoint=highlighted`)
     .then(res => res.json())
     .then(data => {
-      const highlights = data.businesses || data.data || [];
-      renderHighlightedBusinesses(highlights);
+      const featured = data.businesses || data.data || [];
+      renderHighlightedBusinesses(featured);
     })
-    .catch(err => console.error("Error fetching highlighted businesses:", err));
+    .catch(err => console.error("Error fetching featured businesses:", err));
 }
 
 // ================================
@@ -103,9 +103,9 @@ function renderBusinesses(businesses) {
   `).join('');
 }
 
-//  Render Highlighted Businesses
-function renderHighlightedBusinesses(highlights) {
-  highlightContainer.innerHTML = highlights.map(biz => `
+//  Render Featured Businesses
+function renderFeaturedBusinesses(featured) {
+  highlightContainer.innerHTML = featured.map(biz => `
     <div class="card flex-shrink-0 shadow-sm border border-secondary-subtle rounded-4" style="width: 250px;">
       <img 
         src="${biz.business_img ? biz.business_img_url : 'images/preview.png'}"
@@ -218,5 +218,5 @@ scrollRightBtn.addEventListener('click', () => {
 // ================================
 //  Initial Load
 // ================================
-fetchHighlightedBusinesses();
+fetchFeaturedBusinesses();
 fetchBusinesses();

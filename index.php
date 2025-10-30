@@ -248,9 +248,9 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
   <!-- CONTENT SECTION -->
   <div class="container py-4">
     <div class="container bg-white border border-secondary-subtle rounded-4 shadow-sm p-4 p-md-5 my-5">
-      <!-- HIGHLIGHTED BUSINESSES SECTION -->
+      <!-- FEATURED BUSINESSES SECTION -->
       <div class="container my-5">
-        <h2 class="mb-4">Highlighted Businesses</h2>
+        <h2 class="mb-4">Featured Businesses</h2>
 
         <div class="position-relative">
           <!-- Left Scroll Button -->
@@ -270,7 +270,7 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
         </div>
       </div>
 
-      <h2 class="mb-4">Featured Businesses</h2>
+      <h2 class="mb-4">Lists of Businesses</h2>
 
       <!-- Category Filter + Search Bar -->
       <div class="row justify-content-center mb-4">
