@@ -259,7 +259,7 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
           </button>
 
           <!-- Scrollable Highlight Container -->
-          <div id="highlightedContainer" class="d-flex overflow-auto gap-3 pb-3 px-1">
+          <div id="featuredContainer" class="d-flex overflow-auto gap-3 pb-3 px-1">
             <!-- Highlighted business cards will be inserted here by JS -->
           </div>
 

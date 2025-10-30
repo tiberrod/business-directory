@@ -29,11 +29,11 @@ window.addEventListener('scroll', () => {
 //  Fetch Featured Businesses
 // ================================
 function fetchFeaturedBusinesses() {
-  fetch(`${baseApiUrl}?endpoint=highlighted`)
+  fetch(`${baseApiUrl}?endpoint=featured`)
     .then(res => res.json())
     .then(data => {
       const featured = data.businesses || data.data || [];
-      renderHighlightedBusinesses(featured);
+      renderFeaturedBusinesses(featured);
     })
     .catch(err => console.error("Error fetching featured businesses:", err));
 }
@@ -105,7 +105,7 @@ function renderBusinesses(businesses) {
 
 //  Render Featured Businesses
 function renderFeaturedBusinesses(featured) {
-  highlightContainer.innerHTML = featured.map(biz => `
+  featuredContainer.innerHTML = featured.map(biz => `
     <div class="card flex-shrink-0 shadow-sm border border-secondary-subtle rounded-4" style="width: 250px;">
       <img 
         src="${biz.business_img ? biz.business_img_url : 'images/preview.png'}"
@@ -208,11 +208,11 @@ categorySelect.addEventListener('change', () => {
 //  Horizontal Scroll Controls
 // ================================
 scrollLeftBtn.addEventListener('click', () => {
-  highlightContainer.scrollBy({ left: -300, behavior: 'smooth' });
+  featuredContainer.scrollBy({ left: -300, behavior: 'smooth' });
 });
 
 scrollRightBtn.addEventListener('click', () => {
-  highlightContainer.scrollBy({ left: 300, behavior: 'smooth' });
+  featuredContainer.scrollBy({ left: 300, behavior: 'smooth' });
 });
 
 // ================================
