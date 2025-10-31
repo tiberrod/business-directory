@@ -88,7 +88,7 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
       height: 200px;
       border-top-left-radius: 1rem;
       border-top-right-radius: 1rem;
-      object-fit: fill;
+      object-fit: cover;
     }
 
     /* Navbar */
@@ -285,6 +285,11 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
                 <option value="IT Service">IT Service</option>
                 <option value="Healthcare">Healthcare</option>
                 <option value="Education">Education</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="ProfessionalServices">Professional Services</option>
+                <option value="Automotive">Automotive</option>
+                <option value="Beauty&Wellness">Beauty & Wellness</option>
+                <option value="Real Estate">Real Estate</option>
               </select>
             </div>
 
