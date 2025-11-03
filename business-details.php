@@ -1,30 +1,54 @@
 <?php
-// Validate business ID from query string
+// ===================================
+// Security & API Configuration
+// ===================================
+$baseApiUrl = "https://apploqic.my/index.php";
+
+// 1. Input Validation and Sanitization
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
-    die('Invalid business ID.');
+    http_response_code(400); // Bad Request
+    die('Invalid business ID provided.');
 }
 
 $id = intval($_GET['id']);
+$apiUrl = $baseApiUrl . "?endpoint=business&id=" . $id;
 
-// API URL to fetch business details
-$apiUrl = "https://apploqic.my/index.php?endpoint=business&id=" . $id;
+// ===================================
+// Fetch API Data using cURL (Recommended)
+// ===================================
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $apiUrl);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+// Optionally add a timeout
+curl_setopt($ch, CURLOPT_TIMEOUT, 10); 
+$response = curl_exec($ch);
+$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+$curlError = curl_error($ch);
+curl_close($ch);
 
-// Fetch API response
-$response = @file_get_contents($apiUrl);
+// 2. Robust Error Checking
+if ($response === false || $httpCode !== 200) {
+    // If API failed or returned non-200 status
+    http_response_code(503); // Service Unavailable
+    die("Failed to fetch business details. API Error: " . ($curlError ?: "HTTP Code $httpCode"));
+}
+
 $data = json_decode($response, true);
 
-// Check if business data exists
-if (!$data || !isset($data['data']) || empty($data['data'])) {
-    die('Business not found.');
+// 3. Data Structure Verification
+if (!isset($data['data']) || empty($data['data'])) {
+    http_response_code(404); // Not Found
+    die('Business not found for ID: ' . $id);
 }
 
 $biz = $data['data'];
 
-// Determine business image or fallback to placeholder
+// 4. Fallback Logic and Output Sanitization (already good, but included for completeness)
 $businessImage = !empty($biz['business_img_url']) 
     ? htmlspecialchars($biz['business_img_url']) 
     : 'images/placeholder.png';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -191,7 +215,7 @@ $businessImage = !empty($biz['business_img_url'])
                     <p><?= htmlspecialchars($biz['business_contact']) ?></p>
                 </div>
 
-                <a href="index.php" class="btn btn-outline-primary back-btn w-100">
+                <a href="#" onclick="history.back(); return false;" class="btn btn-outline-primary back-btn w-100">
                     <i class="bi bi-arrow-left"></i> Back to Directory
                 </a>
             </div>
