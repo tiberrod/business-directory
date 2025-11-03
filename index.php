@@ -286,7 +286,7 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
                 <option value="Healthcare">Healthcare</option>
                 <option value="Education">Education</option>
                 <option value="Entertainment">Entertainment</option>
-                <option value="ProfessionalServices">Professional Services</option>
+                <option value="Professional Services">Professional Services</option>
                 <option value="Automotive">Automotive</option>
                 <option value="Beauty&Wellness">Beauty & Wellness</option>
                 <option value="Real Estate">Real Estate</option>
