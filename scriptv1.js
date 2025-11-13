@@ -1,85 +1,55 @@
-// ================================
-//  Base Configuration
-// ================================
-const baseApiUrl = "https://apploqic.my/index.php";
-
-// ================================
-//  DOM Elements
-// ================================
+// ==== Global variables ====
 const businessList = document.getElementById('businessList');
 const pagination = document.getElementById('pagination');
-const searchInput = document.getElementById('searchInput');
-const searchBtn = document.getElementById('searchBtn');
-const categorySelect = document.getElementById('categorySelect');
-const featuredContainer = document.getElementById('featuredContainer');
-const scrollLeftBtn = document.getElementById('scrollLeftBtn');
-const scrollRightBtn = document.getElementById('scrollRightBtn');
+const searchInput = document.getElementById('searchInput');      // optional
+const categorySelect = document.getElementById('categorySelect'); // optional
+const featuredSelect = document.getElementById('featuredSelect'); // optional
+const statusSelect = document.getElementById('statusSelect');     // optional
 
 let currentPage = 1;
-
-// ================================
-//  Navbar Scroll Effect
-// ================================
-window.addEventListener('scroll', () => {
-  const navbar = document.querySelector('.navbar');
-  navbar.classList.toggle('scrolled', window.scrollY > 50);
-});
-
-// ================================
-//  Fetch Featured Businesses
-// ================================
-function fetchFeaturedBusinesses() {
-  fetch(`${baseApiUrl}?endpoint=featured`)
-    .then(res => res.json())
-    .then(data => {
-      const featured = data.businesses || data.data || [];
-      renderFeaturedBusinesses(featured);
-    })
-    .catch(err => console.error("Error fetching featured businesses:", err));
-}
+const baseApiUrl = 'https://apploqic.my/api/v1/business'; // adjust if needed
 
 // ================================
 //  Fetch All or Filtered Businesses
 // ================================
 function fetchBusinesses(page = 1) {
-  const searchTerm = searchInput.value.trim();
-  const category = categorySelect?.value || "";
-  let url = "";
+  const searchTerm = searchInput?.value.trim() || '';
+  const category = categorySelect?.value || '';
+  const featured = featuredSelect?.value;
+  const status = statusSelect?.value;
 
-  if (searchTerm) {
-    // Search by name (and optional category)
-    url = `${baseApiUrl}?endpoint=search&name=${encodeURIComponent(searchTerm)}&page=${page}`;
-    if (category) url += `&category=${encodeURIComponent(category)}`;
-  } else {
-    // Fetch all or by category
-    url = `${baseApiUrl}?endpoint=business&page=${page}`;
-    if (category) url += `&category=${encodeURIComponent(category)}`;
-  }
+  const params = new URLSearchParams({ page });
+
+  if (searchTerm) params.append('name', searchTerm);
+  if (category) params.append('category', category);
+  if (featured) params.append('featured', featured);
+  if (status) params.append('status', status);
+
+  const url = `${baseApiUrl}?${params.toString()}`;
 
   fetch(url)
     .then(res => res.json())
     .then(data => {
-      const businesses = data.businesses || data.data || [];
-      const total = data.total || businesses.length;
-      const perPage = data.per_page || 10;
-      const pageNum = data.page || page;
+      const businesses = data.data || [];
+      const paginationInfo = data.pagination || {};
+      const total = paginationInfo.total || businesses.length;
+      const perPage = paginationInfo.per_page || 10;
+      const pageNum = paginationInfo.current_page || page;
 
       if (businesses.length > 0) {
         renderBusinesses(businesses);
         renderPagination(total, pageNum, perPage);
       } else {
-        showNoBusinessMessage();
+        businessList.innerHTML = '<p class="text-center">No businesses found.</p>';
+        pagination.innerHTML = '';
       }
     })
     .catch(err => {
-      console.error('Error fetching:', err);
-      showErrorMessage();
+      console.error('Error fetching businesses:', err);
+      businessList.innerHTML = '<p class="text-center text-danger">Error loading businesses.</p>';
+      pagination.innerHTML = '';
     });
 }
-
-// ================================
-//  Rendering Functions
-// ================================
 
 // 🧱 Render Business Cards
 function renderBusinesses(businesses) {
@@ -87,10 +57,10 @@ function renderBusinesses(businesses) {
     <div class="col-12 col-sm-6 col-md-4 col-lg-3">
       <div class="card h-100 shadow-sm border border-secondary-subtle rounded-4 d-flex flex-column">
         <img 
-          src="${biz.business_img ? biz.business_img_url : 'images/preview.png'}"
-          class="business-img" 
+          src="${biz.business_img_url || 'images/preview.png'}"
+          class="business-img"
           alt="${biz.business_name}">
-        <div class="card-body text-center">
+        <div class="card-body text-center d-flex flex-column">
           <h5 class="card-title">${biz.business_name}</h5>
           <div class="mt-auto">
             <a href="business-details.php?id=${biz.id}" class="btn btn-primary btn-sm w-100">
@@ -103,31 +73,15 @@ function renderBusinesses(businesses) {
   `).join('');
 }
 
-//  Render Featured Businesses
-function renderFeaturedBusinesses(featured) {
-  featuredContainer.innerHTML = featured.map(biz => `
-    <div class="card flex-shrink-0 shadow-sm border border-secondary-subtle rounded-4" style="width: 250px;">
-      <img 
-        src="${biz.business_img ? biz.business_img_url : 'images/preview.png'}"
-        class="card-img-top"
-        alt="${biz.business_name}">
-      <div class="card-body text-center">
-        <h6 class="card-title mb-2">${biz.business_name}</h6>
-        <a href="business-details.php?id=${biz.id}" class="btn btn-sm btn-primary w-100">View</a>
-      </div>
-    </div>
-  `).join('');
-}
-
-//  Render Pagination Controls
+// 🧭 Render Pagination Controls
 function renderPagination(total, page, perPage) {
   const totalPages = Math.ceil(total / perPage);
-  pagination.innerHTML = "";
+  pagination.innerHTML = '';
 
   // Previous Button
   pagination.innerHTML += `
     <li class="page-item ${page === 1 ? 'disabled' : ''}">
-      <a class="page-link" href="#" data-page="${page - 1}" aria-label="Previous">&laquo; Prev</a>
+      <a class="page-link" href="#" data-page="${page - 1}">&laquo; Prev</a>
     </li>
   `;
 
@@ -143,7 +97,7 @@ function renderPagination(total, page, perPage) {
   // Next Button
   pagination.innerHTML += `
     <li class="page-item ${page === totalPages ? 'disabled' : ''}">
-      <a class="page-link" href="#" data-page="${page + 1}" aria-label="Next">Next &raquo;</a>
+      <a class="page-link" href="#" data-page="${page + 1}">Next &raquo;</a>
     </li>
   `;
 
@@ -160,63 +114,11 @@ function renderPagination(total, page, perPage) {
   });
 }
 
-// ================================
-//  Message Helpers
-// ================================
-function showNoBusinessMessage() {
-  businessList.innerHTML = `
-    <div class="text-center mt-5 fade-in">
-      <img src="images/iconEncourage.png" alt="No data" class="img-fluid mb-3" style="max-width: 200px; opacity: 0.8;">
-      <h5 class="text-muted">No businesses found yet.</h5>
-      <p class="text-secondary">Be the first to showcase your business! 🌟</p>
-      <a href="" class="btn btn-primary mt-2">Post Your Business</a>
-    </div>
-  `;
-  pagination.innerHTML = "";
-}
+// ===== Initial fetch =====
+fetchBusinesses(currentPage);
 
-function showErrorMessage() {
-  businessList.innerHTML = `
-    <p class="text-center text-danger mt-5">
-      Failed to load data.<br>
-      (Server down or internet connection disrupted.)
-    </p>
-  `;
-  pagination.innerHTML = "";
-}
-
-// ================================
-//   Search & Filter
-// ================================
-
-// Search when pressing "Enter"
-searchInput.addEventListener('keypress', (e) => {
-  if (e.key === 'Enter') {
-    e.preventDefault();
-    currentPage = 1;
-    fetchBusinesses(1);
-  }
-});
-
-// Change category filter
-categorySelect.addEventListener('change', () => {
-  currentPage = 1;
-  fetchBusinesses();
-});
-
-// ================================
-//  Horizontal Scroll Controls
-// ================================
-scrollLeftBtn.addEventListener('click', () => {
-  featuredContainer.scrollBy({ left: -300, behavior: 'smooth' });
-});
-
-scrollRightBtn.addEventListener('click', () => {
-  featuredContainer.scrollBy({ left: 300, behavior: 'smooth' });
-});
-
-// ================================
-//  Initial Load
-// ================================
-fetchFeaturedBusinesses();
-fetchBusinesses();
+// ===== Optional: trigger fetch on filter/search change =====
+searchInput?.addEventListener('input', () => fetchBusinesses(1));
+categorySelect?.addEventListener('change', () => fetchBusinesses(1));
+featuredSelect?.addEventListener('change', () => fetchBusinesses(1));
+statusSelect?.addEventListener('change', () => fetchBusinesses(1));

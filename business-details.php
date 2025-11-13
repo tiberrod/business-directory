@@ -2,7 +2,7 @@
 // ===================================
 // Security & API Configuration
 // ===================================
-$baseApiUrl = "https://apploqic.my/index.php";
+$baseApiUrl = "https://apploqic.my/api/v1/business";
 
 // 1. Input Validation and Sanitization
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
@@ -11,7 +11,7 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
 }
 
 $id = intval($_GET['id']);
-$apiUrl = $baseApiUrl . "?endpoint=business&id=" . $id;
+$apiUrl = $baseApiUrl . $id;
 
 // ===================================
 // Fetch API Data using cURL (Recommended)

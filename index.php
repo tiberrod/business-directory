@@ -1,7 +1,3 @@
-<?php
-// Base API URL (adjust if needed)
-$baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -248,28 +244,8 @@ $baseApiUrl = "https://apploqic.my/index.php?endpoint=business";
   <!-- CONTENT SECTION -->
   <div class="container py-4">
     <div class="container bg-white border border-secondary-subtle rounded-4 shadow-sm p-4 p-md-5 my-5">
-      <!-- FEATURED BUSINESSES SECTION -->
-      <div class="container my-5">
-        <h2 class="mb-4">Featured Businesses</h2>
 
-        <div class="position-relative">
-          <!-- Left Scroll Button -->
-          <button class="scroll-btn left" id="scrollLeftBtn">
-            <i class="bi bi-chevron-left"></i>
-          </button>
-
-          <!-- Scrollable Highlight Container -->
-          <div id="featuredContainer" class="d-flex overflow-auto gap-3 pb-3 px-1">
-            <!-- Highlighted business cards will be inserted here by JS -->
-          </div>
-
-          <!-- Right Scroll Button -->
-          <button class="scroll-btn right" id="scrollRightBtn">
-            <i class="bi bi-chevron-right"></i>
-          </button>
-        </div>
-      </div>
-
+      <!-- Lists Title -->
       <h2 class="mb-4">Lists of Businesses</h2>
 
       <!-- Category Filter + Search Bar -->
