@@ -2,7 +2,7 @@
 // ===================================
 // Security & API Configuration
 // ===================================
-$baseApiUrl = "https://apploqic.my/api/v1/business";
+$baseApiUrl = "https://apploqic.my/api/v1/business/"; // <-- note trailing slash
 
 // 1. Input Validation and Sanitization
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
@@ -11,7 +11,7 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
 }
 
 $id = intval($_GET['id']);
-$apiUrl = $baseApiUrl . $id;
+$apiUrl = $baseApiUrl . $id; // Correctly forms full endpoint
 
 // ===================================
 // Fetch API Data using cURL (Recommended)
@@ -19,8 +19,7 @@ $apiUrl = $baseApiUrl . $id;
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $apiUrl);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-// Optionally add a timeout
-curl_setopt($ch, CURLOPT_TIMEOUT, 10); 
+curl_setopt($ch, CURLOPT_TIMEOUT, 10); // Optional timeout
 $response = curl_exec($ch);
 $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 $curlError = curl_error($ch);
@@ -28,7 +27,6 @@ curl_close($ch);
 
 // 2. Robust Error Checking
 if ($response === false || $httpCode !== 200) {
-    // If API failed or returned non-200 status
     http_response_code(503); // Service Unavailable
     die("Failed to fetch business details. API Error: " . ($curlError ?: "HTTP Code $httpCode"));
 }
@@ -43,11 +41,12 @@ if (!isset($data['data']) || empty($data['data'])) {
 
 $biz = $data['data'];
 
-// 4. Fallback Logic and Output Sanitization (already good, but included for completeness)
+// 4. Fallback Logic and Output Sanitization
 $businessImage = !empty($biz['business_img_url']) 
     ? htmlspecialchars($biz['business_img_url']) 
     : 'images/placeholder.png';
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
