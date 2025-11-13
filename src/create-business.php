@@ -23,29 +23,29 @@
 
       <div class="form-row">
         <div class="form-group mb-3">
-          <label for="business_name">Business Name</label>
+          <label class="fw-bold h5" for="business_name">Business Name</label>
           <input type="text" id="business_name" name="business_name" class="form-control" required>
         </div>
 
         <div class="form-group mb-3">
-          <label for="business_contact">Contact</label>
+          <label class="fw-bold h5" for="business_contact">Contact</label>
           <input type="text" id="business_contact" name="business_contact" class="form-control" required>
         </div>
       </div>
 
       <div class="form-group mb-3">
-        <label for="business_description">Description</label>
+        <label class="fw-bold h5" for="business_description">Description</label>
         <textarea id="business_description" name="business_description" class="form-control" required></textarea>
       </div>
 
       <div class="form-row">
         <div class="form-group mb-3">
-          <label for="business_category">Category</label>
+          <label class="fw-bold h5" for="business_category">Category</label>
           <input type="text" id="business_category" name="business_category" class="form-control" required>
         </div>
 
         <div class="form-group mb-3">
-          <label for="is_featured">Featured</label>
+          <label class="fw-bold h5" for="is_featured">Featured</label>
           <select id="is_featured" name="is_featured" class="form-select">
             <option value="0">Not Featured</option>
             <option value="1">Featured</option>
@@ -54,7 +54,7 @@
       </div>
 
       <div class="form-group mb-3">
-        <label for="business_img">Business Image</label>
+        <label class="fw-bold h5" for="business_img">Business Image</label>
         <input type="file" id="business_img" name="business_img" class="form-control" accept="image/*">
         <img id="imgPreview" class="img-preview mt-2 py-2" src="#" alt="Preview" style="display:none;">
       </div>

@@ -3,8 +3,8 @@
    ============================== */
 
 .admin-header {
-  background: linear-gradient(90deg, #007bff, #0069d9);
-  color: #fff;
+  background: #183A8A;
+  color: #ffffff;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;

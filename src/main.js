@@ -31,92 +31,98 @@ const modalFeatured = document.getElementById("modalFeatured");
 const modalClose = document.querySelector(".close");
 const editBtn = document.getElementById("editBtn");
 
+
 // Load Businesses (supports pagination + search)
 function loadBusinesses(searchTerm = "", page = 1) {
-  try {
-    activeSearchTerm = searchTerm;
-    currentPage = page;
+  activeSearchTerm = searchTerm;
+  currentPage = page;
 
-    // Get filter values (guard against null)
-    const category = categoryFilter ? categoryFilter.value.trim() : "";
-    const featured = featuredFilter ? featuredFilter.value : "";
-    const status = statusFilter ? statusFilter.value : "active";
+  const category = categoryFilter ? categoryFilter.value : "";
+  const featured = featuredFilter ? featuredFilter.value : "";
+  const status = statusFilter ? statusFilter.value : "";
 
-    // Build query string with new API format
-    let query = `q=${encodeURIComponent(searchTerm)}&page=${page}&per_page=${perPage}`;
-    
-    if (category) query += `&category=${encodeURIComponent(category)}`;
-    if (featured !== "") query += `&featured_only=${encodeURIComponent(featured)}`;
-    if (status) query += `&status=${encodeURIComponent(status)}`;
+  const params = new URLSearchParams();
+  params.set("q", searchTerm || "");
+  params.set("page", String(page));
+  params.set("per_page", String(perPage));
+  if (category) params.set("category", category);
+  if (featured !== "") params.set("featured_only", featured);
+  if (status) params.set("status", status);
 
-    const url = `${apiBase}?${query}`;
-    console.log("Fetching from:", url);
+  const url = `${apiBase}?${params.toString()}`;
+  console.log("Fetching:", url);
 
-    fetch(url)
-      .then(res => res.json())
-      .then(data => {
-        console.log("API response:", data);
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      console.log("API response:", data);
 
-        // New API returns data array directly
-        const items = data.data || [];
-        
-        // Get pagination info from API response
-        const pagination = data.pagination || {};
-        const resultsCount = data.results_count || items.length;
+      // API returns data.data (array) and pagination info
+      const items = Array.isArray(data.data) ? data.data : (Array.isArray(data) ? data : []);
+      const resultsCount = data.results_count || items.length;
+      const pagination = data.pagination || {};
+      const serverPerPage = pagination.per_page ? Number(pagination.per_page) : perPage;
+      const serverPage = pagination.current_page ? Number(pagination.current_page) : page;
 
-        allBusinesses = items;
+      allBusinesses = items;
 
-        // Calculate total pages from API pagination or results
-        totalPages = Math.max(1, Math.ceil(resultsCount / perPage));
+      // If API already returns a paged slice, use it. Otherwise slice client-side.
+      let displayed = items;
+      if (!pagination.current_page || items.length > perPage) {
+        const start = (page - 1) * perPage;
+        displayed = items.slice(start, start + perPage);
+      }
 
-        renderPage(items);
-      })
-      .catch(err => {
-        console.error("Error fetching businesses:", err);
-        businessContainer.innerHTML = "<p class='text-danger'>Failed to load businesses. Check console for errors.</p>";
-        paginationContainer.innerHTML = "";
-      });
-  } catch (err) {
-    console.error("Unexpected error in loadBusinesses:", err);
-  }
+      // set totals for pager
+      totalPages = Math.max(1, Math.ceil((data.results_count || items.length) / perPage));
+      currentPage = serverPage;
+
+      renderPage(displayed);
+    })
+    .catch(err => {
+      console.error("Error fetching businesses:", err);
+      businessContainer.innerHTML = '<div class="col-12 text-center text-danger py-4">Failed to load businesses</div>';
+      paginationContainer.innerHTML = "";
+    });
 }
 
-// Render businesses on screen
 // Render businesses on screen
 function renderPage(pageBusinesses) {
   businessContainer.innerHTML = "";
 
   if (!pageBusinesses || !pageBusinesses.length) {
-    businessContainer.innerHTML = "<p>No businesses found.</p>";
+    businessContainer.innerHTML = '<div class="col-12 text-center py-4">No businesses found.</div>';
     paginationContainer.innerHTML = "";
     return;
   }
 
-  // Render cards
+  // create bootstrap columns (4 per row on lg)
   pageBusinesses.forEach(b => {
-    // image fallbacks - adjust field names based on API response
-    const imgSrc =
-      b.image_url ||
-      b.business_image ||
-      b.image ||
-      b.logo ||
-      "https://placehold.co/400x200?text=No+Image";
+    const id = b.id || b.business_id || b._id || "";
+    const name = (b.name || b.business_name || "Unnamed").replaceAll('"', '&quot;');
+    const category = b.category || b.business_category || "";
+    const imageBase = "https://apploqic.my/Apploqic_Business_Directory/public/images/";
+    const imageField = b.image_url || b.business_image || b.business_img_url || b.business_img || b.image || '';
+    const image = imageField ? (imageField.startsWith("http://") || imageField.startsWith("https://") ? imageField : imageBase + encodeURIComponent(imageField)) : "https://placehold.co/400x200?text=No+Image";
 
-    const name = b.name || b.business_name || "Unnamed";
-    const id = b.id || b.business_id || "";
+    const col = document.createElement("div");
+    col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
 
-    const card = document.createElement("div");
-    card.className = "col-12 col-sm-6 col-md-4 col-lg-3"; // Adjusted for responsive layout
-    card.innerHTML = `
-      <div class="card business-card">
-        <img src="${imgSrc}" alt="${name}" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title">${name}</h5>
-          <a href="view-details.php?id=${id}" class="btn btn-primary btn-sm">View Details</a>
+    col.innerHTML = `
+      <div class="card h-100 business-card shadow-sm">
+        <img src="${image}" class="card-img-top" alt="${name}">
+        <div class="card-body d-flex flex-column">
+          <h6 class="card-title mb-1">${name}</h6>
+          <p class="text-muted small mb-3">${category}</p>
+          <div class="mt-auto d-flex gap-2 justify-content-center">
+            <a href="view-details.php?id=${encodeURIComponent(id)}" class="btn btn-sm btn-primary">View Details</a>
+            <a href="update-business.php?id=${encodeURIComponent(id)}" class="btn btn-sm btn-outline-secondary">Edit</a>
+          </div>
         </div>
       </div>
     `;
-    businessContainer.appendChild(card);
+
+    businessContainer.appendChild(col);
   });
 
   renderPagination();

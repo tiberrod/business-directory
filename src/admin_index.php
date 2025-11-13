@@ -15,7 +15,7 @@
   <header class="admin-header">
     <h4 class="mb-0">Apploqic Business Directory — Admin</h4>
     <div class="d-flex gap-2">
-      <a href="create-business.php" class="btn btn-light">+ Create Business</a>
+      <a href="create-business.php" class="btn btn-light px-4">Create Business</a>
       <a href="status-management.php" class="btn btn-outline-light">Status Management</a>
     </div>
   </header>
