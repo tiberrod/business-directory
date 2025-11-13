@@ -264,7 +264,7 @@
                 <option value="Entertainment">Entertainment</option>
                 <option value="Professional Services">Professional Services</option>
                 <option value="Automotive">Automotive</option>
-                <option value="Beauty&Wellness">Beauty & Wellness</option>
+                <option value="Beauty & Wellness">Beauty & Wellness</option>
                 <option value="Real Estate">Real Estate</option>
               </select>
             </div>

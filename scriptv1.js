@@ -116,9 +116,3 @@ function renderPagination(total, page, perPage) {
 
 // ===== Initial fetch =====
 fetchBusinesses(currentPage);
-
-// ===== Optional: trigger fetch on filter/search change =====
-searchInput?.addEventListener('input', () => fetchBusinesses(1));
-categorySelect?.addEventListener('change', () => fetchBusinesses(1));
-featuredSelect?.addEventListener('change', () => fetchBusinesses(1));
-statusSelect?.addEventListener('change', () => fetchBusinesses(1));
