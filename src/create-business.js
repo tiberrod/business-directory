@@ -1,64 +1,76 @@
-$(document).ready(function() {
-  const apiUrl = "https://apploqic.my/index.php?endpoint=business";
-  const $form = $("#createBusinessForm");
-  const $messageBox = $("#messageBox");
+// =======================================
+// CREATE BUSINESS MODULE
+// =======================================
 
-  $form.on("submit", function(e) {
-    e.preventDefault();
+// API endpoint for creating business
+const createApiBase = "https://apploqic.my/index.php/api/v1/business";
 
-    const name = $("#businessName").val().trim();
-    const contact = $("#businessContact").val().trim();
+document.addEventListener("DOMContentLoaded", () => {
+  const createForm = document.getElementById("createBusinessForm");
+  if (!createForm) return;
 
-    if (!name || !contact) {
-      showMessage("❌ Please fill in both Business Name and Contact.", "error");
-      return;
-    }
+  const submitBtn = createForm.querySelector(".btn-submit");
+  const imgInput = document.getElementById("business_img");
+  const imgPreview = document.getElementById("imgPreview");
 
-    // Prepare FormData
-    const formData = new FormData(this);
-
-    // Ensure default values for optional fields if not selected
-    if (!formData.get("status")) formData.set("status", "1");
-    if (!formData.get("is_featured")) formData.set("is_featured", "0");
-    // ensure also 'featured' key exists (API may expect 'featured' or 'is_featured')
-    if (!formData.get("featured")) formData.set("featured", formData.get("is_featured"));
-
-    // If a file input exists, duplicate it under common keys so backend/listing can return either name
-    const fileInput = $form.find('input[type="file"]')[0];
-    if (fileInput && fileInput.files && fileInput.files[0]) {
-      const file = fileInput.files[0];
-      if (!formData.get("business_img")) formData.set("business_img", file);
-      if (!formData.get("image")) formData.set("image", file);
-    }
-    
-    $.ajax({
-      url: apiUrl,
-      type: "POST",
-      data: formData,
-      processData: false,
-      contentType: false,
-      success: function(result) {
-        console.log("Create response:", result); // inspect keys returned by API
-
-        if (result.status === 201) {
-          showMessage(`✅ ${result.message} (ID: ${result.id})`, "success");
-          $form.trigger("reset");
-        } else {
-          showMessage(`⚠️ ${result.message || "Failed to create business."}`, "error");
-        }
-      },
-      error: function(xhr, status, error) {
-        console.error("Error:", error);
-        showMessage("❌ Network or server error occurred.", "error");
+  // ===== Image Preview =====
+  if (imgInput && imgPreview) {
+    imgInput.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        imgPreview.src = URL.createObjectURL(file);
+        imgPreview.style.display = "block";
+      } else {
+        imgPreview.style.display = "none";
       }
     });
-  });
-
-  // Display messages
-  function showMessage(text, type) {
-    $messageBox
-      .hide()
-      .html(`<div class="alert ${type === "success" ? "alert-success" : "alert-danger"}">${text}</div>`)
-      .fadeIn(300);
   }
+
+  // ===== Handle Form Submit =====
+  createForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Submitting...";
+
+    try {
+      const formData = new FormData(createForm);
+
+      // Optional validation
+      const requiredFields = ["business_name", "business_contact", "business_description", "business_category"];
+      for (const field of requiredFields) {
+        if (!formData.get(field)) {
+          alert(` Please fill in the ${field.replace("_", " ")} field.`);
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Submit";
+          return;
+        }
+      }
+
+      // POST request
+      const response = await fetch(createApiBase, {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+      console.log("Create API Response:", data);
+
+      if (response.ok && data.status === "success") {
+        alert(" Business created successfully!");
+        createForm.reset();
+        if (imgPreview) imgPreview.style.display = "none";
+        // Redirect or stay on page
+        window.location.href = "index.php"; // optional redirect
+      } else {
+        alert(" Failed to create business: " + (data.message || "Unknown error"));
+      }
+    } catch (error) {
+      console.error("Error creating business:", error);
+      alert(" An error occurred. Check console for details.");
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Submit";
+    }
+  });
 });
