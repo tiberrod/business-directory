@@ -82,6 +82,7 @@ function loadBusinesses(searchTerm = "", page = 1) {
 }
 
 // Render businesses on screen
+// Render businesses on screen
 function renderPage(pageBusinesses) {
   businessContainer.innerHTML = "";
 
@@ -105,12 +106,14 @@ function renderPage(pageBusinesses) {
     const id = b.id || b.business_id || "";
 
     const card = document.createElement("div");
-    card.className = "card business-card";
+    card.className = "col-12 col-sm-6 col-md-4 col-lg-3"; // Adjusted for responsive layout
     card.innerHTML = `
-      <img src="${imgSrc}" alt="${name}">
-      <div class="card-body">
-        <h3>${name}</h3>
-        <a href="view-details.php?id=${id}" class="btn btn-primary btn-sm">View Details</a>
+      <div class="card business-card">
+        <img src="${imgSrc}" alt="${name}" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">${name}</h5>
+          <a href="view-details.php?id=${id}" class="btn btn-primary btn-sm">View Details</a>
+        </div>
       </div>
     `;
     businessContainer.appendChild(card);

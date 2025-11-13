@@ -5,34 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Business Details</title>
 
-  <!-- Optional: Bootstrap or your existing site stylesheet -->
+  <!-- Bootstrap and custom stylesheet -->
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
 
 <body>
-  <div class="details-container">
-    <div class="business-header">
-      <img id="businessImage" src="https://placehold.co/400x200?text=Loading..." alt="Business Image" />
-      <div class="info">
-        <h2 id="businessName">Loading...</h2>
-        <div class="meta">
-          <p><strong>Category:</strong> <span id="businessCategory">-</span></p>
-          <p><strong>Contact:</strong> <span id="businessContact">-</span></p>
-          <p><strong>Featured:</strong> <span id="businessFeatured">-</span></p>
-          <p><strong>Created:</strong> <span id="businessCreated">-</span></p>
-          <p><strong>Updated:</strong> <span id="businessUpdated">-</span></p>
+  <header class="admin-header">
+    <h4 class="mb-0">Business Details</h4>
+    <a href="../src/admin_index.php" class="btn btn-light">← Back to Directory</a>
+  </header>
+
+  <div class="container my-5">
+    <div class="details-container card shadow-sm">
+      <div class="row g-3 p-3">
+        <div class="col-md-6">
+          <img id="businessImage" src="https://placehold.co/400x200?text=Loading..." alt="Business Image" class="img-fluid rounded" />
         </div>
-        <span id="businessStatus" class="status-pill">Loading...</span>
+        <div class="col-md-6">
+          <h2 id="businessName">Loading...</h2>
+          <div class="meta">
+            <p><strong>Category:</strong> <span id="businessCategory">-</span></p>
+            <p><strong>Contact:</strong> <span id="businessContact">-</span></p>
+            <p><strong>Featured:</strong> <span id="businessFeatured">-</span></p>
+            <p><strong>Created:</strong> <span id="businessCreated">-</span></p>
+            <p><strong>Updated:</strong> <span id="businessUpdated">-</span></p>
+          </div>
+          <span id="businessStatus" class="status-pill">Loading...</span>
+        </div>
+      </div>
+
+      <div class="business-description mt-4 p-2">
+        <h4>Description</h4>
+        <p id="businessDescription">Loading business details...</p>
       </div>
     </div>
-
-    <div class="business-description">
-      <h4>Description</h4>
-      <p id="businessDescription">Loading business details...</p>
-    </div>
-
-    <a href="../src/admin_index.php" class="btn-back">← Back to Directory</a>
   </div>
 
   <script>
