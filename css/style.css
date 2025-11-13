@@ -1,242 +1,362 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 30px;
-  background-color: #f9f9f9;
-}
-
-h1 {
-  text-align: center;
-}
-
-.search-bar {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.search-bar input {
-  padding: 8px;
-  width: 250px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.search-bar button {
-  padding: 8px 16px;
-  margin-left: 5px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.search-bar button:hover {
-  background-color: #0056b3;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
-  justify-items: center;
-}
-
-.card {
-  width: 220px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
-.card-body {
-  padding: 10px;
-}
-
-.card-body h3 {
-  margin: 10px 0;
-  font-size: 1.1em;
-}
-
-.card-body button {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 6px 12px;
-  cursor: pointer;
-}
-
-.card-body button:hover {
-  background-color: #1e7e34;
-}
-
-/* Pagination */
-.pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.pagination button {
-  padding: 6px 12px;
-  margin: 0 4px;
-  border: 1px solid #ccc;
-  background-color: white;
-  cursor: pointer;
-}
-
-.pagination button.active {
-  background-color: #007bff;
-  color: white;
-  border-color: #007bff;
-}
-
-/* Modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.6);
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 20px;
-  width: 400px;
-  border-radius: 8px;
-  position: relative;
-}
-
-.modal-content img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.close {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  font-size: 22px;
-  cursor: pointer;
-}
-
-/* ===== Delete Button (in Modal) ===== */
-.delete-btn {
-  display: block;
-  width: 100%;
-  margin-top: 1rem;
-  padding: 10px 16px;
-  font-size: 15px;
-  font-weight: 600;
-  background-color: #c62828;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.25s ease;
-}
-
-.delete-btn:hover {
-  background-color: #b71c1c;
-}
-
-.delete-btn:disabled {
-  background-color: #e57373;
-  cursor: not-allowed;
-}
-
-/* ===== Modal Action Buttons ===== */
-.modal-actions {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 1rem;
-}
-
-/* Close Modal Button */
-.close-btn {
-  flex: 1;
-  background-color: #9e9e9e;
-  color: white;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.25s ease;
-}
-
-.close-btn:hover {
-  background-color: #757575;
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  color: #333;
 }
 
 /* ===== Navbar ===== */
-.navbar {
-  background-color: #2e3b55;
-  color: white;
-  padding: 0.8rem 2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+.custom-navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 15px 40px;
 }
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .navbar-logo {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
+  color: #007bff;
   margin: 0;
 }
 
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 15px;
   margin: 0;
   padding: 0;
 }
 
 .nav-btn {
-  background-color: #4f5d75;
-  color: white;
+  background: #007bff;
   border: none;
-  padding: 8px 14px;
-  border-radius: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
+  transition: background 0.3s;
 }
 
 .nav-btn:hover {
-  background-color: #637498;
+  background: #0056b3;
 }
 
-.nav-btn.active {
-  background-color: #1b263b;
-  font-weight: bold;
+/* ===== Search Section ===== */
+.search-section {
+  background: #fff;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  padding: 25px;
+  width: 90%;
+  max-width: 1100px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.search-bar input {
+  flex: 1;
+  border-radius: 8px;
+}
+
+.filter-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ===== Business Grid ===== */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 40px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  width: 100%;
+  max-width: 280px;
+  min-width: 250px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: all 0.2s ease;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-body {
+  text-align: center;
+  padding: 15px;
+}
+
+.card-body h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.card-body button {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  transition: background 0.2s;
+}
+
+.card-body button:hover {
+  background: #0056b3;
+}
+
+/* ===== Pagination ===== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 50px;
+}
+
+.pagination button {
+  border: none;
+  background: #e9ecef;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pagination button.active {
+  background: #007bff;
+  color: #fff;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #007bff;
+  color: #fff;
+}
+
+/* ===== Modal ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 50px; /* Reduced from 80px */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 12px;
+  margin: auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px; /* Reduced from 600px */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.modal-content img {
+  width: 100%;
+  height: 200px; /* Fixed height */
+  border-radius: 8px;
+  margin: 10px 0;
+  object-fit: cover;
+}
+
+/* Add styles for modal text content */
+.modal-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.modal-content p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.modal-content strong {
+  color: #555;
+  min-width: 100px;
+  display: inline-block;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+}
+
+.close:hover {
+  color: #007bff;
+}
+
+/* Buttons inside modal */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.modal-actions button {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.close-btn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: #5a6268;
+}
+
+/* ===== Create Business Form ===== */
+#createBusinessForm {
+  max-width: 760px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  padding: 20px;
+}
+
+#createBusinessForm .form-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+#createBusinessForm .form-group {
+  flex: 1 1 45%;
+  min-width: 220px;
+  margin-bottom: 12px;
+}
+
+#createBusinessForm label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+#createBusinessForm input[type="text"],
+#createBusinessForm input[type="file"],
+#createBusinessForm select,
+#createBusinessForm textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+#createBusinessForm textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* File preview */
+#createBusinessForm .img-preview {
+  display: block;
+  width: 160px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  margin-top: 8px;
+}
+
+/* Submit button */
+#createBusinessForm .btn-submit {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+#createBusinessForm .btn-submit:hover {
+  background: #0056b3;
+}
+
+/* Make form responsive on small screens */
+@media (max-width: 640px) {
+  #createBusinessForm .form-group { flex: 1 1 100%; }
+}
+
+/* ===== Modal Edit Button Styling ===== */
+.modal-actions .nav-btn,
+.modal-actions .edit-link {
+  background: #17a2b8;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.modal-actions .edit-link:hover {
+  background: #138496;
+}
+
+/* ensure modal content is compact on small screens */
+@media (max-width: 520px) {
+  .modal-content { padding: 14px; }
+  .modal-content img { height: 140px; }
 }

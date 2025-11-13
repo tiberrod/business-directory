@@ -13,13 +13,13 @@ form.addEventListener("submit", async (e) => {
 
   // Step 1: Validate ID
   if (!id) {
-    showMessage("❌ Please enter a business ID.", "error");
+    showMessage(" Please enter a business ID.", "error");
     return;
   }
 
   // Step 2: Check if at least one field is provided
   if (!name && !contact && !description && !image) {
-    showMessage("⚠️ Please fill at least one field to update.", "error");
+    showMessage(" Please fill at least one field to update.", "error");
     return;
   }
 
