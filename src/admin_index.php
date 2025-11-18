@@ -89,6 +89,7 @@
         <h3 class="mb-0">List of existing businesses: </h3>
       </div>
       <div id="businessContainer" class="row g-4"></div>
+        <!-- List of businesses will be injected here. -->
       <nav id="paginationWrapper" aria-label="Business pagination" class="mt-4">
         <ul id="paginationContainer" class="pagination justify-content-center"></ul>
       </nav>
@@ -120,6 +121,7 @@
     </section>
 
     <!-- Listings Section -->
+    <!-- Will probably add section for analytics and summaries here (dashboard style) --> 
     <section class="listings-section py-5 bg-light">
       <div class="container">
         <div class="text-center mb-5">

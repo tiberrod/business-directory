@@ -101,14 +101,14 @@ function renderPage(pageBusinesses) {
       ? (imageField.startsWith("http://") || imageField.startsWith("https://") 
           ? imageField 
           : imageBase + encodeURIComponent(imageField))
-      : "https://placehold.co/400x200?text=No+Image";
+      : "https://placehold.co/100x100?text=No+Image";
 
     const col = document.createElement("div");
     col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
 
     col.innerHTML = `
       <div class="card h-100 business-card shadow-sm">
-        <img src="${image}" class="card-img-top" alt="${name}">
+        <img src="${image}" class="card-img-top w-100 h-100" alt="${name}">
         <div class="card-body d-flex flex-column">
           <h6 class="card-title mb-1">${name}</h6>
           <p class="text-muted small mb-3">${category}</p>
