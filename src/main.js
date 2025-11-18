@@ -7,39 +7,29 @@ let totalPages = 1;
 const perPage = 10;
 let activeSearchTerm = "";
 
-// Elements
+// Hero Section Elements
+const heroSearchInput = document.getElementById("heroSearchInput");
+const heroSearchBtn = document.getElementById("heroSearchBtn");
+const heroCategoryFilter = document.getElementById("heroCategoryFilter");
+const heroFeatureFilter = document.getElementById("heroFeatureFilter");
+const heroStatusFilter = document.getElementById("heroStatusFilter");
+
+// Main Section Elements (Optional secondary filters)
 const businessContainer = document.getElementById("businessContainer");
 const paginationContainer = document.getElementById("paginationContainer");
-const searchInput = document.getElementById("searchInput");
-const searchBtn = document.getElementById("searchBtn");
 const categoryFilter = document.getElementById("categoryFilter");
 const featuredFilter = document.getElementById("featureFilter");
 const statusFilter = document.getElementById("statusFilter");
-
-// Modal elements
-const modal = document.getElementById("detailsModal");
-const modalTitle = document.getElementById("modalTitle");
-const modalId = document.getElementById("modalId");
-const modalImage = document.getElementById("modalImage");
-const modalContact = document.getElementById("modalContact");
-const modalCategory = document.getElementById("modalCategory");
-const modalDescription = document.getElementById("modalDescription");
-const modalCreated = document.getElementById("modalCreated");
-const modalUpdated = document.getElementById("modalUpdated");
-const modalStatus = document.getElementById("modalStatus");
-const modalFeatured = document.getElementById("modalFeatured");
-const modalClose = document.querySelector(".close");
-const editBtn = document.getElementById("editBtn");
-
 
 // Load Businesses (supports pagination + search)
 function loadBusinesses(searchTerm = "", page = 1) {
   activeSearchTerm = searchTerm;
   currentPage = page;
 
-  const category = categoryFilter ? categoryFilter.value : "";
-  const featured = featuredFilter ? featuredFilter.value : "";
-  const status = statusFilter ? statusFilter.value : "";
+  // Get filter values from hero section (primary) or main section (fallback)
+  const category = (heroCategoryFilter ? heroCategoryFilter.value : "") || (categoryFilter ? categoryFilter.value : "");
+  const featured = (heroFeatureFilter ? heroFeatureFilter.value : "") || (featuredFilter ? featuredFilter.value : "");
+  const status = (heroStatusFilter ? heroStatusFilter.value : "") || (statusFilter ? statusFilter.value : "");
 
   const params = new URLSearchParams();
   params.set("q", searchTerm || "");
@@ -52,6 +42,11 @@ function loadBusinesses(searchTerm = "", page = 1) {
   const url = `${apiBase}?${params.toString()}`;
   console.log("Fetching:", url);
 
+  // Scroll to results section smoothly
+  if (businessContainer) {
+    businessContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   fetch(url)
     .then(res => res.json())
     .then(data => {
@@ -61,7 +56,6 @@ function loadBusinesses(searchTerm = "", page = 1) {
       const items = Array.isArray(data.data) ? data.data : (Array.isArray(data) ? data : []);
       const resultsCount = data.results_count || items.length;
       const pagination = data.pagination || {};
-      const serverPerPage = pagination.per_page ? Number(pagination.per_page) : perPage;
       const serverPage = pagination.current_page ? Number(pagination.current_page) : page;
 
       allBusinesses = items;
@@ -101,9 +95,13 @@ function renderPage(pageBusinesses) {
     const id = b.id || b.business_id || b._id || "";
     const name = (b.name || b.business_name || "Unnamed").replaceAll('"', '&quot;');
     const category = b.category || b.business_category || "";
-    const imageBase = "https://apploqic.my/Apploqic_Business_Directory/public/images/";
+    const imageBase = "https://apploqic.my/public/images/";
     const imageField = b.image_url || b.business_image || b.business_img_url || b.business_img || b.image || '';
-    const image = imageField ? (imageField.startsWith("http://") || imageField.startsWith("https://") ? imageField : imageBase + encodeURIComponent(imageField)) : "https://placehold.co/400x200?text=No+Image";
+    const image = imageField 
+      ? (imageField.startsWith("http://") || imageField.startsWith("https://") 
+          ? imageField 
+          : imageBase + encodeURIComponent(imageField))
+      : "https://placehold.co/400x200?text=No+Image";
 
     const col = document.createElement("div");
     col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
@@ -115,7 +113,7 @@ function renderPage(pageBusinesses) {
           <h6 class="card-title mb-1">${name}</h6>
           <p class="text-muted small mb-3">${category}</p>
           <div class="mt-auto d-flex gap-2 justify-content-center">
-            <a href="view-details.php?id=${encodeURIComponent(id)}" class="btn btn-sm btn-primary">View Details</a>
+            <a href="view_details.php?id=${encodeURIComponent(id)}" class="btn btn-sm btn-primary">View Details</a>
             <a href="update-business.php?id=${encodeURIComponent(id)}" class="btn btn-sm btn-outline-secondary">Edit</a>
           </div>
         </div>
@@ -132,22 +130,22 @@ function renderPage(pageBusinesses) {
 function renderPagination() {
   paginationContainer.innerHTML = "";
 
-  const prevBtn = document.createElement("button");
-  prevBtn.textContent = "Prev";
-  prevBtn.disabled = currentPage <= 1;
-  prevBtn.onclick = () => loadBusinesses(activeSearchTerm, currentPage - 1);
-  paginationContainer.appendChild(prevBtn);
+  const prevLi = document.createElement("li");
+  prevLi.className = "page-item " + (currentPage <= 1 ? "disabled" : "");
+  prevLi.innerHTML = `<button class="page-link">Previous</button>`;
+  prevLi.onclick = () => { if (currentPage > 1) loadBusinesses(activeSearchTerm, currentPage - 1); };
+  paginationContainer.appendChild(prevLi);
 
-  const pageInfo = document.createElement("span");
-  pageInfo.style.padding = "8px 12px";
-  pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+  const pageInfo = document.createElement("li");
+  pageInfo.className = "page-item disabled";
+  pageInfo.innerHTML = `<span class="page-link">Page ${currentPage} of ${totalPages}</span>`;
   paginationContainer.appendChild(pageInfo);
 
-  const nextBtn = document.createElement("button");
-  nextBtn.textContent = "Next";
-  nextBtn.disabled = currentPage >= totalPages;
-  nextBtn.onclick = () => loadBusinesses(activeSearchTerm, currentPage + 1);
-  paginationContainer.appendChild(nextBtn);
+  const nextLi = document.createElement("li");
+  nextLi.className = "page-item " + (currentPage >= totalPages ? "disabled" : "");
+  nextLi.innerHTML = `<button class="page-link">Next</button>`;
+  nextLi.onclick = () => { if (currentPage < totalPages) loadBusinesses(activeSearchTerm, currentPage + 1); };
+  paginationContainer.appendChild(nextLi);
 }
 
 // Event: View Details Button (delegate)
@@ -160,37 +158,54 @@ businessContainer.addEventListener("click", e => {
   else console.warn("Business not found in current list.");
 });
 
-// Search button
-searchBtn && searchBtn.addEventListener("click", () => {
-  const term = searchInput ? searchInput.value.trim() : "";
-  loadBusinesses(term, 1);
-});
-
-// Enter key in search input
-searchInput && searchInput.addEventListener("keypress", (e) => {
-  if (e.key === "Enter") {
-    const term = searchInput.value.trim();
+// ===== HERO SEARCH EVENTS =====
+// Hero search button
+if (heroSearchBtn) {
+  heroSearchBtn.addEventListener("click", () => {
+    const term = heroSearchInput ? heroSearchInput.value.trim() : "";
     loadBusinesses(term, 1);
-  }
-});
-
-// Auto-refresh when filters change
-[categoryFilter, featuredFilter, statusFilter].forEach(el => {
-  if (!el) return;
-  el.addEventListener("change", () => loadBusinesses(activeSearchTerm, 1));
-});
-
-// Modal Delete Button
-const deleteBtn = document.getElementById("deleteBtn");
-if (deleteBtn) {
-  deleteBtn.addEventListener("click", async () => {
-    console.log("Delete clicked - implement delete logic");
   });
 }
 
-// Close button closes the modal
-const closeBtn = document.getElementById("closeBtn");
-if (closeBtn) closeBtn.addEventListener("click", () => (modal.style.display = "none"));
+// Hero search input - Enter key
+if (heroSearchInput) {
+  heroSearchInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      const term = heroSearchInput.value.trim();
+      loadBusinesses(term, 1);
+    }
+  });
+}
+
+// Hero filters change
+[heroCategoryFilter, heroFeatureFilter, heroStatusFilter].forEach(el => {
+  if (!el) return;
+  el.addEventListener("change", () => {
+    const term = heroSearchInput ? heroSearchInput.value.trim() : "";
+    loadBusinesses(term, 1);
+  });
+});
+
+// ===== MAIN SECTION FILTERS (Secondary) =====
+// Sync main section filters with hero filters
+[categoryFilter, featuredFilter, statusFilter].forEach(el => {
+  if (!el) return;
+  el.addEventListener("change", () => {
+    // Sync with hero filters
+    if (categoryFilter && heroCategoryFilter) heroCategoryFilter.value = categoryFilter.value;
+    if (featuredFilter && heroFeatureFilter) heroFeatureFilter.value = featuredFilter.value;
+    if (statusFilter && heroStatusFilter) heroStatusFilter.value = statusFilter.value;
+    
+    loadBusinesses(activeSearchTerm, 1);
+  });
+});
 
 // Initial load - show all businesses
 loadBusinesses("", 1);
+
+// ===== SMOOTH SCROLL TO RESULTS =====
+// Add smooth scroll behavior when clicking hero search
+document.addEventListener('DOMContentLoaded', function() {
+  // Ensure smooth scrolling works
+  document.documentElement.style.scrollBehavior = 'smooth';
+});
