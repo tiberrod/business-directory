@@ -114,7 +114,7 @@ function renderPage(pageBusinesses) {
           <p class="text-muted small mb-3">${category}</p>
           <div class="mt-auto d-flex gap-2 justify-content-center">
             <a href="view_details.php?id=${encodeURIComponent(id)}" class="btn btn-sm btn-primary">View Details</a>
-            <a href="update-business.php?id=${encodeURIComponent(id)}" class="btn btn-sm btn-outline-secondary">Edit</a>
+            <a href="update_business.php?id=${encodeURIComponent(id)}" class="btn btn-sm btn-outline-secondary">Edit</a>
           </div>
         </div>
       </div>

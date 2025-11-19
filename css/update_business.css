@@ -28,7 +28,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #0A0D14 0%, #1A293D 50%, #3A3A3A 100%);
+  background: linear-gradient(135deg, #020408 0%, #0A0E17 50%, #121621 100%);
   z-index: 0;
 }
 
@@ -47,7 +47,7 @@ body {
 /* Hero Card - Left Side */
 .hero-card {
   flex: 1;
-  background: linear-gradient(135deg, rgba(26, 95, 122, 0.95) 0%, rgba(10, 37, 51, 0.95) 50%, #1A293D 100%);
+  background: linear-gradient(135deg, rgba(30, 26, 80, 0.95) 0%, rgba(15, 12, 40, 0.95) 50%, #0A0814 100%);
   border-radius: 30px;
   padding: 2.5rem;
   display: flex;
@@ -182,6 +182,26 @@ body {
   flex-direction: column;
 }
 
+.btn-back {
+    align-items: center;
+    gap: 0.5rem;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    background-color: rgba(30, 26, 80, 0.95);
+    border-radius: 15px;;
+}
+
+.btn-back:hover {
+    align-items: center;
+    gap: 0.5rem;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    background-color: rgba(25, 21, 68, 0.95);
+    border-radius: 15px;;
+}
+
 /* Custom Scrollbar for Form Card */
 .form-card::-webkit-scrollbar {
   display: none;
@@ -273,31 +293,11 @@ textarea.form-control:focus {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.btn-back {
-    align-items: center;
-    gap: 0.5rem;
-    color: #ffffff;
-    text-decoration: none;
-    margin-bottom: 1.5rem;
-    background-color: rgba(26, 95, 122, 0.95);
-    border-radius: 15px;;
-}
-
-.btn-back:hover {
-    align-items: center;
-    gap: 0.5rem;
-    color: #ffffff;
-    text-decoration: none;
-    margin-bottom: 1.5rem;
-    background-color: rgba(23, 82, 106, 0.95);
-    border-radius: 15px;;
-}
-
 /* Submit Button */
 .btn-submit {
   width: 100%;
   padding: 1rem;
-  background: #1a5f7a;
+  background: rgba(30, 26, 80, 0.95);
   color: white;
   border: none;
   border-radius: 12px;
@@ -312,7 +312,7 @@ textarea.form-control:focus {
 }
 
 .btn-submit:hover {
-  background: #145166;
+  background: rgba(25, 21, 68, 0.95);
   box-shadow: 0 8px 20px rgba(26, 95, 122, 0.3);
 }
 

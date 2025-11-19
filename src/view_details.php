@@ -52,7 +52,7 @@
           <h5 class="card-title d-flex pt-1">Bio & Details</h5>
           <!-- Action Buttons -->
           <div class="action-buttons">
-            <a href="#" id="editBtn" class="btn-action btn-edit">
+            <a href="../src/update_business.php?id=" id="editBtn" class="btn-action btn-edit">
               <i class="bi bi-pencil-fill"></i> Edit 
             </a>
             <a href="#" id="deleteBtn" class="btn-action btn-delete">

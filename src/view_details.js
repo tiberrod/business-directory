@@ -78,7 +78,7 @@ function renderBusinessDetails(data) {
     data.business_description || "No description available.";
 
   // Update Edit/Delete button links (if needed later)
-  document.getElementById("editBtn").href = `edit_business.php?id=${data.id}`;
+  document.getElementById("editBtn").href = `../src/update_business.php?id=${data.id}`;
   document.getElementById("deleteBtn").setAttribute("data-id", data.id);
 }
 
