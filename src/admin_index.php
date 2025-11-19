@@ -32,6 +32,9 @@
           <a href="status-management.php" class="btn btn-outline-light disabled" tabindex="-1" aria-disabled="true">
             <i class="bi bi-gear me-2"></i>Status Management
           </a>
+          <a href="../src/login.php" class="btn btn-outline-light px-2">
+            <i class="bi bi-box-arrow-in-right me-1"></i>
+          </a>
         </div>
       </div>
     </div>
