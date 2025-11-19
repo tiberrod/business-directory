@@ -28,7 +28,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  background: linear-gradient(135deg, #0A0D14 0%, #1A293D 50%, #3A3A3A 100%);
   z-index: 0;
 }
 
@@ -47,7 +47,7 @@ body {
 /* Hero Card - Left Side */
 .hero-card {
   flex: 1;
-  background: linear-gradient(135deg, rgba(26, 95, 122, 0.95) 0%, rgba(10, 37, 51, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(26, 95, 122, 0.95) 0%, rgba(10, 37, 51, 0.95) 50%, #1A293D 100%);
   border-radius: 30px;
   padding: 2.5rem;
   display: flex;
@@ -55,8 +55,6 @@ body {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: hidden;
-  transform: translateX(0);
-  animation: slideInLeft 0.8s ease forwards;
   max-height: 1100px;
 }
 
@@ -68,7 +66,6 @@ body {
   width: 200%;
   height: 200%;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-  animation: rotate 20s linear infinite;
   pointer-events: none;
 }
 
@@ -103,7 +100,7 @@ body {
   padding-right: 0.5rem;
 }
 
-/* Custom Scrollbar for Hero Card - 75% height */
+/* Custom Scrollbar for Hero Card */
 .hero-form::-webkit-scrollbar {
   display: none;
 }
@@ -132,14 +129,12 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  transition: all 0.3s ease;
   padding: 2rem;
 }
 
 .upload-placeholder:hover {
   border-color: rgba(255, 255, 255, 0.7);
   background: rgba(255, 255, 255, 0.1);
-  transform: scale(1.02);
 }
 
 .upload-placeholder i {
@@ -171,7 +166,6 @@ body {
   object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  animation: fadeIn 0.5s ease;
 }
 
 /* Form Card - Right Side */
@@ -184,8 +178,6 @@ body {
   max-height: 1100px;
   overflow-y: auto;
   position: relative;
-  transform: translateX(0); /* Remove the overlap transform */
-  animation: slideInRight 0.8s ease forwards;
   display: flex;
   flex-direction: column;
 }
@@ -201,14 +193,12 @@ body {
   color: #ffffff;
   text-decoration: none;
   margin-bottom: 1.5rem;
-  transition: all 0.3s ease;
 }
 
 .back-link:hover {
   color: #1a5f7a;
   background-color: #203a43;
   border-color: #ffffff;
-  transform: translateX(-5px);
 }
 
 .form-title {
@@ -243,7 +233,6 @@ body {
   border: 2px solid #e9ecef;
   border-radius: 12px;
   font-size: 1rem;
-  transition: all 0.3s ease;
   background: #f8f9fa;
 }
 
@@ -295,7 +284,6 @@ textarea.form-control:focus {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -305,7 +293,6 @@ textarea.form-control:focus {
 
 .btn-submit:hover {
   background: #145166;
-  transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(26, 95, 122, 0.3);
 }
 
@@ -316,7 +303,6 @@ textarea.form-control:focus {
 .btn-submit:disabled {
   background: #6c757d;
   cursor: not-allowed;
-  transform: none;
 }
 
 /* Divider */
@@ -353,7 +339,6 @@ textarea.form-control:focus {
   text-align: center;
   text-decoration: none;
   display: block;
-  transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
@@ -414,16 +399,7 @@ textarea.form-control:focus {
 
   .hero-card,
   .form-card {
-    transform: translateX(0) !important;
     max-height: none;
-  }
-
-  .hero-card {
-    animation: fadeIn 0.8s ease;
-  }
-
-  .form-card {
-    animation: fadeIn 1s ease;
   }
 
   .hero-title {

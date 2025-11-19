@@ -36,6 +36,9 @@
           <div class="profile-image-wrapper">
             <img id="businessImage" src="https://placehold.co/100x100?text=Loading..." alt="Business" class="profile-image" />
           </div>
+          <p class="business-id-label fw-bold">Business ID: 
+            <span id="businessId" class="profile-id fw-light">Loading...</span>
+          </p>
           <h2 id="businessName" class="profile-name">Loading...</h2>
           <p id="businessCategory" class="profile-category">Category</p>
           <span id="businessStatus" class="status-badge">Loading...</span>
@@ -62,11 +65,6 @@
           <div class="detail-item">
             <label class="details-label fw-bold">Contact Number</label>
             <p id="businessContact">-</p>
-          </div>
-
-          <div class="detail-item">
-            <label class="details-label fw-bold">Email Address</label>
-            <p id="businessEmail">-</p>
           </div>
 
           <div class="detail-item">

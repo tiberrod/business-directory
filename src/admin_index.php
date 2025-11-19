@@ -135,7 +135,6 @@
           <div class="col-md-6 col-lg-3">
             <div class="listing-card card h-100 border-0 shadow-sm">
               <div class="position-relative">
-                <img src="image1.jpg" class="card-img-top" alt="Business">
                 <span class="badge bg-success position-absolute top-0 start-0 m-3">Cemetery</span>
                 <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-3 rounded-circle">
                   <i class="bi bi-heart"></i>
@@ -143,7 +142,6 @@
               </div>
               <div class="card-body">
                 <div class="d-flex align-items-center mb-2">
-                  <img src="avatar.jpg" class="rounded-circle me-2" width="30" height="30">
                   <small class="text-muted">Allina Power</small>
                 </div>
                 <h5 class="card-title">Dr. Frances Sutton</h5>
@@ -184,12 +182,9 @@
         <div class="row align-items-center">
           <div class="col-lg-6 mb-4 mb-lg-0">
             <div class="feature-images position-relative">
-              <img src="main-image.jpg" class="img-fluid rounded shadow-lg" alt="Feature">
               <div class="position-absolute" style="bottom: -20px; left: -20px;">
-                <img src="small-image1.jpg" class="img-fluid rounded shadow" width="150" alt="Small">
               </div>
               <div class="position-absolute" style="top: 50%; right: -20px;">
-                <img src="small-image2.jpg" class="img-fluid rounded shadow" width="120" alt="Small">
               </div>
             </div>
           </div>

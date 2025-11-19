@@ -1,175 +1,108 @@
-const viewDetailsApiBase = "https://apploqic.my/api/v1/business";
+// ==============================
+// Fetch Business Details Script
+// ==============================
 
-// Get business ID from URL
-const params = new URLSearchParams(window.location.search);
-const businessId = params.get('id');
-
-// Format date helper function
-const formatDate = (dateStr) => {
-  if (!dateStr) return "N/A";
-  const date = new Date(dateStr);
-  return date.toLocaleDateString('en-US', { 
-    year: 'numeric', 
-    month: 'short', 
-    day: 'numeric' 
-  });
-};
-
-// Load business details
-function loadBusinessDetails() {
-  if (!businessId) {
-    showError("Business ID is missing.");
-    return;
-  }
-
-  const apiUrl = `${viewDetailsApiBase}/${businessId}`; // Final form of the endpoint
-
-  fetch(apiUrl)
-    .then(res => res.json())
-    .then(data => {
-      if (data.status !== "success" || !data.data) {
-        showError("Business not found.");
-        return;
-      }
-
-      const b = data.data;
-      renderBusinessDetails(b);
-    })
-    .catch(err => {
-      console.error("Error loading business details:", err);
-      showError("Error loading business details.");
-    });
+// 1. Extract ID from URL
+function getBusinessIdFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("id");
 }
 
-// Render business details to the page
-function renderBusinessDetails(business) {
-  // Basic info
-  document.getElementById("businessName").textContent = business.business_name || "Unknown Business";
-  document.getElementById("businessImage").src = business.business_img_url || "https://placehold.co/100x100?text=No+Image";
-  document.getElementById("businessContact").textContent = business.business_contact || "Not provided";
-  document.getElementById("businessEmail").textContent = business.business_email || "Not provided";
-  document.getElementById("businessCategory").textContent = business.business_category || "Uncategorized";
-  document.getElementById("businessDescription").textContent = business.business_description || "No description available.";
-  
-  // Featured status
-  document.getElementById("businessFeatured").textContent = business.is_featured == 1 ? "Yes" : "No";
-  
-  // Dates
-  document.getElementById("businessCreated").textContent = formatDate(business.created_at);
-  document.getElementById("businessUpdated").textContent = formatDate(business.updated_at);
-
-  // Status badge
-  const statusEl = document.getElementById("businessStatus");
-  if (business.status == 1) {
-    statusEl.textContent = "Active";
-    statusEl.classList.add("status-active");
-  } else {
-    statusEl.textContent = "Inactive";
-    statusEl.classList.add("status-inactive");
-  }
-
-  // Update quick action links
-  updateQuickActions(business);
-
-  // Update action buttons
-  updateActionButtons();
-}
-
-// Update quick action links
-function updateQuickActions(business) {
-  const callLink = document.querySelector('.social-link[title="Call Business"]');
-  const emailLink = document.querySelector('.social-link[title="Email Business"]');
-  
-  if (callLink && business.business_contact) {
-    callLink.href = `tel:${business.business_contact}`;
-  }
-  
-  if (emailLink && business.business_email) {
-    emailLink.href = `mailto:${business.business_email}`;
-  }
-  
-  // Share functionality
-  const shareLink = document.querySelector('.social-link[title="Share"]');
-  if (shareLink) {
-    shareLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      shareBusinessProfile(business);
-    });
-  }
-}
-
-// Update action buttons
-function updateActionButtons() {
-  // Edit button
-  document.getElementById("editBtn").href = `update_business.php?id=${businessId}`;
-  
-  // Delete button
-  document.getElementById("deleteBtn").addEventListener('click', (e) => {
-    e.preventDefault();
-    handleDeleteBusiness();
-  });
-}
-
-// Handle business deletion
-async function handleDeleteBusiness() {
-  if (!confirm('Are you sure you want to delete this business? This action cannot be undone.')) {
-    return;
-  }
+// 2. Fetch business details from API
+async function getBusinessDetails(businessId) {
+  const API_URL = `https://apploqic.my/api/v1/business/${businessId}`;
 
   try {
-    const response = await fetch(`${viewDetailsApiBase}/${businessId}`, {
-      method: 'DELETE'
-    });
+    const response = await fetch(API_URL);
+    if (!response.ok) throw new Error("API request failed");
 
-    const data = await response.json();
+    const result = await response.json();
+    if (result.status !== "success") throw new Error("Invalid API response");
 
-    if (response.ok && data.status === "success") {
-      alert('Business deleted successfully!');
-      window.location.href = 'admin_index.php';
-    } else {
-      alert(data.message || 'Failed to delete business.');
-    }
+    return result.data;
   } catch (error) {
-    console.error('Error deleting business:', error);
-    alert('An error occurred while deleting the business.');
+    console.error("Error fetching business details:", error);
+    return null;
   }
 }
 
-// Share business profile
-function shareBusinessProfile(business) {
-  const shareData = {
-    title: business.business_name,
-    text: `Check out ${business.business_name} on our business directory!`,
-    url: window.location.href
+// 3. Render data into the two separate cards
+function renderBusinessDetails(data) {
+  if (!data) {
+    document.querySelector(".profile-container").innerHTML =
+      "<p>Failed to load business details.</p>";
+    return;
+  }
+
+  // ==============================
+  // Profile Card (left)
+  // ==============================
+  document.getElementById("businessId").textContent = data.id;
+  document.getElementById("businessImage").src = data.business_img_url;
+  document.getElementById("businessName").textContent = data.business_name;
+  document.getElementById("businessCategory").textContent = data.business_category;
+
+  // Status badge → "Active" or "Inactive"
+  const statusBadge = document.getElementById("businessStatus");
+  if (data.status == 1) {
+    statusBadge.textContent = "Active";
+    statusBadge.classList.add("active-badge");
+  } else {
+    statusBadge.textContent = "Inactive";
+    statusBadge.classList.add("inactive-badge");
+  }
+
+  // Fallback if image fails
+  document.getElementById("businessImage").onerror = function () {
+    this.src = "https://placehold.co/100x100?text=No+Image";
   };
 
-  // Check if Web Share API is supported
-  if (navigator.share) {
-    navigator.share(shareData)
-      .then(() => console.log('Shared successfully'))
-      .catch(err => console.log('Error sharing:', err));
-  } else {
-    // Fallback: Copy to clipboard
-    navigator.clipboard.writeText(window.location.href)
-      .then(() => alert('Link copied to clipboard!'))
-      .catch(() => alert('Unable to share. Please copy the URL manually.'));
+  // ==============================
+  // Details Card (right)
+  // ==============================
+  document.getElementById("businessContact").textContent = data.business_contact || "-";
+
+  // Featured status
+  document.getElementById("businessFeatured").textContent =
+    data.is_featured == 1 ? "Featured Business" : "Not Featured";
+
+  // Created & Updated dates
+  document.getElementById("businessCreated").textContent =
+    data.created_at ? formatDate(data.created_at) : "-";
+
+  document.getElementById("businessUpdated").textContent =
+    data.updated_at ? formatDate(data.updated_at) : "-";
+
+  // Description
+  document.getElementById("businessDescription").textContent =
+    data.business_description || "No description available.";
+
+  // Update Edit/Delete button links (if needed later)
+  document.getElementById("editBtn").href = `edit_business.php?id=${data.id}`;
+  document.getElementById("deleteBtn").setAttribute("data-id", data.id);
+}
+
+// Helper: Format date (YYYY-MM-DD HH:mm → DD MMM YYYY)
+function formatDate(dateStr) {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString("en-MY", {
+    year: "numeric",
+    month: "short",
+    day: "numeric"
+  });
+}
+
+// 4. Initialize page
+async function init() {
+  const businessId = getBusinessIdFromURL();
+
+  if (!businessId) {
+    alert("No business ID provided in the URL.");
+    return;
   }
+
+  const details = await getBusinessDetails(businessId);
+  renderBusinessDetails(details);
 }
 
-// Show error message
-function showError(message) {
-  document.querySelector('.profile-container').innerHTML = `
-    <div class='error-message'>
-      <i class='bi bi-exclamation-circle'></i>
-      <p>${message}</p>
-      <a href="admin_index.php" class="btn-back" style="margin-top: 1rem; display: inline-flex;">
-        <i class="bi bi-arrow-left"></i> Back to Directory
-      </a>
-    </div>
-  `;
-}
-
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', () => {
-  loadBusinessDetails();
-});
+init();

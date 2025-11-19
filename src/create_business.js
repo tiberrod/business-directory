@@ -1,122 +1,105 @@
-// =======================================
-// CREATE BUSINESS MODULE
-// =======================================
+// create_business.js
 
-// API endpoint for creating business
-const createApiBase = "https://apploqic.my/api/v1/business";
+const API_URL = "https://apploqic.my/api/v1/business";
 
-document.addEventListener("DOMContentLoaded", () => {
-  const createForm = document.getElementById("createBusinessForm");
-  if (!createForm) return;
+/* ------------------------------------------------------
+   Image Preview Handling
+--------------------------------------------------------- */
+const imageInput = document.getElementById("business_img");
+const imgPreview = document.getElementById("imgPreview");
+const uploadPlaceholder = document.getElementById("uploadPlaceholder");
 
-  const submitBtn = createForm.querySelector('button[type="submit"]');
-  const imgInput = document.getElementById("business_img");
-  const imgPreview = document.getElementById("imgPreview");
-  const uploadPlaceholder = document.getElementById("uploadPlaceholder");
+imageInput.addEventListener("change", function () {
+  const file = this.files[0];
 
-  // Image Preview with placeholder toggle
-  if (imgInput && imgPreview && uploadPlaceholder) {
-    imgInput.addEventListener("change", (e) => {
-      const file = e.target.files && e.target.files[0];
-      if (file) {
-        // Hide placeholder, show preview
-        uploadPlaceholder.style.display = "none";
-        
-        const objectUrl = URL.createObjectURL(file);
-        imgPreview.src = objectUrl;
-        imgPreview.style.display = "block";
-        
-        imgPreview.onload = () => {
-          URL.revokeObjectURL(objectUrl); 
-        };
-      } else {
-        // Show placeholder, hide preview
-        uploadPlaceholder.style.display = "flex";
-        imgPreview.src = "#";
-        imgPreview.style.display = "none";
-      }
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      uploadPlaceholder.style.display = "none";
+      imgPreview.style.display = "block";
+      imgPreview.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  } else {
+    // Reset to placeholder
+    imgPreview.style.display = "none";
+    uploadPlaceholder.style.display = "flex";
+  }
+});
+
+/* ------------------------------------------------------
+   Handle Form Submission (Create Business)
+--------------------------------------------------------- */
+document.getElementById("createBusinessForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  // Required fields
+  const business_name = document.getElementById("business_name").value.trim();
+  const business_contact = document.getElementById("business_contact").value.trim();
+  const business_category = document.getElementById("business_category").value;
+  const business_description = document.getElementById("business_description").value.trim();
+  const is_featured = document.getElementById("is_featured").value;
+  const business_img = document.getElementById("business_img").files[0];
+
+  // Validate required
+  if (!business_name || !business_contact || !business_category) {
+    Swal.fire({
+      icon: "warning",
+      title: "Missing Required Fields",
+      text: "Please fill in business name, contact number and category.",
     });
-
-    // Click on preview to change image
-    imgPreview.addEventListener("click", () => {
-      imgInput.click();
-    });
+    return;
   }
 
-  // Handle Form Submit
-  createForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Creating...';
+  try {
+    const formData = new FormData();
+    formData.append("business_name", business_name);
+    formData.append("business_contact", business_contact);
+    formData.append("business_category", business_category);
+    formData.append("business_description", business_description);
+    formData.append("is_featured", is_featured);
+
+    if (business_img) {
+      formData.append("business_img", business_img);
     }
 
-    try {
-      const formData = new FormData();
-      
-      // Add all form fields to FormData
-      formData.append("business_name", document.getElementById("business_name").value);
-      formData.append("business_contact", document.getElementById("business_contact").value);
-      formData.append("business_email", document.getElementById("business_email").value);
-      formData.append("business_category", document.getElementById("business_category").value);
-      formData.append("business_description", document.getElementById("business_description").value);
-      formData.append("is_featured", document.getElementById("is_featured").value);
-      
-      // Add image if selected
-      if (imgInput.files[0]) {
-        formData.append("business_img", imgInput.files[0]);
-      }
+    // Show loading button state
+    const submitBtn = document.querySelector(".btn-submit");
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm me-2"></span> Creating...`;
 
-      // Validate required fields
-      const requiredFields = [
-        { field: "business_name", name: "Business Name" },
-        { field: "business_contact", name: "Contact Number" },
-        { field: "business_category", name: "Category" },
-        { field: "business_description", name: "Description" }
-      ];
+    const response = await fetch(API_URL, {
+      method: "POST",
+      body: formData,
+    });
 
-      for (const field of requiredFields) {
-        const value = formData.get(field.field);
-        if (!value || String(value).trim() === "") {
-          alert(`Please fill in the ${field.name}`);
-          if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = '<i class="bi bi-check-circle me-2"></i> Create Business';
-          }
-          return;
-        }
-      }
+    const result = await response.json();
 
-      // POST request
-      const response = await fetch(createApiBase, {
-        method: "POST",
-        body: formData
+    if (response.ok && result.status === "success") {
+      Swal.fire({
+        icon: "success",
+        title: "Business Created Successfully!",
+        text: "The new business has been added to the directory.",
+        timer: 2000,
+        showConfirmButton: false,
       });
 
-      const data = await response.json();
-      console.log("Create API Response:", data);
-
-      if (response.ok && (data.status === "success" || data.status === "created")) {
-        // Success - show message and redirect
-        alert("Business created successfully!");
-        
-        // Redirect to admin dashboard after 1 second
-        setTimeout(() => {
-          window.location.href = "admin_index.php";
-        }, 1000);
-      } else {
-        const msg = (data && (data.message || data.error)) ? (data.message || data.error) : "Failed to create business";
-        alert(msg);
-      }
-    } catch (error) {
-      console.error("Error creating business:", error);
-      alert("An error occurred. Please check your connection and try again.");
-    } finally {
-      if (submitBtn) {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = '<i class="bi bi-check-circle me-2"></i> Create Business';
-      }
+      setTimeout(() => {
+        window.location.href = "../src/admin_index.php"; // Redirect to dashboard
+      }, 2000);
+    } else {
+      throw new Error(result.message || "Failed to create business.");
     }
-  });
+
+  } catch (err) {
+    Swal.fire({
+      icon: "error",
+      title: "Error Creating Business",
+      text: err.message,
+    });
+  } finally {
+    const submitBtn = document.querySelector(".btn-submit");
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = `<i class="bi bi-check-circle me-2"></i> Create Business`;
+  }
 });

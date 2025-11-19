@@ -131,55 +131,14 @@ body {
   letter-spacing: 0.5px;
 }
 
-.status-active {
-  background: #d4edda;
-  color: #155724;
-}
-
-.status-inactive {
-  background: #f8d7da;
-  color: #721c24;
-}
-
-/* Social Section */
-.social-section {
-  margin-top: 1.5rem;
-}
-
-.section-title {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #7f8c8d;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 1rem;
-}
-
-.social-links {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.social-link {
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f8f9fa;
-  color: #495057;
-  border-radius: 12px;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  font-size: 1.2rem;
-}
-
-.social-link:hover {
-  background: #3498db;
+.active-badge {
+  background-color: #28a745;
   color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.inactive-badge {
+  background-color: #dc3545;
+  color: white;
 }
 
 /* Details Card */
