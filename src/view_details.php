@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/view_details.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -55,9 +56,9 @@
             <a href="../src/update_business.php?id=" id="editBtn" class="btn-action btn-edit">
               <i class="bi bi-pencil-fill"></i> Edit 
             </a>
-            <a href="#" id="deleteBtn" class="btn-action btn-delete">
-                <i class="bi bi-trash-fill"></i> Delete
-            </a>
+            <button id="btn-deactivate" class="btn-action btn-delete">
+                <i class="bi bi-trash-fill"></i> Deactivate
+            </button>
           </div>
         </div>
         
@@ -94,5 +95,6 @@
 
   <!-- External JavaScript -->
   <script src="../src/view_details.js"></script>
+  <script src="../src/deactivate_business.js"></script>
 </body>
 </html>

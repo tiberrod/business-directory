@@ -22,6 +22,7 @@ const featuredFilter = document.getElementById("featureFilter");
 const statusFilter = document.getElementById("statusFilter");
 
 // Load Businesses (supports pagination + search)
+// Load Businesses (supports pagination + search)
 function loadBusinesses(searchTerm = "", page = 1) {
   activeSearchTerm = searchTerm;
   currentPage = page;
@@ -52,26 +53,16 @@ function loadBusinesses(searchTerm = "", page = 1) {
     .then(data => {
       console.log("API response:", data);
 
-      // API returns data.data (array) and pagination info
-      const items = Array.isArray(data.data) ? data.data : (Array.isArray(data) ? data : []);
-      const resultsCount = data.results_count || items.length;
+      const items = Array.isArray(data.data) ? data.data : [];
       const pagination = data.pagination || {};
-      const serverPage = pagination.current_page ? Number(pagination.current_page) : page;
 
       allBusinesses = items;
 
-      // If API already returns a paged slice, use it. Otherwise slice client-side.
-      let displayed = items;
-      if (!pagination.current_page || items.length > perPage) {
-        const start = (page - 1) * perPage;
-        displayed = items.slice(start, start + perPage);
-      }
+      // Use API-provided pagination info if available
+      totalPages = pagination.total_pages ? Number(pagination.total_pages) : Math.max(1, Math.ceil((data.results_count || items.length) / perPage));
+      currentPage = pagination.current_page ? Number(pagination.current_page) : page;
 
-      // set totals for pager
-      totalPages = Math.max(1, Math.ceil((data.results_count || items.length) / perPage));
-      currentPage = serverPage;
-
-      renderPage(displayed);
+      renderPage(items); // API returns paged data
     })
     .catch(err => {
       console.error("Error fetching businesses:", err);
@@ -113,8 +104,8 @@ function renderPage(pageBusinesses) {
           <h6 class="card-title mb-1">${name}</h6>
           <p class="text-muted small mb-3">${category}</p>
           <div class="mt-auto d-flex gap-2 justify-content-center">
-            <a href="view_details.php?id=${encodeURIComponent(id)}" class="btn btn-sm btn-primary">View Details</a>
-            <a href="update_business.php?id=${encodeURIComponent(id)}" class="btn btn-sm btn-outline-secondary">Edit</a>
+            <a href="view_details.php?id=${encodeURIComponent(id)}" class="btn-view btn-primary ">View Details</a>
+            <a href="update_business.php?id=${encodeURIComponent(id)}" class="btn-edit btn-outline-secondary">Edit</a>
           </div>
         </div>
       </div>
@@ -122,41 +113,42 @@ function renderPage(pageBusinesses) {
 
     businessContainer.appendChild(col);
   });
-
+  console.log("currentPage:", currentPage, "totalPages:", totalPages);
   renderPagination();
 }
 
 // Render pagination with Next/Prev
 function renderPagination() {
   paginationContainer.innerHTML = "";
+// No pagination needed
 
+  // Previous button
   const prevLi = document.createElement("li");
   prevLi.className = "page-item " + (currentPage <= 1 ? "disabled" : "");
   prevLi.innerHTML = `<button class="page-link">Previous</button>`;
   prevLi.onclick = () => { if (currentPage > 1) loadBusinesses(activeSearchTerm, currentPage - 1); };
   paginationContainer.appendChild(prevLi);
 
-  const pageInfo = document.createElement("li");
-  pageInfo.className = "page-item disabled";
-  pageInfo.innerHTML = `<span class="page-link">Page ${currentPage} of ${totalPages}</span>`;
-  paginationContainer.appendChild(pageInfo);
+  // Page numbers (optional: show 5 pages around current)
+  const maxVisible = 5;
+  const startPage = Math.max(1, currentPage - Math.floor(maxVisible / 2));
+  const endPage = Math.min(totalPages, startPage + maxVisible - 1);
 
+  for (let i = startPage; i <= endPage; i++) {
+    const li = document.createElement("li");
+    li.className = "page-item " + (i === currentPage ? "active" : "");
+    li.innerHTML = `<button class="page-link">${i}</button>`;
+    li.onclick = () => loadBusinesses(activeSearchTerm, i);
+    paginationContainer.appendChild(li);
+  }
+
+  // Next button
   const nextLi = document.createElement("li");
   nextLi.className = "page-item " + (currentPage >= totalPages ? "disabled" : "");
   nextLi.innerHTML = `<button class="page-link">Next</button>`;
   nextLi.onclick = () => { if (currentPage < totalPages) loadBusinesses(activeSearchTerm, currentPage + 1); };
   paginationContainer.appendChild(nextLi);
 }
-
-// Event: View Details Button (delegate)
-businessContainer.addEventListener("click", e => {
-  const btn = e.target.closest(".view-details");
-  if (!btn) return;
-  const id = btn.getAttribute("data-id");
-  const found = allBusinesses.find(b => String(b.id || b.business_id) === String(id));
-  if (found) showModal(found);
-  else console.warn("Business not found in current list.");
-});
 
 // ===== HERO SEARCH EVENTS =====
 // Hero search button

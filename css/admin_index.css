@@ -397,6 +397,60 @@
   height: 300px;
 }
 
+.btn-edit {
+  border-radius: 15px;
+  border: 1px solid #8e8e8e;
+  padding: 7px 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: #495057;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-edit:hover {
+  background-color: #495057;
+  color: #fff;
+  border-color: #495057;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(73, 80, 87, 0.3);
+  text-decoration: none;
+}
+
+.btn-edit:active {
+  transform: translateY(0);
+}
+
+.btn-view {
+  border-radius: 15px;
+  background-color: #213550;
+  color: #fff;
+  padding: 7px 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid #213550;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-view:hover {
+  background-color: #1a2a3f;
+  border-color: #1a2a3f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(33, 53, 80, 0.4);
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-view:active {
+  transform: translateY(0);
+}
+
 /* Scroll Animation */
 .listing-card,
 .category-card {

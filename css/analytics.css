@@ -1,0 +1,168 @@
+/* Analytics Section Container */
+.analytics-section {
+  background: #f8f9fa;
+  margin-top: 3rem;
+}
+
+.analytics-section .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Analytics Dashboard Container - 2x3 Grid */
+#analytics-dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Analytics Card Base */
+#analytics-dashboard .card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+#analytics-dashboard .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Headings */
+#analytics-dashboard .card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Card Values */
+#analytics-dashboard .card p {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: #2c3e50;
+  font-family: 'Inter', sans-serif;
+  line-height: 1;
+}
+
+/* Specific Card Colors - Row 1 */
+#analytics-dashboard .card:nth-child(1) {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+#analytics-dashboard .card:nth-child(1) h3,
+#analytics-dashboard .card:nth-child(1) p {
+  color: white;
+}
+
+#analytics-dashboard .card:nth-child(2) {
+  background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
+}
+
+#analytics-dashboard .card:nth-child(2) h3,
+#analytics-dashboard .card:nth-child(2) p {
+  color: white;
+}
+
+#analytics-dashboard .card:nth-child(3) {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+}
+
+#analytics-dashboard .card:nth-child(3) h3,
+#analytics-dashboard .card:nth-child(3) p {
+  color: white;
+}
+
+/* Specific Card Colors - Row 2 */
+#analytics-dashboard .card:nth-child(4) {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+#analytics-dashboard .card:nth-child(4) h3,
+#analytics-dashboard .card:nth-child(4) p {
+  color: white;
+}
+
+#analytics-dashboard .card:nth-child(5) {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+#analytics-dashboard .card:nth-child(5) h3,
+#analytics-dashboard .card:nth-child(5) p {
+  color: white;
+}
+
+#analytics-dashboard .card:nth-child(6) {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+#analytics-dashboard .card:nth-child(6) h3,
+#analytics-dashboard .card:nth-child(6) p {
+  color: white;
+}
+
+/* Icon Addition (Optional) */
+#analytics-dashboard .card::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  #analytics-dashboard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  #analytics-dashboard {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  #analytics-dashboard .card {
+    padding: 1.5rem;
+  }
+  
+  #analytics-dashboard .card h3 {
+    font-size: 0.85rem;
+  }
+  
+  #analytics-dashboard .card p {
+    font-size: 2rem;
+  }
+  
+  .analytics-section .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #analytics-dashboard .card {
+    padding: 1.25rem;
+  }
+  
+  #analytics-dashboard .card p { 
+    font-size: 1.75rem;
+  }
+}

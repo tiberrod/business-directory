@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/admin_index.css">
+  <link rel="stylesheet" href="../css/analytics.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
@@ -28,7 +29,7 @@
           <a href="../src/create_business.php" class="btn btn-outline-light px-4">
             <i class="bi bi-plus-circle me-2"></i>Create Business
           </a>
-          <a href="status-management.php" class="btn btn-outline-light">
+          <a href="status-management.php" class="btn btn-outline-light disabled" tabindex="-1" aria-disabled="true">
             <i class="bi bi-gear me-2"></i>Status Management
           </a>
         </div>
@@ -96,86 +97,39 @@
       </nav>
     </section>
 
-    <!-- Category Cards -->
-    <section class="category-section py-5">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-6 col-md-4 col-lg-2">
-            <div class="category-card text-center p-4 bg-white shadow-sm rounded">
-              <div class="category-icon mb-3">
-                <i class="bi bi-shop fs-1 text-danger"></i>
-              </div>
-              <h6 class="mb-0">Restaurant</h6>
-            </div>
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-            <div class="category-card text-center p-4 bg-white shadow-sm rounded">
-              <div class="category-icon mb-3">
-                <i class="bi bi-cart fs-1 text-danger"></i>
-              </div>
-              <h6 class="mb-0">Shopping</h6>
-            </div>
-          </div>
-          <!-- Repeat for other categories -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Listings Section -->
     <!-- Will probably add section for analytics and summaries here (dashboard style) --> 
-    <section class="listings-section py-5 bg-light">
+    <section class="analytics-section py-5">
       <div class="container">
-        <div class="text-center mb-5">
-          <p class="text-danger text-uppercase mb-2">Our Latest Listings</p>
-          <h2 class="display-5 fw-bold">New Listings in Our Directory</h2>
-          <p class="text-muted">Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
-        </div>
-
-        <div class="row g-4">
-          <!-- Listing Card 1 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="listing-card card h-100 border-0 shadow-sm">
-              <div class="position-relative">
-                <span class="badge bg-success position-absolute top-0 start-0 m-3">Cemetery</span>
-                <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-3 rounded-circle">
-                  <i class="bi bi-heart"></i>
-                </button>
-              </div>
-              <div class="card-body">
-                <div class="d-flex align-items-center mb-2">
-                  <small class="text-muted">Allina Power</small>
-                </div>
-                <h5 class="card-title">Dr. Frances Sutton</h5>
-                <p class="card-text small text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                
-                <div class="d-flex align-items-center text-muted small mb-2">
-                  <i class="bi bi-geo-alt me-1"></i>
-                  <span>1845, GHA, USA (Contabilia)</span>
-                </div>
-                <div class="d-flex align-items-center text-muted small mb-3">
-                  <i class="bi bi-clock me-1"></i>
-                  <span>Sunday - Friday: 9am - 5pm</span>
-                </div>
-
-                <div class="d-flex justify-content-between align-items-center">
-                  <h4 class="text-danger mb-0">$50</h4>
-                  <button class="btn btn-outline-danger btn-sm">Appointment</button>
-                </div>
-              </div>
-              
-              <!-- Hover Action Buttons -->
-              <div class="card-hover-actions">
-                <button class="btn btn-light btn-sm rounded-circle"><i class="bi bi-share"></i></button>
-                <button class="btn btn-light btn-sm rounded-circle"><i class="bi bi-bookmark"></i></button>
-                <button class="btn btn-light btn-sm rounded-circle"><i class="bi bi-eye"></i></button>
-              </div>
-            </div>
+        <h3 class="section-title mb-4">Summaries of the Directory</h3>
+        <div id="analytics-dashboard">
+          <div class="card">
+            <h3>Total Businesses</h3>
+            <p id="total_businesses">0</p>
           </div>
-
-          <!-- Repeat for other listings -->
+          <div class="card">
+            <h3>Active Businesses</h3>
+            <p id="active_businesses">0</p>
+          </div>
+          <div class="card">
+            <h3>Inactive Businesses</h3>
+            <p id="inactive_businesses">0</p>
+          </div>
+          <div class="card">
+            <h3>Featured Businesses</h3>
+            <p id="featured_businesses">0</p>
+          </div>
+          <div class="card">
+            <h3>Activation Rate</h3>
+            <p id="activation_rate">0%</p>
+          </div>
+          <div class="card">
+            <h3>Featured Rate</h3>
+            <p id="featured_rate">0%</p>
+          </div>
         </div>
       </div>
     </section>
+
 
     <!-- Features Section -->
     <section class="features-section py-5">
@@ -231,6 +185,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../src/main.js"></script>
+  <script src="../src/analytics.js"></script>
 
   <!-- Sticky Header Script -->
   <script>
