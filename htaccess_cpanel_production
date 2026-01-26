@@ -1,0 +1,205 @@
+# Business Directory API - cPanel Production .htaccess
+# Optimized for cPanel hosting environments
+
+# Enable URL rewriting
+RewriteEngine On
+
+# cPanel compatibility settings
+Options +FollowSymLinks -Indexes
+DirectoryIndex index.php
+
+# Security: Prevent access to configuration and sensitive files
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak|config)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Prevent access to app directory files directly
+RewriteRule ^app/ - [F,L]
+
+# Allow access to public directory
+RewriteRule ^public/ - [L]
+
+# API URL Rewriting - Fixed routing for v1 API and legacy support
+
+# Handle v1 API endpoints with ID: /api/v1/business/123, /api/v1/reactivate/123
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/v1/business/([0-9]+)/?$ index.php?endpoint=business&id=$1 [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/v1/reactivate/([0-9]+)/?$ index.php?endpoint=reactivate&id=$1 [QSA,L]
+
+# Handle v1 API endpoints: /api/v1/business, /api/v1/search, /api/v1/analytics
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/v1/business/?$ index.php?endpoint=business [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/v1/search/?$ index.php?endpoint=search [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/v1/analytics/?$ index.php?endpoint=analytics [QSA,L]
+
+# Handle legacy business endpoints with ID: /api/business/123  
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/business/([0-9]+)/?$ index.php?endpoint=business&id=$1 [QSA,L]
+
+# Handle business search: /api/business/search
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/business/search/?$ index.php?endpoint=search [QSA,L]
+
+# Handle general business endpoint: /api/business
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/business/?$ index.php?endpoint=business [QSA,L]
+
+# Handle search endpoint: /api/search
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/search/?$ index.php?endpoint=search [QSA,L]
+
+# Handle analytics endpoint: /api/analytics
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/analytics/?$ index.php?endpoint=analytics [QSA,L]
+
+# Handle reactivate endpoint: /api/reactivate
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/reactivate/([0-9]+)/?$ index.php?endpoint=reactivate&id=$1 [QSA,L]
+
+# Handle API info: /api/info or /api
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/info/?$ index.php?endpoint=info [QSA,L]
+
+# Handle bare /api - redirect to API info
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/?$ index.php?endpoint=info [QSA,L]
+
+# Fallback for any other API routes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/(.*)$ index.php?endpoint=$1 [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/business/?$ index.php?endpoint=business [QSA,L]
+
+# Analytics endpoint: /api/analytics
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/analytics/?$ index.php?endpoint=analytics [QSA,L]
+
+# Search endpoint: /api/search
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/search/?$ index.php?endpoint=search [QSA,L]
+
+# Reactivate endpoint: /api/reactivate
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/reactivate/?$ index.php?endpoint=reactivate [QSA,L]
+
+# Handle direct file access to documentation and test folders
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(documentation|test|public)/(.*)$ $0 [L]
+
+# Fallback: redirect /api to index.php for basic API info
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/?$ index.php [QSA,L]
+
+# Error handling - redirect 404s to API for graceful error responses
+ErrorDocument 404 /index.php
+
+# CORS Headers for API access
+<IfModule mod_headers.c>
+    # Allow cross-origin requests for API endpoints
+    SetEnvIf Request_URI "^/?(index\.php|api/)" CORS=1
+    Header always set Access-Control-Allow-Origin "*" env=CORS
+    Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS" env=CORS
+    Header always set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With" env=CORS
+    Header always set Access-Control-Max-Age "3600" env=CORS
+    
+    # Handle preflight OPTIONS requests
+    RewriteCond %{REQUEST_METHOD} OPTIONS
+    RewriteRule .* index.php [L]
+</IfModule>
+
+# Performance optimizations
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Images
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    
+    # CSS and JavaScript
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType text/javascript "access plus 1 week"
+    
+    # HTML and API responses (shorter cache for dynamic content)
+    ExpiresByType text/html "access plus 1 hour"
+    ExpiresByType application/json "access plus 5 minutes"
+</IfModule>
+
+# Compression for better performance
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+    # Prevent clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # Prevent MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # Enable XSS protection
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Referrer policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# PHP Configuration optimizations for cPanel
+<IfModule mod_php.c>
+    # Increase upload limits for image uploads
+    php_value upload_max_filesize 5M
+    php_value post_max_size 5M
+    php_value max_execution_time 30
+    php_value memory_limit 128M
+    
+    # Error handling
+    php_flag log_errors on
+    php_flag display_errors off
+    php_value error_log error_log
+</IfModule>
+
+# Alternative PHP configuration for PHP as CGI
+<IfModule mod_suphp.c>
+    suPHP_ConfigPath /home/your_username/public_html
+</IfModule>

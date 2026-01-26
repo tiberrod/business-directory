@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apploqic Business Directory API - Interactive Documentation</title>
+    <meta name="description" content="Secure Interactive API Documentation for Apploqic Business Directory">
+    <link rel="icon" type="image/webp" href="assets/apploqic-logo.webp">
+    <link rel="stylesheet" href="css/interactive-docs.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginContainer" class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <h1>🔐 API Documentation Access</h1>
+                <p>Secure login required to access Apploqic Business Directory API documentation</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required autocomplete="current-password">
+                </div>
+                <button type="submit" class="login-btn">Access Documentation</button>
+                <div id="errorMessage" class="error-message"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Documentation Interface -->
+    <div id="mainContainer" class="main-container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">A</div>
+                    <h1 class="header-title">Apploqic Business Directory API</h1>
+                </div>
+                <div class="header-actions">
+                    <select id="versionFilter" class="version-filter">
+                        <option value="v1">API Version 1.0</option>
+                        <option value="v2" disabled>API Version 2.0 (Coming Soon)</option>
+                    </select>
+                    <button id="logoutBtn" class="logout-btn">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            <aside class="sidebar">
+                <h3>📚 API Endpoints</h3>
+                <div style="margin-bottom: 15px; font-size: 12px; color: #666;">
+                    <div><span style="color: #28a745;">🟢 Client</span> - Open access</div>
+                    <div><span style="color: #ffc107;">🟡 Admin</span> - Requires admin role</div>
+                </div>
+                <ul class="endpoint-list">
+                    <li class="endpoint-item">
+                        <a href="#" class="endpoint-link" data-endpoint="overview">
+                            <span class="method-tag method-get">INFO</span>
+                            API Overview
+                        </a>
+                    </li>
+                    <li class="endpoint-item">
+                        <a href="#" class="endpoint-link" data-endpoint="business-index">
+                            <span class="method-tag method-get">GET</span>
+                            <span style="color: #28a745;">🟢</span> /api/v1/business
+                        </a>
+                    </li>
+                    <li class="endpoint-item">
+                        <a href="#" class="endpoint-link" data-endpoint="business-show">
+                            <span class="method-tag method-get">GET</span>
+                            <span style="color: #28a745;">🟢</span> /api/v1/business/{id}
+                        </a>
+                    </li>
+                    <li class="endpoint-item">
+                        <a href="#" class="endpoint-link" data-endpoint="business-search">
+                            <span class="method-tag method-get">GET</span>
+                            <span style="color: #28a745;">🟢</span> /api/v1/search
+                        </a>
+                    </li>
+                    <li class="endpoint-item">
+                        <a href="#" class="endpoint-link" data-endpoint="business-store">
+                            <span class="method-tag method-post">POST</span>
+                            <span style="color: #ffc107;">🟡</span> /api/v1/business
+                        </a>
+                    </li>
+                    <li class="endpoint-item">
+                        <a href="#" class="endpoint-link" data-endpoint="business-update">
+                            <span class="method-tag method-put">PUT</span>
+                            <span style="color: #ffc107;">🟡</span> /api/v1/business
+                        </a>
+                    </li>
+                    <li class="endpoint-item">
+                        <a href="#" class="endpoint-link" data-endpoint="business-delete">
+                            <span class="method-tag method-delete">DELETE</span>
+                            <span style="color: #ffc107;">🟡</span> /api/v1/business
+                        </a>
+                    </li>
+                    <li class="endpoint-item">
+                        <a href="#" class="endpoint-link" data-endpoint="analytics">
+                            <span class="method-tag method-get">GET</span>
+                            <span style="color: #ffc107;">🟡</span> /api/v1/analytics
+                        </a>
+                    </li>
+                    <li class="endpoint-item">
+                        <a href="#" class="endpoint-link" data-endpoint="reactivate">
+                            <span class="method-tag method-put">PUT</span>
+                            <span style="color: #ffc107;">🟡</span> /api/v1/reactivate/{id}
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+
+            <main class="main-content">
+                <!-- Welcome/Overview Section -->
+                <div id="overview" class="endpoint-details active">
+                    <div class="welcome-message">
+                        <h2>🎉 Welcome to Apploqic API Documentation!</h2>
+                        <p>You have successfully authenticated and now have access to our comprehensive Business Directory API documentation.</p>
+                        
+                        <div class="api-stats">
+                            <div class="stat-card">
+                                <span class="stat-number">9</span>
+                                <div class="stat-label">Available Endpoints</div>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">v1.0</span>
+                                <div class="stat-label">Current Version</div>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">REST</span>
+                                <div class="stat-label">API Type</div>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">JSON</span>
+                                <div class="stat-label">Response Format</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h4>🚀 Available Features</h4>
+                        <ul style="color: var(--text-secondary); line-height: 2;">
+                            <li>✅ Complete CRUD operations for business listings</li>
+                            <li>✅ Enhanced search with multiple filters (v1.1.0)</li>
+                            <li>✅ Pagination support for large datasets</li>
+                            <li>✅ 30-day expiry tracking system (v1.1.0)</li>
+                            <li>✅ Image URL generation for production</li>
+                            <li>✅ Status management (active/inactive)</li>
+                            <li>✅ Featured business highlighting</li>
+                            <li>✅ Business reactivation with expiry renewal</li>
+                            <li>✅ Analytics and statistics (admin only)</li>
+                            <li>✅ Category-based filtering</li>
+                            <li>✅ Empty search shows all businesses</li>
+                            <li>✅ Live API testing interface</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <h4>📝 Recent Updates & Patches</h4>
+                        <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 6px; border-left: 4px solid var(--accent-green);">
+                            <strong>Version 1.1.0 - Enhanced Interactive</strong><br>
+                            <small style="color: var(--text-secondary);">Released: November 2024</small>
+                            <ul style="margin-top: 0.5rem; color: var(--text-secondary);">
+                                <li>Added live API testing interface with real responses</li>
+                                <li>Enhanced search functionality with expiry tracking</li>
+                                <li>Implemented 30-day automatic expiry system</li>
+                                <li>Added business reactivation with expiry renewal</li>
+                                <li>Improved analytics endpoint with admin access control</li>
+                                <li>Enhanced image URL handling for production environments</li>
+                                <li>Added comprehensive error handling and validation</li>
+                                <li>Separated CSS and JavaScript for better maintainability</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Index Endpoint -->
+                <div id="business-index" class="endpoint-details">
+                    <div class="endpoint-header">
+                        <span class="method-tag method-get">GET</span>
+                        <h3 class="endpoint-title">Get All Businesses</h3>
+                        <span style="background: #28a745; color: white; padding: 4px 8px; border-radius: 12px; font-size: 11px; font-weight: bold;">🟢 CLIENT ACCESS</span>
+                    </div>
+                    
+                    <div class="endpoint-url">GET /api/v1/business</div>
+                    
+                    <div class="section">
+                        <h4>🔐 Access Level</h4>
+                        <p><strong>Client Access:</strong> This endpoint is open for all users. No authentication required at API level (handled by frontend).</p>
+                    </div>
+
+                    <div class="section">
+                        <h4>📋 Description</h4>
+                        <p>Retrieve a paginated list of all business listings with optional filtering capabilities.</p>
+                    </div>
+
+                    <div class="section">
+                        <h4>🔧 Query Parameters</h4>
+                        <table class="params-table">
+                            <thead>
+                                <tr>
+                                    <th>Parameter</th>
+                                    <th>Type</th>
+                                    <th>Required</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>page</td>
+                                    <td>integer</td>
+                                    <td>No</td>
+                                    <td>Page number for pagination (default: 1)</td>
+                                </tr>
+                                <tr>
+                                    <td>category</td>
+                                    <td>string</td>
+                                    <td>No</td>
+                                    <td>Filter by business category</td>
+                                </tr>
+                                <tr>
+                                    <td>featured</td>
+                                    <td>boolean</td>
+                                    <td>No</td>
+                                    <td>Filter featured businesses (1 or 0)</td>
+                                </tr>
+                                <tr>
+                                    <td>status</td>
+                                    <td>string</td>
+                                    <td>No</td>
+                                    <td>Filter by status: "active" or "inactive" (default: active)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="section">
+                        <h4>🧪 API Tester</h4>
+                        <div class="api-tester">
+                            <h5>Test this endpoint with live data</h5>
+                            <form id="test-form-business-index" class="test-form">
+                                <div class="test-input-group">
+                                    <label for="param-business-index-page">page (integer) - Optional</label>
+                                    <input type="number" id="param-business-index-page" name="page" placeholder="Page number for pagination (default: 1)" min="1">
+                                    <small>Page number for pagination (default: 1)</small>
+                                </div>
+                                <div class="test-input-group">
+                                    <label for="param-business-index-category">category (string) - Optional</label>
+                                    <input type="text" id="param-business-index-category" name="category" placeholder="e.g., restaurant, retail, service">
+                                    <small>Filter by business category</small>
+                                </div>
+                                <div class="test-input-group">
+                                    <label for="param-business-index-featured">featured (boolean) - Optional</label>
+                                    <select id="param-business-index-featured" name="featured">
+                                        <option value="">-- Select --</option>
+                                        <option value="1">Yes (1)</option>
+                                        <option value="0">No (0)</option>
+                                    </select>
+                                    <small>Filter featured businesses (1 or 0)</small>
+                                </div>
+                                <div class="test-input-group">
+                                    <label for="param-business-index-status">status (string) - Optional</label>
+                                    <select id="param-business-index-status" name="status">
+                                        <option value="">-- Select --</option>
+                                        <option value="active" selected>Active</option>
+                                        <option value="inactive">Inactive</option>
+                                    </select>
+                                    <small>Filter by status: "active" or "inactive" (default: active)</small>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <button type="submit" class="test-btn" id="test-btn-business-index">
+                                        <span class="btn-text">Send Request</span>
+                                    </button>
+                                    <button type="button" class="test-btn clear-btn" onclick="clearBusinessIndexForm()">
+                                        Clear
+                                    </button>
+                                </div>
+                            </form>
+                            <div id="response-container-business-index" class="response-container" style="display: none;">
+                                <div class="response-header">
+                                    <div>
+                                        <span id="response-status-business-index" class="response-status"></span>
+                                    </div>
+                                    <div id="response-time-business-index" class="response-time"></div>
+                                </div>
+                                <div id="response-body-business-index" class="response-body"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h4>📤 Response Example</h4>
+                        <pre class="response-example">{
+  "status": "success",
+  "data": [
+    {
+      "id": 1,
+      "business_name": "Sample Restaurant",
+      "business_contact": "123-456-7890",
+      "business_description": "Great food and atmosphere",
+      "business_category": "restaurant",
+      "business_img_url": "https://example.com/images/sample.jpg",
+      "status": 1,
+      "is_featured": 1,
+      "created_at": "2024-11-01 10:00:00",
+      "expiry_date": "2024-12-01 10:00:00"
+    }
+  ],
+  "pagination": {
+    "current_page": 1,
+    "per_page": 10,
+    "total": 25,
+    "total_pages": 3
+  },
+  "filters_applied": {
+    "category": "",
+    "status": "active",
+    "featured": null
+  },
+  "api_version": "v1"
+}</pre>
+                    </div>
+                </div>
+
+                <!-- Additional endpoint details will be dynamically loaded -->
+                
+            </main>
+        </div>
+    </div>
+
+    <script src="js/interactive-docs.js?v=20241110-3"></script>
+    <script>
+        // Standalone business index form handler - completely independent
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, setting up business index form');
+            
+            // Define our own base API URL function
+            function getBaseApiUrl() {
+                const hostname = window.location.hostname;
+                if (hostname === 'localhost' || hostname === '127.0.0.1') {
+                    return window.location.origin + '/Apploqic_Business_Directory';
+                }
+                return window.location.origin;
+            }
+            
+            // Wait a bit for page to fully load
+            setTimeout(() => {
+                const form = document.getElementById('test-form-business-index');
+                if (form) {
+                    console.log('Business index form found, binding event listener');
+                    
+                    form.addEventListener('submit', async function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        console.log('Form submitted - testing business-index endpoint');
+                        
+                        // Get form elements
+                        const testBtn = document.getElementById('test-btn-business-index');
+                        const responseContainer = document.getElementById('response-container-business-index');
+                        const responseStatus = document.getElementById('response-status-business-index');
+                        const responseTime = document.getElementById('response-time-business-index');
+                        const responseBody = document.getElementById('response-body-business-index');
+                        
+                        if (!testBtn || !responseContainer) {
+                            console.error('Required elements not found');
+                            console.log('testBtn:', testBtn, 'responseContainer:', responseContainer);
+                            return false;
+                        }
+                        
+                        // Show loading state
+                        testBtn.disabled = true;
+                        testBtn.innerHTML = '<span class="loading-spinner"></span>Sending...';
+                        responseContainer.style.display = 'none';
+                        
+                        try {
+                            const startTime = Date.now();
+                            const formData = new FormData(e.target);
+                            
+                            // Build URL with query parameters
+                            const baseUrl = getBaseApiUrl();
+                            let url = `${baseUrl}/index.php?endpoint=business`;
+                            const params = new URLSearchParams();
+                            
+                            for (const [key, value] of formData.entries()) {
+                                if (value && value.trim() !== '') {
+                                    params.append(key, value);
+                                }
+                            }
+                            
+                            if (params.toString()) {
+                                url += `&${params.toString()}`;
+                            }
+                            
+                            console.log('Making request to:', url);
+                            console.log('Base URL:', baseUrl);
+                            
+                            const response = await fetch(url, {
+                                method: 'GET',
+                                headers: {
+                                    'Accept': 'application/json',
+                                    'Content-Type': 'application/json'
+                                }
+                            });
+                            
+                            const endTime = Date.now();
+                            console.log('Response received:', response.status, response.statusText);
+                            
+                            // Show response
+                            responseContainer.style.display = 'block';
+                            responseStatus.textContent = `${response.status} ${response.statusText}`;
+                            responseStatus.className = `response-status ${response.ok ? 'status-success' : 'status-error'}`;
+                            responseTime.textContent = `${endTime - startTime}ms`;
+                            
+                            const responseText = await response.text();
+                            let formattedResponse;
+                            
+                            try {
+                                const jsonData = JSON.parse(responseText);
+                                formattedResponse = JSON.stringify(jsonData, null, 2);
+                            } catch (parseError) {
+                                console.warn('Response is not valid JSON:', parseError);
+                                formattedResponse = responseText;
+                            }
+                            
+                            responseBody.textContent = formattedResponse;
+                            console.log('Response displayed successfully');
+                            
+                        } catch (error) {
+                            console.error('API request failed:', error);
+                            responseContainer.style.display = 'block';
+                            responseStatus.textContent = 'Network Error';
+                            responseStatus.className = 'response-status status-error';
+                            responseTime.textContent = 'Failed';
+                            responseBody.textContent = `Error: ${error.message}`;
+                        } finally {
+                            // Reset button state
+                            testBtn.disabled = false;
+                            testBtn.innerHTML = '<span class="btn-text">Send Request</span>';
+                        }
+                        
+                        return false; // Prevent any default behavior
+                    });
+                    
+                    console.log('Form event listener bound successfully');
+                } else {
+                    console.error('Business index form not found');
+                    console.log('Available forms:', document.querySelectorAll('form'));
+                }
+            }, 2000); // Increased delay even more
+        });
+        
+        // Custom clear function for the static form
+        function clearBusinessIndexForm() {
+            const form = document.getElementById('test-form-business-index');
+            if (form) {
+                form.reset();
+                const responseContainer = document.getElementById('response-container-business-index');
+                if (responseContainer) {
+                    responseContainer.style.display = 'none';
+                }
+                console.log('Form cleared');
+            }
+        }
+    </script>
+</body>
+</html>

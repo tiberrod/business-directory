@@ -1,0 +1,155 @@
+/* ==============================
+   ADMIN DASHBOARD STYLES
+   ============================== */
+
+.admin-header {
+  background: #183A8A;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-header h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.admin-header .btn {
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.admin-header .btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Card hover animation */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-img-top {
+  height: 150px; /* Set a fixed height */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.business-card {
+  margin-bottom: 1.5rem; /* Space between cards */
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Filter section */
+.filters select {
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  margin-left: 0.5rem;
+}
+
+.filters select:focus {
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.25);
+  border-color: #007bff;
+}
+
+/* Search input */
+.input-group input {
+  border-radius: 8px;
+  transition: box-shadow 0.2s ease;
+}
+
+.input-group input:focus {
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.25);
+}
+
+/* Pagination styling */
+.pagination .page-link {
+  border-radius: 6px;
+  color: #007bff;
+  transition: background 0.2s, color 0.2s;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.pagination .page-link:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Toast-like alert popup */
+.alert-toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1050;
+}
+
+.alert-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Form improvements */
+.inner-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* Status styling */
+.status-pill {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.status-active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-inactive {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Details container */
+.details-container {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.meta p {
+  margin-bottom: 0.5rem;
+}
+
+.business-description {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+/* Image preview */
+.img-preview {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 8px;
+}

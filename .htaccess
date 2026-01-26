@@ -1,0 +1,79 @@
+# Business Directory API - cPanel Production .htaccess
+# Optimized for cPanel hosting environments
+
+RewriteEngine On
+
+# cPanel compatibility settings
+Options +FollowSymLinks
+Options -Indexes
+
+# PRIORITY: Serve static files directly (images, CSS, JS, etc.)
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^images/ - [L]
+
+RewriteCond %{REQUEST_FILENAME} -f  
+RewriteRule ^(assets|css|js|public)/ - [L]
+
+# Handle v1 API endpoints with ID: /api/v1/business/123, /api/v1/reactivate/123
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/v1/business/([0-9]+)/?$ index.php?endpoint=business&id=$1 [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/v1/reactivate/([0-9]+)/?$ index.php?endpoint=reactivate&id=$1 [QSA,L]
+
+# Handle v1 API endpoints: /api/v1/business, /api/v1/search, /api/v1/analytics
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/v1/business/?$ index.php?endpoint=business [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/v1/search/?$ index.php?endpoint=search [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/v1/analytics/?$ index.php?endpoint=analytics [QSA,L]
+
+# Handle legacy business endpoints with ID: /api/business/123
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/business/([0-9]+)/?$ index.php?endpoint=business&id=$1 [QSA,L]
+
+# Handle business search: /api/business/search
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/business/search/?$ index.php?endpoint=search [QSA,L]
+
+# Handle general business endpoint: /api/business
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/business/?$ index.php?endpoint=business [QSA,L]
+
+# Handle search endpoint: /api/search
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/search/?$ index.php?endpoint=search [QSA,L]
+
+# Handle API info: /api/info or /api
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/info/?$ index.php?endpoint=info [QSA,L]
+
+# Handle bare /api - redirect to API info
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/?$ index.php?endpoint=info [QSA,L]
+
+# Fallback for any other API routes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/(.*)$ index.php?endpoint=$1 [QSA,L]
+
+# Handle direct file access to documentation and test folders
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(documentation|test|public)/(.*)$ $0 [L]
+
+# Error handling for cPanel - only for API endpoints
+ErrorDocument 404 /404.html
