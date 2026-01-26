@@ -1,0 +1,28 @@
+RewriteEngine On
+
+# Handle API v1 routes
+RewriteRule ^api/v1/(.*)$ api-v1.php [QSA,L]
+
+# Handle legacy API routes (redirect to v1)
+RewriteRule ^api/business/?(.*)$ api/v1/business/$1 [R=301,L]
+RewriteRule ^api/search/?(.*)$ api/v1/search/$1 [R=301,L]
+RewriteRule ^api/analytics/?(.*)$ api/v1/analytics/$1 [R=301,L]
+RewriteRule ^api/reactivate/?(.*)$ api/v1/reactivate/$1 [R=301,L]
+
+# Default API route (no version specified) goes to v1
+RewriteRule ^api/(?!v[0-9])(.*)$ api/v1/$1 [R=301,L]
+
+# Handle documentation routes
+RewriteRule ^docs/?(.*)$ ../documentation/index.php [QSA,L]
+RewriteRule ^documentation/?(.*)$ ../documentation/index.php [QSA,L]
+
+# Handle static files normally
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Handle directory requests
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Fallback to index.php for other requests
+RewriteRule . index.php [L]

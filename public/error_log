@@ -1,0 +1,1234 @@
+[13-Nov-2025 22:07:42 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[13-Nov-2025 22:07:42 UTC] API Debug - Path: /public/api-v1.php
+[13-Nov-2025 22:07:42 UTC] API Debug - Final endpoint: business
+[13-Nov-2025 22:07:42 UTC] API Debug - Final id: null
+[13-Nov-2025 22:07:42 UTC] API Debug - Method: GET
+[13-Nov-2025 22:07:42 UTC] API Operation: {"timestamp":"2025-11-13 22:07:42","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"182.63.119.25","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[13-Nov-2025 22:07:50 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=24
+[13-Nov-2025 22:07:50 UTC] API Debug - Path: /public/api-v1.php
+[13-Nov-2025 22:07:50 UTC] API Debug - Final endpoint: business
+[13-Nov-2025 22:07:50 UTC] API Debug - Final id: 24
+[13-Nov-2025 22:07:50 UTC] API Debug - Method: GET
+[13-Nov-2025 22:07:50 UTC] API Operation: {"timestamp":"2025-11-13 22:07:50","api_version":"v1","operation":"view_business","business_id":24,"user_ip":"182.63.119.25","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[13-Nov-2025 22:07:55 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[13-Nov-2025 22:07:55 UTC] API Debug - Path: /public/api-v1.php
+[13-Nov-2025 22:07:55 UTC] API Debug - Final endpoint: business
+[13-Nov-2025 22:07:55 UTC] API Debug - Final id: null
+[13-Nov-2025 22:07:55 UTC] API Debug - Method: GET
+[13-Nov-2025 22:07:55 UTC] API Operation: {"timestamp":"2025-11-13 22:07:55","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"182.63.119.25","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 00:47:35 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 00:47:35 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 00:47:35 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 00:47:35 UTC] API Debug - Final id: null
+[14-Nov-2025 00:47:35 UTC] API Debug - Method: GET
+[14-Nov-2025 00:47:35 UTC] API Operation: {"timestamp":"2025-11-14 00:47:35","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 01:50:24 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 01:50:24 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 01:50:24 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 01:50:24 UTC] API Debug - Final id: null
+[14-Nov-2025 01:50:24 UTC] API Debug - Method: GET
+[14-Nov-2025 01:50:24 UTC] API Operation: {"timestamp":"2025-11-14 01:50:24","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 01:50:30 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 01:50:30 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 01:50:30 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 01:50:30 UTC] API Debug - Final id: null
+[14-Nov-2025 01:50:30 UTC] API Debug - Method: GET
+[14-Nov-2025 01:50:30 UTC] API Operation: {"timestamp":"2025-11-14 01:50:30","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 02:34:43 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 02:34:43 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:34:43 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:34:43 UTC] API Debug - Final id: null
+[14-Nov-2025 02:34:43 UTC] API Debug - Method: GET
+[14-Nov-2025 02:34:43 UTC] API Operation: {"timestamp":"2025-11-14 02:34:43","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 02:35:02 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 02:35:02 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:35:02 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:35:02 UTC] API Debug - Final id: null
+[14-Nov-2025 02:35:02 UTC] API Debug - Method: GET
+[14-Nov-2025 02:35:02 UTC] API Operation: {"timestamp":"2025-11-14 02:35:02","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 02:35:23 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 02:35:23 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:35:23 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:35:23 UTC] API Debug - Final id: null
+[14-Nov-2025 02:35:23 UTC] API Debug - Method: GET
+[14-Nov-2025 02:35:23 UTC] API Operation: {"timestamp":"2025-11-14 02:35:23","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 02:37:30 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business
+[14-Nov-2025 02:37:30 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:37:30 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:37:30 UTC] API Debug - Final id: null
+[14-Nov-2025 02:37:30 UTC] API Debug - Method: POST
+[14-Nov-2025 02:37:30 UTC] API Operation: {"timestamp":"2025-11-14 02:37:30","api_version":"v1","operation":"create_business","business_id":"25","user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"business_name":"Super Majestic Sdn. Bhd.","business_contact":"-","business_description":"SUPER MAJESTIC SDN. BHD. was incorporated on 2011-12-16 in Malaysia with registration number of 0971986T \/ 201101043866.","business_category":"Retail","business_img":null,"is_featured":0}}
+[14-Nov-2025 02:37:32 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 02:37:32 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:37:32 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:37:32 UTC] API Debug - Final id: null
+[14-Nov-2025 02:37:32 UTC] API Debug - Method: GET
+[14-Nov-2025 02:37:32 UTC] API Operation: {"timestamp":"2025-11-14 02:37:32","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 02:40:10 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business
+[14-Nov-2025 02:40:10 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:40:10 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:40:10 UTC] API Debug - Final id: null
+[14-Nov-2025 02:40:10 UTC] API Debug - Method: POST
+[14-Nov-2025 02:40:10 UTC] handleImageUpload: Upload path: /home2/apploqic/public_html/apploqic.my/images/
+[14-Nov-2025 02:40:10 UTC] handleImageUpload: File type: image/png
+[14-Nov-2025 02:40:10 UTC] handleImageUpload: Target file: /home2/apploqic/public_html/apploqic.my/images/1763088010_6916968a6a527.png
+[14-Nov-2025 02:40:10 UTC] handleImageUpload: Image name: 1763088010_6916968a6a527.png
+[14-Nov-2025 02:40:10 UTC] handleImageUpload: Successfully uploaded image: 1763088010_6916968a6a527.png
+[14-Nov-2025 02:40:10 UTC] API Operation: {"timestamp":"2025-11-14 02:40:10","api_version":"v1","operation":"create_business","business_id":"26","user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"business_name":"Dynakey Laboratories Sdn. Bhd","business_contact":"6089215233","business_description":"Established since April 2011 with the function as testing laboratory to provide testing services to the public. Dynakey Laboratories Sdn. Bhd. is formed by a dedicated team of technical expertise that offers a complete range of testing and laboratory related services.","business_category":"Professional Services","business_img":"1763088010_6916968a6a527.png","is_featured":1}}
+[14-Nov-2025 02:40:12 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 02:40:12 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:40:12 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:40:12 UTC] API Debug - Final id: null
+[14-Nov-2025 02:40:12 UTC] API Debug - Method: GET
+[14-Nov-2025 02:40:12 UTC] API Operation: {"timestamp":"2025-11-14 02:40:12","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 02:40:44 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business
+[14-Nov-2025 02:40:44 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:40:44 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:40:44 UTC] API Debug - Final id: null
+[14-Nov-2025 02:40:44 UTC] API Debug - Method: POST
+[14-Nov-2025 02:40:44 UTC] handleImageUpload: Upload path: /home2/apploqic/public_html/apploqic.my/images/
+[14-Nov-2025 02:40:44 UTC] handleImageUpload: File type: image/png
+[14-Nov-2025 02:40:44 UTC] handleImageUpload: Target file: /home2/apploqic/public_html/apploqic.my/images/1763088044_691696acdc828.png
+[14-Nov-2025 02:40:44 UTC] handleImageUpload: Image name: 1763088044_691696acdc828.png
+[14-Nov-2025 02:40:44 UTC] handleImageUpload: Successfully uploaded image: 1763088044_691696acdc828.png
+[14-Nov-2025 02:40:44 UTC] API Operation: {"timestamp":"2025-11-14 02:40:44","api_version":"v1","operation":"create_business","business_id":"27","user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"business_name":"Thiam Hao Yun Restaurant","business_contact":"014-928-0919","business_description":"Breakfast. Lunch. Dinner.\r\nDim Sum \u2022 \u789f\u5934\u996d \u2022 \u53eb\u83dc\u5403\u996d\r\n\r\nThiam Hao Yun Restaurant \u2014 authentic flavors, affordable prices, and a warm welcome all day long.\r\n\u6dfb\u597d\u8fd0\u9152\u5bb6 \u2014\u2014 \u53e3\u5473\u6b63\u5b97\uff0c\u4ef7\u683c\u4eb2\u6c11\uff0c\u5168\u5929\u5019\u4e3a\u60a8\u5e26\u6765\u6e29\u99a8\u7528\u9910\u4f53\u9a8c\u3002","business_category":"Restaurant","business_img":"1763088044_691696acdc828.png","is_featured":0}}
+[14-Nov-2025 02:40:47 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 02:40:47 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:40:47 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:40:47 UTC] API Debug - Final id: null
+[14-Nov-2025 02:40:47 UTC] API Debug - Method: GET
+[14-Nov-2025 02:40:47 UTC] API Operation: {"timestamp":"2025-11-14 02:40:47","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 02:42:23 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business
+[14-Nov-2025 02:42:23 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:42:23 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:42:23 UTC] API Debug - Final id: null
+[14-Nov-2025 02:42:23 UTC] API Debug - Method: POST
+[14-Nov-2025 02:42:23 UTC] handleImageUpload: Upload path: /home2/apploqic/public_html/apploqic.my/images/
+[14-Nov-2025 02:42:23 UTC] handleImageUpload: File type: image/png
+[14-Nov-2025 02:42:23 UTC] handleImageUpload: Target file: /home2/apploqic/public_html/apploqic.my/images/1763088143_6916970f3822e.png
+[14-Nov-2025 02:42:23 UTC] handleImageUpload: Image name: 1763088143_6916970f3822e.png
+[14-Nov-2025 02:42:23 UTC] handleImageUpload: Successfully uploaded image: 1763088143_6916970f3822e.png
+[14-Nov-2025 02:42:23 UTC] API Operation: {"timestamp":"2025-11-14 02:42:23","api_version":"v1","operation":"create_business","business_id":"28","user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"business_name":"I POSB Logistic Sdn. Bhd.","business_contact":"089-669 811","business_description":"iPosb offer the Malaysia's most flexible delivery service options, based around your busy lifestyle.","business_category":"Professional Services","business_img":"1763088143_6916970f3822e.png","is_featured":0}}
+[14-Nov-2025 02:42:25 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 02:42:25 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:42:25 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:42:25 UTC] API Debug - Final id: null
+[14-Nov-2025 02:42:25 UTC] API Debug - Method: GET
+[14-Nov-2025 02:42:25 UTC] API Operation: {"timestamp":"2025-11-14 02:42:25","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 02:45:09 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business
+[14-Nov-2025 02:45:09 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:45:09 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:45:09 UTC] API Debug - Final id: null
+[14-Nov-2025 02:45:09 UTC] API Debug - Method: POST
+[14-Nov-2025 02:45:09 UTC] handleImageUpload: Upload path: /home2/apploqic/public_html/apploqic.my/images/
+[14-Nov-2025 02:45:09 UTC] handleImageUpload: File type: image/jpeg
+[14-Nov-2025 02:45:09 UTC] handleImageUpload: Target file: /home2/apploqic/public_html/apploqic.my/images/1763088309_691697b55b675.jpg
+[14-Nov-2025 02:45:09 UTC] handleImageUpload: Image name: 1763088309_691697b55b675.jpg
+[14-Nov-2025 02:45:09 UTC] handleImageUpload: Successfully uploaded image: 1763088309_691697b55b675.jpg
+[14-Nov-2025 02:45:09 UTC] API Operation: {"timestamp":"2025-11-14 02:45:09","api_version":"v1","operation":"create_business","business_id":"29","user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"business_name":"New King City Seafood Restaurant","business_contact":"017-222 6763","business_description":"\"\u65b0\u7687\u57ce\u6d77\u9c9c\u697c\u5728\u9910\u996e\u4e1a\u6df1\u8015\u4e8c\u5341\u8f7d\uff0c\u5e0c\u671b\u4e3a\u5c71\u6253\u6839\u7684\u4e61\u4eb2\u4eec\u5e26\u6765\u5bb6\u4e61\u7684\u719f\u6089\u7f8e\u5473\uff0c\u5e76\u5728IJM\u9910\u9986\u7ecf\u8425\u5341\u5e74\u6709\u4f59\uff0c\u4e3b\u8425\u6d77\u9c9c\uff0c\u4e14\u4e0d\u4f9b\u5e94\u732a\u8089\u3002SERVE NO PORK \u63d0\u4f9b\u670d\u52a1 - \u81ea\u52a9\u9910 (\u53ef\u501f\u684c\u6905\uff0c\u6765\u56de\u63a5\u9001\uff09 - \u9152\u4f1a\u5bb4\u5e2d (\u672c\u5385\/\u80b2\u539f\/\u5ba2\u5bb6\u516c\u4f1a\u7b49\u7b49\uff09 - VIP Room \u8d35\u5bbe\u623f - \u8bb2\u5ea7\u4f1a\u5403\u5e2d \u5916\u9001\u670d\u52a1 \uff1aFood Panda \/ Grab Food \u7ecf\u6d4e\u914d\u5957 \uff1a \u53ea\u9700\u6700\u4f4eRM7.50 \u8d77 \u9e21\u996d \u4ee5\u53ca \u4ec0\u83dc\u996d New Royal Seafood Restaurant has been in the catering industry for 20 years. It hopes to bring the familiar flavors of hometown to the folks in Sandakan. It has been operating in IJM restaurant for more than 10 years. It mainly sells seafood and does not supply pork. SERVE NO PORK Services provided - Buffet (tables and chairs can be borrowed, round-trip transportation) - Cocktail banquet (main hall\/Yuyuan\/Hakka Association, etc.) - VIP Room VIP Room - Seminar banquet Delivery service: Food Panda \/ Grab Food Economy package: Star\"","business_category":"Restaurant","business_img":"1763088309_691697b55b675.jpg","is_featured":0}}
+[14-Nov-2025 02:45:11 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 02:45:11 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:45:11 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:45:11 UTC] API Debug - Final id: null
+[14-Nov-2025 02:45:11 UTC] API Debug - Method: GET
+[14-Nov-2025 02:45:11 UTC] API Operation: {"timestamp":"2025-11-14 02:45:11","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 02:45:23 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business
+[14-Nov-2025 02:45:23 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:45:23 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:45:23 UTC] API Debug - Final id: null
+[14-Nov-2025 02:45:23 UTC] API Debug - Method: POST
+[14-Nov-2025 02:45:23 UTC] handleImageUpload: Upload path: /home2/apploqic/public_html/apploqic.my/images/
+[14-Nov-2025 02:45:23 UTC] handleImageUpload: File type: image/jpeg
+[14-Nov-2025 02:45:23 UTC] handleImageUpload: Target file: /home2/apploqic/public_html/apploqic.my/images/1763088323_691697c3f01d5.jpeg
+[14-Nov-2025 02:45:23 UTC] handleImageUpload: Image name: 1763088323_691697c3f01d5.jpeg
+[14-Nov-2025 02:45:23 UTC] handleImageUpload: Successfully uploaded image: 1763088323_691697c3f01d5.jpeg
+[14-Nov-2025 02:45:23 UTC] API Operation: {"timestamp":"2025-11-14 02:45:23","api_version":"v1","operation":"create_business","business_id":"30","user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"business_name":"Fruits World Drink House","business_contact":"0182223168","business_description":"\ud835\udc00 \ud835\udc1c\ud835\udc28\ud835\udc33\ud835\udc32 \ud835\udc2c\ud835\udc29\ud835\udc28\ud835\udc2d \ud835\udc1f\ud835\udc28\ud835\udc2b \ud835\udc2b\ud835\udc1e\ud835\udc1f\ud835\udc2b\ud835\udc1e\ud835\udc2c\ud835\udc21\ud835\udc22\ud835\udc27\ud835\udc20 \ud835\udc2c\ud835\udc21\ud835\udc1a\ud835\udc2f\ud835\udc1e\ud835\udc1d \ud835\udc22\ud835\udc1c\ud835\udc1e \u2014 \ud835\udc1a\ud835\udc27\ud835\udc1d \ud835\udc32\ud835\udc1e\ud835\udc2c, \ud835\udc30\ud835\udc1e \ud835\udc2c\ud835\udc1e\ud835\udc2b\ud835\udc2f\ud835\udc1e \ud835\udc0d\ud835\udc28 \ud835\udc0f\ud835\udc28\ud835\udc2b\ud835\udc24!","business_category":"Restaurant","business_img":"1763088323_691697c3f01d5.jpeg","is_featured":1}}
+[14-Nov-2025 02:45:26 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 02:45:26 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:45:26 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:45:26 UTC] API Debug - Final id: null
+[14-Nov-2025 02:45:26 UTC] API Debug - Method: GET
+[14-Nov-2025 02:45:26 UTC] API Operation: {"timestamp":"2025-11-14 02:45:26","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 02:49:09 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business
+[14-Nov-2025 02:49:09 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:49:09 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:49:09 UTC] API Debug - Final id: null
+[14-Nov-2025 02:49:09 UTC] API Debug - Method: POST
+[14-Nov-2025 02:49:09 UTC] handleImageUpload: Upload path: /home2/apploqic/public_html/apploqic.my/images/
+[14-Nov-2025 02:49:09 UTC] handleImageUpload: File type: image/jpeg
+[14-Nov-2025 02:49:09 UTC] handleImageUpload: Target file: /home2/apploqic/public_html/apploqic.my/images/1763088549_691698a588075.jpeg
+[14-Nov-2025 02:49:09 UTC] handleImageUpload: Image name: 1763088549_691698a588075.jpeg
+[14-Nov-2025 02:49:09 UTC] handleImageUpload: Successfully uploaded image: 1763088549_691698a588075.jpeg
+[14-Nov-2025 02:49:09 UTC] API Operation: {"timestamp":"2025-11-14 02:49:09","api_version":"v1","operation":"create_business","business_id":"31","user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"business_name":"Sazarice Sdn. Bhd","business_contact":"089221936","business_description":"Perjalanan kami bermula dengan satu visi, iaitu membekalkan beras yang terbaik untuk setiap isi rumah di seluruh Sabah. Visi kami menjadi realiti pada Ogos 1997 apabila Sazarice Sdn Bhd sebagai Syarikat tempatan Sabah ditubuhkan dengan fokus bagi pengedaran beras di seluruh Sabah dan Wilayah Persekutuan Labuan. Syarikat Sazarice telah berkembang maju dan mempunyai 6 cawangan operasi di seluruh Sabah termasuk Wilayah Persekutuan Labuan.","business_category":"Professional Services","business_img":"1763088549_691698a588075.jpeg","is_featured":1}}
+[14-Nov-2025 02:49:11 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 02:49:11 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:49:11 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:49:11 UTC] API Debug - Final id: null
+[14-Nov-2025 02:49:11 UTC] API Debug - Method: GET
+[14-Nov-2025 02:49:11 UTC] API Operation: {"timestamp":"2025-11-14 02:49:11","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 02:51:02 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business
+[14-Nov-2025 02:51:02 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:51:02 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:51:02 UTC] API Debug - Final id: null
+[14-Nov-2025 02:51:02 UTC] API Debug - Method: POST
+[14-Nov-2025 02:51:02 UTC] handleImageUpload: Upload path: /home2/apploqic/public_html/apploqic.my/images/
+[14-Nov-2025 02:51:02 UTC] handleImageUpload: File type: image/png
+[14-Nov-2025 02:51:02 UTC] handleImageUpload: Target file: /home2/apploqic/public_html/apploqic.my/images/1763088662_6916991604e46.png
+[14-Nov-2025 02:51:02 UTC] handleImageUpload: Image name: 1763088662_6916991604e46.png
+[14-Nov-2025 02:51:02 UTC] handleImageUpload: Successfully uploaded image: 1763088662_6916991604e46.png
+[14-Nov-2025 02:51:02 UTC] API Operation: {"timestamp":"2025-11-14 02:51:02","api_version":"v1","operation":"create_business","business_id":"32","user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"business_name":"Real Continental Sdn. Bhd.","business_contact":"-","business_description":"REAL CONTINENTAL SDN. BHD. was incorporated on 2005-09-05 in Malaysia with registration number of 0708467V \/ 200501026334. REAL CONTINENTAL SDN. BHD.'s business includes INVESTMENT HOLDING.","business_category":"Professional Services","business_img":"1763088662_6916991604e46.png","is_featured":0}}
+[14-Nov-2025 02:51:04 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 02:51:04 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:51:04 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:51:04 UTC] API Debug - Final id: null
+[14-Nov-2025 02:51:04 UTC] API Debug - Method: GET
+[14-Nov-2025 02:51:04 UTC] API Operation: {"timestamp":"2025-11-14 02:51:04","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 02:52:38 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business
+[14-Nov-2025 02:52:38 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:52:38 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:52:38 UTC] API Debug - Final id: null
+[14-Nov-2025 02:52:38 UTC] API Debug - Method: POST
+[14-Nov-2025 02:52:38 UTC] handleImageUpload: Upload path: /home2/apploqic/public_html/apploqic.my/images/
+[14-Nov-2025 02:52:38 UTC] handleImageUpload: File type: image/jpeg
+[14-Nov-2025 02:52:38 UTC] handleImageUpload: Target file: /home2/apploqic/public_html/apploqic.my/images/1763088758_69169976ed535.jpg
+[14-Nov-2025 02:52:38 UTC] handleImageUpload: Image name: 1763088758_69169976ed535.jpg
+[14-Nov-2025 02:52:38 UTC] handleImageUpload: Successfully uploaded image: 1763088758_69169976ed535.jpg
+[14-Nov-2025 02:52:38 UTC] API Operation: {"timestamp":"2025-11-14 02:52:38","api_version":"v1","operation":"create_business","business_id":"33","user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"business_name":"Arasu Dental Clinic","business_contact":"01112521321","business_description":"We give the best treatment at reasonable cost and apply the latest technology that can benefit you.","business_category":"Healthcare","business_img":"1763088758_69169976ed535.jpg","is_featured":1}}
+[14-Nov-2025 02:52:41 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 02:52:41 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:52:41 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:52:41 UTC] API Debug - Final id: null
+[14-Nov-2025 02:52:41 UTC] API Debug - Method: GET
+[14-Nov-2025 02:52:41 UTC] API Operation: {"timestamp":"2025-11-14 02:52:41","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 02:54:12 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=25
+[14-Nov-2025 02:54:12 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:54:12 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:54:12 UTC] API Debug - Final id: 25
+[14-Nov-2025 02:54:12 UTC] API Debug - Method: GET
+[14-Nov-2025 02:54:12 UTC] API Operation: {"timestamp":"2025-11-14 02:54:12","api_version":"v1","operation":"view_business","business_id":25,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 02:55:20 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business
+[14-Nov-2025 02:55:20 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:55:20 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:55:20 UTC] API Debug - Final id: null
+[14-Nov-2025 02:55:20 UTC] API Debug - Method: POST
+[14-Nov-2025 02:55:20 UTC] API Operation: {"timestamp":"2025-11-14 02:55:20","api_version":"v1","operation":"create_business","business_id":"34","user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"business_name":"Auriwealth Holding Sdn .Bhd","business_contact":"-","business_description":"AURIWEALTH HOLDINGS SDN. BHD. was incorporated on 2025-02-17 in Malaysia with registration number of 1607883H \/ 202501006469. AURIWEALTH HOLDINGS SDN. BHD.'s business includes ACTIVITIES OF HEAD OFFICES","business_category":"Professional Services","business_img":null,"is_featured":1}}
+[14-Nov-2025 02:55:22 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 02:55:22 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:55:22 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:55:22 UTC] API Debug - Final id: null
+[14-Nov-2025 02:55:22 UTC] API Debug - Method: GET
+[14-Nov-2025 02:55:22 UTC] API Operation: {"timestamp":"2025-11-14 02:55:22","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 02:57:12 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business
+[14-Nov-2025 02:57:12 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:57:12 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:57:12 UTC] API Debug - Final id: null
+[14-Nov-2025 02:57:12 UTC] API Debug - Method: POST
+[14-Nov-2025 02:57:12 UTC] handleImageUpload: Upload path: /home2/apploqic/public_html/apploqic.my/images/
+[14-Nov-2025 02:57:12 UTC] handleImageUpload: File type: image/jpeg
+[14-Nov-2025 02:57:12 UTC] handleImageUpload: Target file: /home2/apploqic/public_html/apploqic.my/images/1763089032_69169a88d34e9.jpg
+[14-Nov-2025 02:57:12 UTC] handleImageUpload: Image name: 1763089032_69169a88d34e9.jpg
+[14-Nov-2025 02:57:12 UTC] PHP Warning:  move_uploaded_file(/home2/apploqic/public_html/apploqic.my/images/1763089032_69169a88d34e9.jpg): Failed to open stream: Disk quota exceeded in /home2/apploqic/public_html/apploqic.my/app/controllers/v1/BusinessController.php on line 938
+[14-Nov-2025 02:57:12 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpJKGv0Q' to '/home2/apploqic/public_html/apploqic.my/images/1763089032_69169a88d34e9.jpg' in /home2/apploqic/public_html/apploqic.my/app/controllers/v1/BusinessController.php on line 938
+[14-Nov-2025 02:57:12 UTC] handleImageUpload: Failed to move uploaded file from /tmp/phpJKGv0Q to /home2/apploqic/public_html/apploqic.my/images/1763089032_69169a88d34e9.jpg
+[14-Nov-2025 02:57:17 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business
+[14-Nov-2025 02:57:17 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:57:17 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:57:17 UTC] API Debug - Final id: null
+[14-Nov-2025 02:57:17 UTC] API Debug - Method: POST
+[14-Nov-2025 02:57:17 UTC] handleImageUpload: Upload path: /home2/apploqic/public_html/apploqic.my/images/
+[14-Nov-2025 02:57:17 UTC] handleImageUpload: File type: image/jpeg
+[14-Nov-2025 02:57:17 UTC] handleImageUpload: Target file: /home2/apploqic/public_html/apploqic.my/images/1763089037_69169a8dd2d0d.jpg
+[14-Nov-2025 02:57:17 UTC] handleImageUpload: Image name: 1763089037_69169a8dd2d0d.jpg
+[14-Nov-2025 02:57:17 UTC] PHP Warning:  move_uploaded_file(/home2/apploqic/public_html/apploqic.my/images/1763089037_69169a8dd2d0d.jpg): Failed to open stream: Disk quota exceeded in /home2/apploqic/public_html/apploqic.my/app/controllers/v1/BusinessController.php on line 938
+[14-Nov-2025 02:57:17 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php3pWzGe' to '/home2/apploqic/public_html/apploqic.my/images/1763089037_69169a8dd2d0d.jpg' in /home2/apploqic/public_html/apploqic.my/app/controllers/v1/BusinessController.php on line 938
+[14-Nov-2025 02:57:17 UTC] handleImageUpload: Failed to move uploaded file from /tmp/php3pWzGe to /home2/apploqic/public_html/apploqic.my/images/1763089037_69169a8dd2d0d.jpg
+[14-Nov-2025 02:57:54 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business
+[14-Nov-2025 02:57:54 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:57:54 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:57:54 UTC] API Debug - Final id: null
+[14-Nov-2025 02:57:54 UTC] API Debug - Method: POST
+[14-Nov-2025 02:57:54 UTC] handleImageUpload: Upload path: /home2/apploqic/public_html/apploqic.my/images/
+[14-Nov-2025 02:57:54 UTC] handleImageUpload: File type: image/jpeg
+[14-Nov-2025 02:57:54 UTC] handleImageUpload: Target file: /home2/apploqic/public_html/apploqic.my/images/1763089074_69169ab28084b.jpg
+[14-Nov-2025 02:57:54 UTC] handleImageUpload: Image name: 1763089074_69169ab28084b.jpg
+[14-Nov-2025 02:57:54 UTC] PHP Warning:  move_uploaded_file(/home2/apploqic/public_html/apploqic.my/images/1763089074_69169ab28084b.jpg): Failed to open stream: Disk quota exceeded in /home2/apploqic/public_html/apploqic.my/app/controllers/v1/BusinessController.php on line 938
+[14-Nov-2025 02:57:54 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php7ItZop' to '/home2/apploqic/public_html/apploqic.my/images/1763089074_69169ab28084b.jpg' in /home2/apploqic/public_html/apploqic.my/app/controllers/v1/BusinessController.php on line 938
+[14-Nov-2025 02:57:54 UTC] handleImageUpload: Failed to move uploaded file from /tmp/php7ItZop to /home2/apploqic/public_html/apploqic.my/images/1763089074_69169ab28084b.jpg
+[14-Nov-2025 02:57:58 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 02:57:58 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:57:58 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:57:58 UTC] API Debug - Final id: null
+[14-Nov-2025 02:57:58 UTC] API Debug - Method: GET
+[14-Nov-2025 02:57:58 UTC] API Operation: {"timestamp":"2025-11-14 02:57:58","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 02:58:00 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 02:58:00 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:58:00 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:58:00 UTC] API Debug - Final id: null
+[14-Nov-2025 02:58:00 UTC] API Debug - Method: GET
+[14-Nov-2025 02:58:00 UTC] API Operation: {"timestamp":"2025-11-14 02:58:00","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 02:58:06 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=2&per_page=12
+[14-Nov-2025 02:58:06 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:58:06 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:58:06 UTC] API Debug - Final id: null
+[14-Nov-2025 02:58:06 UTC] API Debug - Method: GET
+[14-Nov-2025 02:58:06 UTC] API Operation: {"timestamp":"2025-11-14 02:58:06","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 02:58:08 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 02:58:08 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:58:08 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:58:08 UTC] API Debug - Final id: null
+[14-Nov-2025 02:58:08 UTC] API Debug - Method: GET
+[14-Nov-2025 02:58:08 UTC] API Operation: {"timestamp":"2025-11-14 02:58:08","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 02:58:30 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business
+[14-Nov-2025 02:58:30 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:58:30 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:58:30 UTC] API Debug - Final id: null
+[14-Nov-2025 02:58:30 UTC] API Debug - Method: POST
+[14-Nov-2025 02:58:30 UTC] handleImageUpload: Upload path: /home2/apploqic/public_html/apploqic.my/images/
+[14-Nov-2025 02:58:30 UTC] handleImageUpload: File type: image/jpeg
+[14-Nov-2025 02:58:30 UTC] handleImageUpload: Target file: /home2/apploqic/public_html/apploqic.my/images/1763089110_69169ad63ff8a.jpg
+[14-Nov-2025 02:58:30 UTC] handleImageUpload: Image name: 1763089110_69169ad63ff8a.jpg
+[14-Nov-2025 02:58:30 UTC] handleImageUpload: Successfully uploaded image: 1763089110_69169ad63ff8a.jpg
+[14-Nov-2025 02:58:30 UTC] API Operation: {"timestamp":"2025-11-14 02:58:30","api_version":"v1","operation":"create_business","business_id":"35","user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"business_name":"Crowd99","business_contact":"089660869","business_description":"We would like to provide a place for people to enjoy food, relax & share of their daily life!\ud83c\udf5d","business_category":"Restaurant","business_img":"1763089110_69169ad63ff8a.jpg","is_featured":1}}
+[14-Nov-2025 02:58:32 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 02:58:32 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 02:58:32 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 02:58:32 UTC] API Debug - Final id: null
+[14-Nov-2025 02:58:32 UTC] API Debug - Method: GET
+[14-Nov-2025 02:58:32 UTC] API Operation: {"timestamp":"2025-11-14 02:58:32","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 03:01:40 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 03:01:40 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 03:01:40 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 03:01:40 UTC] API Debug - Final id: null
+[14-Nov-2025 03:01:40 UTC] API Debug - Method: GET
+[14-Nov-2025 03:01:40 UTC] API Operation: {"timestamp":"2025-11-14 03:01:40","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 03:01:43 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=2&per_page=12
+[14-Nov-2025 03:01:43 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 03:01:43 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 03:01:43 UTC] API Debug - Final id: null
+[14-Nov-2025 03:01:43 UTC] API Debug - Method: GET
+[14-Nov-2025 03:01:43 UTC] API Operation: {"timestamp":"2025-11-14 03:01:43","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 03:01:46 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 03:01:46 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 03:01:46 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 03:01:46 UTC] API Debug - Final id: null
+[14-Nov-2025 03:01:46 UTC] API Debug - Method: GET
+[14-Nov-2025 03:01:46 UTC] API Operation: {"timestamp":"2025-11-14 03:01:46","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 03:24:16 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[14-Nov-2025 03:24:16 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 03:24:16 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 03:24:16 UTC] API Debug - Final id: null
+[14-Nov-2025 03:24:16 UTC] API Debug - Method: GET
+[14-Nov-2025 03:24:16 UTC] API Operation: {"timestamp":"2025-11-14 03:24:16","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 03:24:21 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=35
+[14-Nov-2025 03:24:21 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 03:24:21 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 03:24:21 UTC] API Debug - Final id: 35
+[14-Nov-2025 03:24:21 UTC] API Debug - Method: GET
+[14-Nov-2025 03:24:21 UTC] API Operation: {"timestamp":"2025-11-14 03:24:21","api_version":"v1","operation":"view_business","business_id":35,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 03:24:23 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=34
+[14-Nov-2025 03:24:23 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 03:24:23 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 03:24:23 UTC] API Debug - Final id: 34
+[14-Nov-2025 03:24:23 UTC] API Debug - Method: GET
+[14-Nov-2025 03:24:23 UTC] API Operation: {"timestamp":"2025-11-14 03:24:23","api_version":"v1","operation":"view_business","business_id":34,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 03:24:32 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=34
+[14-Nov-2025 03:24:32 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 03:24:32 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 03:24:32 UTC] API Debug - Final id: 34
+[14-Nov-2025 03:24:32 UTC] API Debug - Method: GET
+[14-Nov-2025 03:24:32 UTC] API Operation: {"timestamp":"2025-11-14 03:24:32","api_version":"v1","operation":"view_business","business_id":34,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 03:24:32 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=34
+[14-Nov-2025 03:24:32 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 03:24:32 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 03:24:32 UTC] API Debug - Final id: 34
+[14-Nov-2025 03:24:32 UTC] API Debug - Method: GET
+[14-Nov-2025 03:24:32 UTC] API Operation: {"timestamp":"2025-11-14 03:24:32","api_version":"v1","operation":"view_business","business_id":34,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 03:24:40 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=34
+[14-Nov-2025 03:24:40 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 03:24:40 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 03:24:40 UTC] API Debug - Final id: 34
+[14-Nov-2025 03:24:40 UTC] API Debug - Method: GET
+[14-Nov-2025 03:24:40 UTC] API Operation: {"timestamp":"2025-11-14 03:24:40","api_version":"v1","operation":"view_business","business_id":34,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 03:24:55 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=33
+[14-Nov-2025 03:24:55 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 03:24:55 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 03:24:55 UTC] API Debug - Final id: 33
+[14-Nov-2025 03:24:55 UTC] API Debug - Method: GET
+[14-Nov-2025 03:24:55 UTC] API Operation: {"timestamp":"2025-11-14 03:24:55","api_version":"v1","operation":"view_business","business_id":33,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 03:24:55 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=33
+[14-Nov-2025 03:24:55 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 03:24:55 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 03:24:55 UTC] API Debug - Final id: 33
+[14-Nov-2025 03:24:55 UTC] API Debug - Method: GET
+[14-Nov-2025 03:24:55 UTC] API Operation: {"timestamp":"2025-11-14 03:24:55","api_version":"v1","operation":"view_business","business_id":33,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[14-Nov-2025 03:25:00 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=33
+[14-Nov-2025 03:25:00 UTC] API Debug - Path: /public/api-v1.php
+[14-Nov-2025 03:25:00 UTC] API Debug - Final endpoint: business
+[14-Nov-2025 03:25:00 UTC] API Debug - Final id: 33
+[14-Nov-2025 03:25:00 UTC] API Debug - Method: GET
+[14-Nov-2025 03:25:00 UTC] API Operation: {"timestamp":"2025-11-14 03:25:00","api_version":"v1","operation":"view_business","business_id":33,"user_ip":"115.135.114.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:13:21 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 02:13:21 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:13:21 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:13:21 UTC] API Debug - Final id: null
+[15-Nov-2025 02:13:21 UTC] API Debug - Method: GET
+[15-Nov-2025 02:13:21 UTC] API Operation: {"timestamp":"2025-11-15 02:13:21","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:18:00 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=35
+[15-Nov-2025 02:18:00 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:18:00 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:18:00 UTC] API Debug - Final id: 35
+[15-Nov-2025 02:18:00 UTC] API Debug - Method: GET
+[15-Nov-2025 02:18:00 UTC] API Operation: {"timestamp":"2025-11-15 02:18:00","api_version":"v1","operation":"view_business","business_id":35,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:18:01 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=35
+[15-Nov-2025 02:18:01 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:18:01 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:18:01 UTC] API Debug - Final id: 35
+[15-Nov-2025 02:18:01 UTC] API Debug - Method: GET
+[15-Nov-2025 02:18:01 UTC] API Operation: {"timestamp":"2025-11-15 02:18:01","api_version":"v1","operation":"view_business","business_id":35,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:18:14 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 02:18:14 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:18:14 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:18:14 UTC] API Debug - Final id: null
+[15-Nov-2025 02:18:14 UTC] API Debug - Method: GET
+[15-Nov-2025 02:18:14 UTC] API Operation: {"timestamp":"2025-11-15 02:18:14","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:21:53 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=35
+[15-Nov-2025 02:21:53 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:21:53 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:21:53 UTC] API Debug - Final id: 35
+[15-Nov-2025 02:21:53 UTC] API Debug - Method: GET
+[15-Nov-2025 02:21:53 UTC] API Operation: {"timestamp":"2025-11-15 02:21:53","api_version":"v1","operation":"view_business","business_id":35,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:22:04 UTC] API Debug - Method override detected: POST -> PUT
+[15-Nov-2025 02:22:04 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=35
+[15-Nov-2025 02:22:04 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:22:04 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:22:04 UTC] API Debug - Final id: 35
+[15-Nov-2025 02:22:04 UTC] API Debug - Method: PUT
+[15-Nov-2025 02:22:04 UTC] === UPDATE METHOD CALLED ===
+[15-Nov-2025 02:22:04 UTC] REQUEST_METHOD: POST
+[15-Nov-2025 02:22:04 UTC] REQUEST_URI: /public/api-v1.php?endpoint=business&id=35
+[15-Nov-2025 02:22:04 UTC] QUERY_STRING: endpoint=business&id=35
+[15-Nov-2025 02:22:04 UTC] CONTENT_TYPE: multipart/form-data; boundary=----WebKitFormBoundaryhosXsIOeNLtV4b8G
+[15-Nov-2025 02:22:04 UTC] GET params: {"endpoint":"business","id":"35"}
+[15-Nov-2025 02:22:04 UTC] POST params: {"name":"Crowd99","contact":"089660869","category":"Restaurant","description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit.","_method":"PUT"}
+[15-Nov-2025 02:22:04 UTC] FILES: []
+[15-Nov-2025 02:22:04 UTC] Raw input length: 0
+[15-Nov-2025 02:22:04 UTC] UPDATE: Processing form data - FILES: NO, POST: YES
+[15-Nov-2025 02:22:04 UTC] UPDATE: FILES content: []
+[15-Nov-2025 02:22:04 UTC] UPDATE: POST content: {"name":"Crowd99","contact":"089660869","category":"Restaurant","description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit.","_method":"PUT"}
+[15-Nov-2025 02:22:04 UTC] BaseController getJsonInput - Multipart form detected, returning empty array
+[15-Nov-2025 02:22:04 UTC] UPDATE: All input sources - GET: {"endpoint":"business","id":"35"}, POST: {"name":"Crowd99","contact":"089660869","category":"Restaurant","description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit.","_method":"PUT"}, JSON: [], Final: {"name":"Crowd99","contact":"089660869","category":"Restaurant","description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit."}
+[15-Nov-2025 02:22:07 UTC] API Debug - Method override detected: POST -> PUT
+[15-Nov-2025 02:22:07 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=35
+[15-Nov-2025 02:22:07 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:22:07 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:22:07 UTC] API Debug - Final id: 35
+[15-Nov-2025 02:22:07 UTC] API Debug - Method: PUT
+[15-Nov-2025 02:22:07 UTC] === UPDATE METHOD CALLED ===
+[15-Nov-2025 02:22:07 UTC] REQUEST_METHOD: POST
+[15-Nov-2025 02:22:07 UTC] REQUEST_URI: /public/api-v1.php?endpoint=business&id=35
+[15-Nov-2025 02:22:07 UTC] QUERY_STRING: endpoint=business&id=35
+[15-Nov-2025 02:22:07 UTC] CONTENT_TYPE: multipart/form-data; boundary=----WebKitFormBoundaryyqqiJw1eVXUIUkdP
+[15-Nov-2025 02:22:07 UTC] GET params: {"endpoint":"business","id":"35"}
+[15-Nov-2025 02:22:07 UTC] POST params: {"name":"Crowd99","contact":"089660869","category":"Restaurant","description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit.","_method":"PUT"}
+[15-Nov-2025 02:22:07 UTC] FILES: []
+[15-Nov-2025 02:22:07 UTC] Raw input length: 0
+[15-Nov-2025 02:22:07 UTC] UPDATE: Processing form data - FILES: NO, POST: YES
+[15-Nov-2025 02:22:07 UTC] UPDATE: FILES content: []
+[15-Nov-2025 02:22:07 UTC] UPDATE: POST content: {"name":"Crowd99","contact":"089660869","category":"Restaurant","description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit.","_method":"PUT"}
+[15-Nov-2025 02:22:07 UTC] BaseController getJsonInput - Multipart form detected, returning empty array
+[15-Nov-2025 02:22:07 UTC] UPDATE: All input sources - GET: {"endpoint":"business","id":"35"}, POST: {"name":"Crowd99","contact":"089660869","category":"Restaurant","description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit.","_method":"PUT"}, JSON: [], Final: {"name":"Crowd99","contact":"089660869","category":"Restaurant","description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit."}
+[15-Nov-2025 02:22:14 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 02:22:14 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:22:14 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:22:14 UTC] API Debug - Final id: null
+[15-Nov-2025 02:22:14 UTC] API Debug - Method: GET
+[15-Nov-2025 02:22:14 UTC] API Operation: {"timestamp":"2025-11-15 02:22:14","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:22:17 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=35
+[15-Nov-2025 02:22:17 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:22:17 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:22:17 UTC] API Debug - Final id: 35
+[15-Nov-2025 02:22:17 UTC] API Debug - Method: GET
+[15-Nov-2025 02:22:17 UTC] API Operation: {"timestamp":"2025-11-15 02:22:17","api_version":"v1","operation":"view_business","business_id":35,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:22:22 UTC] API Debug - Method override detected: POST -> PUT
+[15-Nov-2025 02:22:22 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=35
+[15-Nov-2025 02:22:22 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:22:22 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:22:22 UTC] API Debug - Final id: 35
+[15-Nov-2025 02:22:22 UTC] API Debug - Method: PUT
+[15-Nov-2025 02:22:22 UTC] === UPDATE METHOD CALLED ===
+[15-Nov-2025 02:22:22 UTC] REQUEST_METHOD: POST
+[15-Nov-2025 02:22:22 UTC] REQUEST_URI: /public/api-v1.php?endpoint=business&id=35
+[15-Nov-2025 02:22:22 UTC] QUERY_STRING: endpoint=business&id=35
+[15-Nov-2025 02:22:22 UTC] CONTENT_TYPE: multipart/form-data; boundary=----WebKitFormBoundary4314rG5IVWw1htpE
+[15-Nov-2025 02:22:22 UTC] GET params: {"endpoint":"business","id":"35"}
+[15-Nov-2025 02:22:22 UTC] POST params: {"name":"Crowd99","contact":"089660869","category":"Restaurant","description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit.","_method":"PUT"}
+[15-Nov-2025 02:22:22 UTC] FILES: []
+[15-Nov-2025 02:22:22 UTC] Raw input length: 0
+[15-Nov-2025 02:22:22 UTC] UPDATE: Processing form data - FILES: NO, POST: YES
+[15-Nov-2025 02:22:22 UTC] UPDATE: FILES content: []
+[15-Nov-2025 02:22:22 UTC] UPDATE: POST content: {"name":"Crowd99","contact":"089660869","category":"Restaurant","description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit.","_method":"PUT"}
+[15-Nov-2025 02:22:22 UTC] BaseController getJsonInput - Multipart form detected, returning empty array
+[15-Nov-2025 02:22:22 UTC] UPDATE: All input sources - GET: {"endpoint":"business","id":"35"}, POST: {"name":"Crowd99","contact":"089660869","category":"Restaurant","description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit.","_method":"PUT"}, JSON: [], Final: {"name":"Crowd99","contact":"089660869","category":"Restaurant","description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit."}
+[15-Nov-2025 02:22:28 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=35
+[15-Nov-2025 02:22:28 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:22:28 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:22:28 UTC] API Debug - Final id: 35
+[15-Nov-2025 02:22:28 UTC] API Debug - Method: GET
+[15-Nov-2025 02:22:28 UTC] API Operation: {"timestamp":"2025-11-15 02:22:28","api_version":"v1","operation":"view_business","business_id":35,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:22:41 UTC] API Debug - Method override detected: POST -> PUT
+[15-Nov-2025 02:22:41 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=35
+[15-Nov-2025 02:22:41 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:22:41 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:22:41 UTC] API Debug - Final id: 35
+[15-Nov-2025 02:22:41 UTC] API Debug - Method: PUT
+[15-Nov-2025 02:22:41 UTC] === UPDATE METHOD CALLED ===
+[15-Nov-2025 02:22:41 UTC] REQUEST_METHOD: POST
+[15-Nov-2025 02:22:41 UTC] REQUEST_URI: /public/api-v1.php?endpoint=business&id=35
+[15-Nov-2025 02:22:41 UTC] QUERY_STRING: endpoint=business&id=35
+[15-Nov-2025 02:22:41 UTC] CONTENT_TYPE: multipart/form-data; boundary=----WebKitFormBoundaryDxGWAmCjuOAofQKS
+[15-Nov-2025 02:22:41 UTC] GET params: {"endpoint":"business","id":"35"}
+[15-Nov-2025 02:22:41 UTC] POST params: {"name":"Crowd99","contact":"089660869","category":"Restaurant","description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit.","_method":"PUT"}
+[15-Nov-2025 02:22:41 UTC] FILES: []
+[15-Nov-2025 02:22:41 UTC] Raw input length: 0
+[15-Nov-2025 02:22:41 UTC] UPDATE: Processing form data - FILES: NO, POST: YES
+[15-Nov-2025 02:22:41 UTC] UPDATE: FILES content: []
+[15-Nov-2025 02:22:41 UTC] UPDATE: POST content: {"name":"Crowd99","contact":"089660869","category":"Restaurant","description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit.","_method":"PUT"}
+[15-Nov-2025 02:22:41 UTC] BaseController getJsonInput - Multipart form detected, returning empty array
+[15-Nov-2025 02:22:41 UTC] UPDATE: All input sources - GET: {"endpoint":"business","id":"35"}, POST: {"name":"Crowd99","contact":"089660869","category":"Restaurant","description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit.","_method":"PUT"}, JSON: [], Final: {"name":"Crowd99","contact":"089660869","category":"Restaurant","description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit."}
+[15-Nov-2025 02:23:11 UTC] API Debug - Method override detected: POST -> PUT
+[15-Nov-2025 02:23:11 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=35
+[15-Nov-2025 02:23:11 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:23:11 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:23:11 UTC] API Debug - Final id: 35
+[15-Nov-2025 02:23:11 UTC] API Debug - Method: PUT
+[15-Nov-2025 02:23:11 UTC] === UPDATE METHOD CALLED ===
+[15-Nov-2025 02:23:11 UTC] REQUEST_METHOD: POST
+[15-Nov-2025 02:23:11 UTC] REQUEST_URI: /public/api-v1.php?endpoint=business&id=35
+[15-Nov-2025 02:23:11 UTC] QUERY_STRING: endpoint=business&id=35
+[15-Nov-2025 02:23:11 UTC] CONTENT_TYPE: multipart/form-data; boundary=----WebKitFormBoundaryOOwDiRqbKsZBweLo
+[15-Nov-2025 02:23:11 UTC] GET params: {"endpoint":"business","id":"35"}
+[15-Nov-2025 02:23:11 UTC] POST params: {"name":"Crowd99","contact":"089660869","category":"Restaurant","description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit.","_method":"PUT"}
+[15-Nov-2025 02:23:11 UTC] FILES: []
+[15-Nov-2025 02:23:11 UTC] Raw input length: 0
+[15-Nov-2025 02:23:11 UTC] UPDATE: Processing form data - FILES: NO, POST: YES
+[15-Nov-2025 02:23:11 UTC] UPDATE: FILES content: []
+[15-Nov-2025 02:23:11 UTC] UPDATE: POST content: {"name":"Crowd99","contact":"089660869","category":"Restaurant","description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit.","_method":"PUT"}
+[15-Nov-2025 02:23:11 UTC] BaseController getJsonInput - Multipart form detected, returning empty array
+[15-Nov-2025 02:23:11 UTC] UPDATE: All input sources - GET: {"endpoint":"business","id":"35"}, POST: {"name":"Crowd99","contact":"089660869","category":"Restaurant","description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit.","_method":"PUT"}, JSON: [], Final: {"name":"Crowd99","contact":"089660869","category":"Restaurant","description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit."}
+[15-Nov-2025 02:23:24 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 02:23:24 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:23:24 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:23:24 UTC] API Debug - Final id: null
+[15-Nov-2025 02:23:24 UTC] API Debug - Method: GET
+[15-Nov-2025 02:23:24 UTC] API Operation: {"timestamp":"2025-11-15 02:23:24","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:23:33 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=35
+[15-Nov-2025 02:23:33 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:23:33 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:23:33 UTC] API Debug - Final id: 35
+[15-Nov-2025 02:23:33 UTC] API Debug - Method: DELETE
+[15-Nov-2025 02:23:33 UTC] BaseController getJsonInput - Content-Type: application/json, Raw Input Length: 0
+[15-Nov-2025 02:23:33 UTC] BaseController getJsonInput - JSON decode error: Syntax error
+[15-Nov-2025 02:23:33 UTC] API Operation: {"timestamp":"2025-11-15 02:23:33","api_version":"v1","operation":"deactivate_business","business_id":"35","user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:23:33 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 02:23:33 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:23:33 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:23:33 UTC] API Debug - Final id: null
+[15-Nov-2025 02:23:33 UTC] API Debug - Method: GET
+[15-Nov-2025 02:23:33 UTC] API Operation: {"timestamp":"2025-11-15 02:23:33","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:34:56 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business
+[15-Nov-2025 02:34:56 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:34:56 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:34:56 UTC] API Debug - Final id: null
+[15-Nov-2025 02:34:56 UTC] API Debug - Method: POST
+[15-Nov-2025 02:34:56 UTC] handleImageUpload: Upload path: /home2/apploqic/public_html/apploqic.my/images/
+[15-Nov-2025 02:34:56 UTC] handleImageUpload: File type: image/jpeg
+[15-Nov-2025 02:34:56 UTC] handleImageUpload: Target file: /home2/apploqic/public_html/apploqic.my/images/1763174096_6917e6d011472.jpg
+[15-Nov-2025 02:34:56 UTC] handleImageUpload: Image name: 1763174096_6917e6d011472.jpg
+[15-Nov-2025 02:34:56 UTC] handleImageUpload: Successfully uploaded image: 1763174096_6917e6d011472.jpg
+[15-Nov-2025 02:34:56 UTC] API Operation: {"timestamp":"2025-11-15 02:34:56","api_version":"v1","operation":"create_business","business_id":"36","user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"business_name":"Crowd99","business_contact":"089660869","business_description":"Step into Crowd99 Sandakan, a charming caf\u00e9 known for its warm, cozy ambiance and a calm, feel-good atmosphere perfect for friends catching up or couples enjoying a relaxed date. Specializing in delicious Western-style dishes, this caf\u00e9 brings together comfort, flavor, and a touch of elegance in every plate.\r\n\r\nBeyond its signature Western menu, Crowd99 also offers a delightful selection of exclusive drinks and specialty creations that you won\u2019t find anywhere else. Whether you're here for a hearty meal or a refreshing handcrafted beverage, every visit promises something memorable.\r\n\r\nIf you\u2019re looking for a spot with great vibes, amazing food, and drinks worth coming back for \u2014 Crowd99 Sandakan is a must-visit.","business_category":"Restaurant","business_img":"1763174096_6917e6d011472.jpg","is_featured":1}}
+[15-Nov-2025 02:34:58 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 02:34:58 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:34:58 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:34:58 UTC] API Debug - Final id: null
+[15-Nov-2025 02:34:58 UTC] API Debug - Method: GET
+[15-Nov-2025 02:34:58 UTC] API Operation: {"timestamp":"2025-11-15 02:34:58","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:35:12 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=34
+[15-Nov-2025 02:35:12 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:35:12 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:35:12 UTC] API Debug - Final id: 34
+[15-Nov-2025 02:35:12 UTC] API Debug - Method: GET
+[15-Nov-2025 02:35:12 UTC] API Operation: {"timestamp":"2025-11-15 02:35:12","api_version":"v1","operation":"view_business","business_id":34,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:44:54 UTC] API Debug - Method override detected: POST -> PUT
+[15-Nov-2025 02:44:54 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=34
+[15-Nov-2025 02:44:54 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:44:54 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:44:54 UTC] API Debug - Final id: 34
+[15-Nov-2025 02:44:54 UTC] API Debug - Method: PUT
+[15-Nov-2025 02:44:54 UTC] === UPDATE METHOD CALLED ===
+[15-Nov-2025 02:44:54 UTC] REQUEST_METHOD: POST
+[15-Nov-2025 02:44:54 UTC] REQUEST_URI: /public/api-v1.php?endpoint=business&id=34
+[15-Nov-2025 02:44:54 UTC] QUERY_STRING: endpoint=business&id=34
+[15-Nov-2025 02:44:54 UTC] CONTENT_TYPE: multipart/form-data; boundary=----WebKitFormBoundaryGdB5UpXNvOuVFCBK
+[15-Nov-2025 02:44:54 UTC] GET params: {"endpoint":"business","id":"34"}
+[15-Nov-2025 02:44:54 UTC] POST params: {"name":"Auriwealth Holding Sdn .Bhd","contact":"-","category":"Professional Services","description":"Founded in 2025 and headquartered in Sabah, Auriwealth Holdings is an ambitious and forward-looking investment and administrative hub built to steward and scale diversified business interests across Malaysia. As a holding company, Auriwealth plays the strategic role of overseeing and aligning key business units, enabling efficient resource management and long-term value creation.\r\n\r\nBuilt on a foundation of integrity, smart capital allocation, and visionary leadership, Auriwealth is poised to support emerging ventures as well as mature enterprises. Its mission is to deliver sustainable growth, partnering with entrepreneurial teams, and to act as a catalyst for innovation. While still in its early stages, Auriwealth\u2019s structure enables it to adapt, pivot, and invest in priority areas \u2014 whether that\u2019s technology, property, or other growth sectors.\r\n\r\nFor investors and partners, Auriwealth presents a compelling platform: lean, flexible, and ready to scale. As it builds its portfolio, the company promises transparency, prudent governance, and an eye toward lasting impact in Sabah and beyond.SDN. BHD.'s business includes ACTIVITIES OF HEAD OFFICES","_method":"PUT"}
+[15-Nov-2025 02:44:54 UTC] FILES: []
+[15-Nov-2025 02:44:54 UTC] Raw input length: 0
+[15-Nov-2025 02:44:54 UTC] UPDATE: Processing form data - FILES: NO, POST: YES
+[15-Nov-2025 02:44:54 UTC] UPDATE: FILES content: []
+[15-Nov-2025 02:44:54 UTC] UPDATE: POST content: {"name":"Auriwealth Holding Sdn .Bhd","contact":"-","category":"Professional Services","description":"Founded in 2025 and headquartered in Sabah, Auriwealth Holdings is an ambitious and forward-looking investment and administrative hub built to steward and scale diversified business interests across Malaysia. As a holding company, Auriwealth plays the strategic role of overseeing and aligning key business units, enabling efficient resource management and long-term value creation.\r\n\r\nBuilt on a foundation of integrity, smart capital allocation, and visionary leadership, Auriwealth is poised to support emerging ventures as well as mature enterprises. Its mission is to deliver sustainable growth, partnering with entrepreneurial teams, and to act as a catalyst for innovation. While still in its early stages, Auriwealth\u2019s structure enables it to adapt, pivot, and invest in priority areas \u2014 whether that\u2019s technology, property, or other growth sectors.\r\n\r\nFor investors and partners, Auriwealth presents a compelling platform: lean, flexible, and ready to scale. As it builds its portfolio, the company promises transparency, prudent governance, and an eye toward lasting impact in Sabah and beyond.SDN. BHD.'s business includes ACTIVITIES OF HEAD OFFICES","_method":"PUT"}
+[15-Nov-2025 02:44:54 UTC] BaseController getJsonInput - Multipart form detected, returning empty array
+[15-Nov-2025 02:44:54 UTC] UPDATE: All input sources - GET: {"endpoint":"business","id":"34"}, POST: {"name":"Auriwealth Holding Sdn .Bhd","contact":"-","category":"Professional Services","description":"Founded in 2025 and headquartered in Sabah, Auriwealth Holdings is an ambitious and forward-looking investment and administrative hub built to steward and scale diversified business interests across Malaysia. As a holding company, Auriwealth plays the strategic role of overseeing and aligning key business units, enabling efficient resource management and long-term value creation.\r\n\r\nBuilt on a foundation of integrity, smart capital allocation, and visionary leadership, Auriwealth is poised to support emerging ventures as well as mature enterprises. Its mission is to deliver sustainable growth, partnering with entrepreneurial teams, and to act as a catalyst for innovation. While still in its early stages, Auriwealth\u2019s structure enables it to adapt, pivot, and invest in priority areas \u2014 whether that\u2019s technology, property, or other growth sectors.\r\n\r\nFor investors and partners, Auriwealth presents a compelling platform: lean, flexible, and ready to scale. As it builds its portfolio, the company promises transparency, prudent governance, and an eye toward lasting impact in Sabah and beyond.SDN. BHD.'s business includes ACTIVITIES OF HEAD OFFICES","_method":"PUT"}, JSON: [], Final: {"name":"Auriwealth Holding Sdn .Bhd","contact":"-","category":"Professional Services","description":"Founded in 2025 and headquartered in Sabah, Auriwealth Holdings is an ambitious and forward-looking investment and administrative hub built to steward and scale diversified business interests across Malaysia. As a holding company, Auriwealth plays the strategic role of overseeing and aligning key business units, enabling efficient resource management and long-term value creation.\r\n\r\nBuilt on a foundation of integrity, smart capital allocation, and visionary leadership, Auriwealth is poised to support emerging ventures as well as mature enterprises. Its mission is to deliver sustainable growth, partnering with entrepreneurial teams, and to act as a catalyst for innovation. While still in its early stages, Auriwealth\u2019s structure enables it to adapt, pivot, and invest in priority areas \u2014 whether that\u2019s technology, property, or other growth sectors.\r\n\r\nFor investors and partners, Auriwealth presents a compelling platform: lean, flexible, and ready to scale. As it builds its portfolio, the company promises transparency, prudent governance, and an eye toward lasting impact in Sabah and beyond.SDN. BHD.'s business includes ACTIVITIES OF HEAD OFFICES"}
+[15-Nov-2025 02:45:08 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 02:45:08 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:45:08 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:45:08 UTC] API Debug - Final id: null
+[15-Nov-2025 02:45:08 UTC] API Debug - Method: GET
+[15-Nov-2025 02:45:08 UTC] API Operation: {"timestamp":"2025-11-15 02:45:08","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:45:11 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=34
+[15-Nov-2025 02:45:11 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:45:11 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:45:11 UTC] API Debug - Final id: 34
+[15-Nov-2025 02:45:11 UTC] API Debug - Method: DELETE
+[15-Nov-2025 02:45:11 UTC] BaseController getJsonInput - Content-Type: application/json, Raw Input Length: 0
+[15-Nov-2025 02:45:11 UTC] BaseController getJsonInput - JSON decode error: Syntax error
+[15-Nov-2025 02:45:11 UTC] API Operation: {"timestamp":"2025-11-15 02:45:11","api_version":"v1","operation":"deactivate_business","business_id":"34","user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:45:11 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 02:45:11 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:45:11 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:45:11 UTC] API Debug - Final id: null
+[15-Nov-2025 02:45:11 UTC] API Debug - Method: GET
+[15-Nov-2025 02:45:11 UTC] API Operation: {"timestamp":"2025-11-15 02:45:11","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:45:44 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business
+[15-Nov-2025 02:45:44 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:45:44 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:45:44 UTC] API Debug - Final id: null
+[15-Nov-2025 02:45:44 UTC] API Debug - Method: POST
+[15-Nov-2025 02:45:44 UTC] API Operation: {"timestamp":"2025-11-15 02:45:44","api_version":"v1","operation":"create_business","business_id":"37","user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"business_name":"Auriwealth Holding Sdn .Bhd","business_contact":"-","business_description":"Founded in 2025 and headquartered in Sabah, Auriwealth Holdings is an ambitious and forward-looking investment and administrative hub built to steward and scale diversified business interests across Malaysia. As a holding company, Auriwealth plays the strategic role of overseeing and aligning key business units, enabling efficient resource management and long-term value creation.\r\n\r\nBuilt on a foundation of integrity, smart capital allocation, and visionary leadership, Auriwealth is poised to support emerging ventures as well as mature enterprises. Its mission is to deliver sustainable growth, partnering with entrepreneurial teams, and to act as a catalyst for innovation. While still in its early stages, Auriwealth\u2019s structure enables it to adapt, pivot, and invest in priority areas \u2014 whether that\u2019s technology, property, or other growth sectors.\r\n\r\nFor investors and partners, Auriwealth presents a compelling platform: lean, flexible, and ready to scale. As it builds its portfolio, the company promises transparency, prudent governance, and an eye toward lasting impact in Sabah and beyond.","business_category":"Professional Services","business_img":null,"is_featured":1}}
+[15-Nov-2025 02:45:46 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 02:45:46 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:45:46 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:45:46 UTC] API Debug - Final id: null
+[15-Nov-2025 02:45:46 UTC] API Debug - Method: GET
+[15-Nov-2025 02:45:46 UTC] API Operation: {"timestamp":"2025-11-15 02:45:46","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:45:59 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=30
+[15-Nov-2025 02:45:59 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:45:59 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:45:59 UTC] API Debug - Final id: 30
+[15-Nov-2025 02:45:59 UTC] API Debug - Method: GET
+[15-Nov-2025 02:45:59 UTC] API Operation: {"timestamp":"2025-11-15 02:45:59","api_version":"v1","operation":"view_business","business_id":30,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:46:00 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=30
+[15-Nov-2025 02:46:00 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:46:00 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:46:00 UTC] API Debug - Final id: 30
+[15-Nov-2025 02:46:00 UTC] API Debug - Method: GET
+[15-Nov-2025 02:46:00 UTC] API Operation: {"timestamp":"2025-11-15 02:46:00","api_version":"v1","operation":"view_business","business_id":30,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:46:14 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=30
+[15-Nov-2025 02:46:14 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:46:14 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:46:14 UTC] API Debug - Final id: 30
+[15-Nov-2025 02:46:14 UTC] API Debug - Method: GET
+[15-Nov-2025 02:46:14 UTC] API Operation: {"timestamp":"2025-11-15 02:46:14","api_version":"v1","operation":"view_business","business_id":30,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:52:04 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 02:52:04 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:52:04 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:52:04 UTC] API Debug - Final id: null
+[15-Nov-2025 02:52:04 UTC] API Debug - Method: GET
+[15-Nov-2025 02:52:04 UTC] API Operation: {"timestamp":"2025-11-15 02:52:04","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:53:20 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=30
+[15-Nov-2025 02:53:20 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:53:20 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:53:20 UTC] API Debug - Final id: 30
+[15-Nov-2025 02:53:20 UTC] API Debug - Method: DELETE
+[15-Nov-2025 02:53:20 UTC] BaseController getJsonInput - Content-Type: application/json, Raw Input Length: 0
+[15-Nov-2025 02:53:20 UTC] BaseController getJsonInput - JSON decode error: Syntax error
+[15-Nov-2025 02:53:20 UTC] API Operation: {"timestamp":"2025-11-15 02:53:20","api_version":"v1","operation":"deactivate_business","business_id":"30","user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:53:20 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 02:53:20 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:53:20 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:53:20 UTC] API Debug - Final id: null
+[15-Nov-2025 02:53:20 UTC] API Debug - Method: GET
+[15-Nov-2025 02:53:20 UTC] API Operation: {"timestamp":"2025-11-15 02:53:20","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:54:17 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business
+[15-Nov-2025 02:54:17 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:54:17 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:54:17 UTC] API Debug - Final id: null
+[15-Nov-2025 02:54:17 UTC] API Debug - Method: POST
+[15-Nov-2025 02:54:17 UTC] handleImageUpload: Upload path: /home2/apploqic/public_html/apploqic.my/images/
+[15-Nov-2025 02:54:17 UTC] handleImageUpload: File type: image/jpeg
+[15-Nov-2025 02:54:17 UTC] handleImageUpload: Target file: /home2/apploqic/public_html/apploqic.my/images/1763175257_6917eb59a9d08.jpg
+[15-Nov-2025 02:54:17 UTC] handleImageUpload: Image name: 1763175257_6917eb59a9d08.jpg
+[15-Nov-2025 02:54:17 UTC] handleImageUpload: Successfully uploaded image: 1763175257_6917eb59a9d08.jpg
+[15-Nov-2025 02:54:17 UTC] API Operation: {"timestamp":"2025-11-15 02:54:17","api_version":"v1","operation":"create_business","business_id":"38","user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"business_name":"Fruit World Drink House","business_contact":"0182223168","business_description":"Fruit World Drink House in Sandakan is a vibrant tropical escape where refreshing flavors come to life, serving irresistible fruit-shaved ice, creamy ice creams, rich smoothies, and a variety of exclusive signature creations you won\u2019t find anywhere else. With its bright, welcoming atmosphere and playful menu bursting with fresh, colorful ingredients, this caf\u00e9 offers the perfect spot to cool down, relax, and indulge\u2014whether you\u2019re hanging out with friends, treating the family, or enjoying a sweet moment with someone special.","business_category":"Restaurant","business_img":"1763175257_6917eb59a9d08.jpg","is_featured":1}}
+[15-Nov-2025 02:54:20 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 02:54:20 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:54:20 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:54:20 UTC] API Debug - Final id: null
+[15-Nov-2025 02:54:20 UTC] API Debug - Method: GET
+[15-Nov-2025 02:54:20 UTC] API Operation: {"timestamp":"2025-11-15 02:54:20","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:54:24 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=33
+[15-Nov-2025 02:54:24 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:54:24 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:54:24 UTC] API Debug - Final id: 33
+[15-Nov-2025 02:54:24 UTC] API Debug - Method: GET
+[15-Nov-2025 02:54:24 UTC] API Operation: {"timestamp":"2025-11-15 02:54:24","api_version":"v1","operation":"view_business","business_id":33,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:54:25 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=33
+[15-Nov-2025 02:54:25 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:54:25 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:54:25 UTC] API Debug - Final id: 33
+[15-Nov-2025 02:54:25 UTC] API Debug - Method: GET
+[15-Nov-2025 02:54:25 UTC] API Operation: {"timestamp":"2025-11-15 02:54:25","api_version":"v1","operation":"view_business","business_id":33,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:59:14 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=33
+[15-Nov-2025 02:59:14 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:59:14 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:59:14 UTC] API Debug - Final id: 33
+[15-Nov-2025 02:59:14 UTC] API Debug - Method: DELETE
+[15-Nov-2025 02:59:14 UTC] BaseController getJsonInput - Content-Type: application/json, Raw Input Length: 0
+[15-Nov-2025 02:59:14 UTC] BaseController getJsonInput - JSON decode error: Syntax error
+[15-Nov-2025 02:59:14 UTC] API Operation: {"timestamp":"2025-11-15 02:59:14","api_version":"v1","operation":"deactivate_business","business_id":"33","user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 02:59:14 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 02:59:14 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 02:59:14 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 02:59:14 UTC] API Debug - Final id: null
+[15-Nov-2025 02:59:14 UTC] API Debug - Method: GET
+[15-Nov-2025 02:59:14 UTC] API Operation: {"timestamp":"2025-11-15 02:59:14","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 03:00:01 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business
+[15-Nov-2025 03:00:01 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 03:00:01 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 03:00:01 UTC] API Debug - Final id: null
+[15-Nov-2025 03:00:01 UTC] API Debug - Method: POST
+[15-Nov-2025 03:00:01 UTC] handleImageUpload: Upload path: /home2/apploqic/public_html/apploqic.my/images/
+[15-Nov-2025 03:00:01 UTC] handleImageUpload: File type: image/jpeg
+[15-Nov-2025 03:00:01 UTC] handleImageUpload: Target file: /home2/apploqic/public_html/apploqic.my/images/1763175601_6917ecb1959be.jpg
+[15-Nov-2025 03:00:01 UTC] handleImageUpload: Image name: 1763175601_6917ecb1959be.jpg
+[15-Nov-2025 03:00:01 UTC] handleImageUpload: Successfully uploaded image: 1763175601_6917ecb1959be.jpg
+[15-Nov-2025 03:00:01 UTC] API Operation: {"timestamp":"2025-11-15 03:00:01","api_version":"v1","operation":"create_business","business_id":"39","user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"business_name":"Arasu Dental Clinic","business_contact":"01112521321","business_description":"Arasu Dental Clinic (Klinik Pergigian Arasu), located at Lot 3 & 4, Block 20, Ground Floor, Mile 4, Jalan Utara, Bandar Indah, 90000 Sandakan, Sabah, is a warm, modern dental centre that blends professional excellence with friendly, patient-focused care. From routine check-ups, scaling, and fillings to more advanced services like root canal treatment, extractions, dentures, and cosmetic dentistry (whitening, crowns, veneers), their expert team offers comprehensive care tailored to every smile. Whether you\u2019re here for preventive treatment, restoring form and function, or enhancing your confidence, Arasu Dental Clinic makes each visit comfortable and reassuring, supported by the latest technology and a genuine commitment to your oral health.","business_category":"Healthcare","business_img":"1763175601_6917ecb1959be.jpg","is_featured":1}}
+[15-Nov-2025 03:00:03 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 03:00:03 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 03:00:03 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 03:00:03 UTC] API Debug - Final id: null
+[15-Nov-2025 03:00:03 UTC] API Debug - Method: GET
+[15-Nov-2025 03:00:03 UTC] API Operation: {"timestamp":"2025-11-15 03:00:03","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 03:00:21 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=31
+[15-Nov-2025 03:00:21 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 03:00:21 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 03:00:21 UTC] API Debug - Final id: 31
+[15-Nov-2025 03:00:21 UTC] API Debug - Method: GET
+[15-Nov-2025 03:00:21 UTC] API Operation: {"timestamp":"2025-11-15 03:00:21","api_version":"v1","operation":"view_business","business_id":31,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 03:00:22 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=31
+[15-Nov-2025 03:00:22 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 03:00:22 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 03:00:22 UTC] API Debug - Final id: 31
+[15-Nov-2025 03:00:22 UTC] API Debug - Method: GET
+[15-Nov-2025 03:00:22 UTC] API Operation: {"timestamp":"2025-11-15 03:00:22","api_version":"v1","operation":"view_business","business_id":31,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 03:00:28 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 03:00:28 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 03:00:28 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 03:00:28 UTC] API Debug - Final id: null
+[15-Nov-2025 03:00:28 UTC] API Debug - Method: GET
+[15-Nov-2025 03:00:28 UTC] API Operation: {"timestamp":"2025-11-15 03:00:28","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 03:00:30 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=38
+[15-Nov-2025 03:00:30 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 03:00:30 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 03:00:30 UTC] API Debug - Final id: 38
+[15-Nov-2025 03:00:30 UTC] API Debug - Method: GET
+[15-Nov-2025 03:00:30 UTC] API Operation: {"timestamp":"2025-11-15 03:00:30","api_version":"v1","operation":"view_business","business_id":38,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 03:00:30 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=38
+[15-Nov-2025 03:00:30 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 03:00:30 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 03:00:30 UTC] API Debug - Final id: 38
+[15-Nov-2025 03:00:30 UTC] API Debug - Method: GET
+[15-Nov-2025 03:00:30 UTC] API Operation: {"timestamp":"2025-11-15 03:00:30","api_version":"v1","operation":"view_business","business_id":38,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 03:00:35 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 03:00:35 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 03:00:35 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 03:00:35 UTC] API Debug - Final id: null
+[15-Nov-2025 03:00:35 UTC] API Debug - Method: GET
+[15-Nov-2025 03:00:35 UTC] API Operation: {"timestamp":"2025-11-15 03:00:35","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 03:00:38 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=26
+[15-Nov-2025 03:00:38 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 03:00:38 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 03:00:38 UTC] API Debug - Final id: 26
+[15-Nov-2025 03:00:38 UTC] API Debug - Method: GET
+[15-Nov-2025 03:00:38 UTC] API Operation: {"timestamp":"2025-11-15 03:00:38","api_version":"v1","operation":"view_business","business_id":26,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 03:00:39 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=26
+[15-Nov-2025 03:00:39 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 03:00:39 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 03:00:39 UTC] API Debug - Final id: 26
+[15-Nov-2025 03:00:39 UTC] API Debug - Method: GET
+[15-Nov-2025 03:00:39 UTC] API Operation: {"timestamp":"2025-11-15 03:00:39","api_version":"v1","operation":"view_business","business_id":26,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 03:00:48 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 03:00:48 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 03:00:48 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 03:00:48 UTC] API Debug - Final id: null
+[15-Nov-2025 03:00:48 UTC] API Debug - Method: GET
+[15-Nov-2025 03:00:48 UTC] API Operation: {"timestamp":"2025-11-15 03:00:48","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 03:00:55 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=32
+[15-Nov-2025 03:00:55 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 03:00:55 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 03:00:55 UTC] API Debug - Final id: 32
+[15-Nov-2025 03:00:55 UTC] API Debug - Method: GET
+[15-Nov-2025 03:00:55 UTC] API Operation: {"timestamp":"2025-11-15 03:00:55","api_version":"v1","operation":"view_business","business_id":32,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 03:00:56 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=32
+[15-Nov-2025 03:00:56 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 03:00:56 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 03:00:56 UTC] API Debug - Final id: 32
+[15-Nov-2025 03:00:56 UTC] API Debug - Method: GET
+[15-Nov-2025 03:00:56 UTC] API Operation: {"timestamp":"2025-11-15 03:00:56","api_version":"v1","operation":"view_business","business_id":32,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 03:04:37 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 03:04:37 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 03:04:37 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 03:04:37 UTC] API Debug - Final id: null
+[15-Nov-2025 03:04:37 UTC] API Debug - Method: GET
+[15-Nov-2025 03:04:37 UTC] API Operation: {"timestamp":"2025-11-15 03:04:37","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 03:04:49 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=32
+[15-Nov-2025 03:04:49 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 03:04:49 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 03:04:49 UTC] API Debug - Final id: 32
+[15-Nov-2025 03:04:49 UTC] API Debug - Method: DELETE
+[15-Nov-2025 03:04:49 UTC] BaseController getJsonInput - Content-Type: application/json, Raw Input Length: 0
+[15-Nov-2025 03:04:49 UTC] BaseController getJsonInput - JSON decode error: Syntax error
+[15-Nov-2025 03:04:49 UTC] API Operation: {"timestamp":"2025-11-15 03:04:49","api_version":"v1","operation":"deactivate_business","business_id":"32","user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 03:04:49 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 03:04:49 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 03:04:49 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 03:04:49 UTC] API Debug - Final id: null
+[15-Nov-2025 03:04:49 UTC] API Debug - Method: GET
+[15-Nov-2025 03:04:49 UTC] API Operation: {"timestamp":"2025-11-15 03:04:49","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 03:06:56 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business
+[15-Nov-2025 03:06:56 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 03:06:56 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 03:06:56 UTC] API Debug - Final id: null
+[15-Nov-2025 03:06:56 UTC] API Debug - Method: POST
+[15-Nov-2025 03:06:56 UTC] API Operation: {"timestamp":"2025-11-15 03:06:56","api_version":"v1","operation":"create_business","business_id":"40","user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"business_name":"Real Continental Sdn. Bhd","business_contact":"-","business_description":"Real Continental Sdn. Bhd. is a Sabah-based business with its headquarters in Sandakan, operating out of the 4th Floor, Lot 1-2, Megah Light Industrial Estate, Mile 7, Jalan Labuk, Sandakan. \r\nMaukerja\r\n+1\r\n Incorporated on 5 September 2005, the company holds the registration number 708467-V. \r\nCTOS Business Report\r\n While much of its public profile remains modest, it is categorized under the Agriculture \/ Poultry \/ Fisheries sector, suggesting involvement in primary production or supply-chain roles within these industries. \r\nRicebowl\r\n+2\r\nMaukerja\r\n+2\r\n\r\nThough Real Continental does not appear to operate a consumer-facing business, its industrial presence in Sandakan positions it as a potentially important player in the region\u2019s agribusiness ecosystem. With a lean company size (1\u201350 employees, according to available data) \r\nMaukerja\r\n, Real Continental likely focuses on efficient operations, perhaps supplying or processing agricultural products rather than large-scale mass production. The company\u2019s longevity \u2014 operating for nearly two decades \u2014 hints at stable relationships, strong local knowledge, and a commitment to sustainable operations in Sabah\u2019s agricultural landscape.","business_category":"Professional Services","business_img":null,"is_featured":1}}
+[15-Nov-2025 03:06:59 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 03:06:59 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 03:06:59 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 03:06:59 UTC] API Debug - Final id: null
+[15-Nov-2025 03:06:59 UTC] API Debug - Method: GET
+[15-Nov-2025 03:06:59 UTC] API Operation: {"timestamp":"2025-11-15 03:06:59","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 03:07:08 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=2&per_page=12
+[15-Nov-2025 03:07:08 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 03:07:08 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 03:07:08 UTC] API Debug - Final id: null
+[15-Nov-2025 03:07:08 UTC] API Debug - Method: GET
+[15-Nov-2025 03:07:08 UTC] API Operation: {"timestamp":"2025-11-15 03:07:08","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[15-Nov-2025 03:07:11 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[15-Nov-2025 03:07:11 UTC] API Debug - Path: /public/api-v1.php
+[15-Nov-2025 03:07:11 UTC] API Debug - Final endpoint: business
+[15-Nov-2025 03:07:11 UTC] API Debug - Final id: null
+[15-Nov-2025 03:07:11 UTC] API Debug - Method: GET
+[15-Nov-2025 03:07:11 UTC] API Operation: {"timestamp":"2025-11-15 03:07:11","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"175.142.85.64","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[17-Nov-2025 09:53:00 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[17-Nov-2025 09:53:00 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:53:00 UTC] API Debug - Final endpoint: business
+[17-Nov-2025 09:53:00 UTC] API Debug - Final id: null
+[17-Nov-2025 09:53:00 UTC] API Debug - Method: GET
+[17-Nov-2025 09:53:00 UTC] API Operation: {"timestamp":"2025-11-17 09:53:00","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[17-Nov-2025 09:53:29 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[17-Nov-2025 09:53:29 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:53:29 UTC] API Debug - Final endpoint: business
+[17-Nov-2025 09:53:29 UTC] API Debug - Final id: null
+[17-Nov-2025 09:53:29 UTC] API Debug - Method: GET
+[17-Nov-2025 09:53:29 UTC] API Operation: {"timestamp":"2025-11-17 09:53:29","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[17-Nov-2025 09:53:32 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=search&page=1&per_page=12&status=active
+[17-Nov-2025 09:53:32 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:53:32 UTC] API Debug - Final endpoint: search
+[17-Nov-2025 09:53:32 UTC] API Debug - Final id: null
+[17-Nov-2025 09:53:32 UTC] API Debug - Method: GET
+[17-Nov-2025 09:53:32 UTC] API Operation: {"timestamp":"2025-11-17 09:53:32","api_version":"v1","operation":"search_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"search_term":"","category":""}}
+[17-Nov-2025 09:53:33 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[17-Nov-2025 09:53:33 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:53:33 UTC] API Debug - Final endpoint: business
+[17-Nov-2025 09:53:33 UTC] API Debug - Final id: null
+[17-Nov-2025 09:53:33 UTC] API Debug - Method: GET
+[17-Nov-2025 09:53:33 UTC] API Operation: {"timestamp":"2025-11-17 09:53:33","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[17-Nov-2025 09:53:34 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=search&page=1&per_page=12&featured_only=1
+[17-Nov-2025 09:53:34 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:53:34 UTC] API Debug - Final endpoint: search
+[17-Nov-2025 09:53:34 UTC] API Debug - Final id: null
+[17-Nov-2025 09:53:34 UTC] API Debug - Method: GET
+[17-Nov-2025 09:53:34 UTC] API Operation: {"timestamp":"2025-11-17 09:53:34","api_version":"v1","operation":"search_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"search_term":"","category":""}}
+[17-Nov-2025 09:53:35 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[17-Nov-2025 09:53:35 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:53:35 UTC] API Debug - Final endpoint: business
+[17-Nov-2025 09:53:35 UTC] API Debug - Final id: null
+[17-Nov-2025 09:53:35 UTC] API Debug - Method: GET
+[17-Nov-2025 09:53:35 UTC] API Operation: {"timestamp":"2025-11-17 09:53:35","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[17-Nov-2025 09:53:36 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=search&page=1&per_page=12&category=Restaurant
+[17-Nov-2025 09:53:36 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:53:36 UTC] API Debug - Final endpoint: search
+[17-Nov-2025 09:53:36 UTC] API Debug - Final id: null
+[17-Nov-2025 09:53:36 UTC] API Debug - Method: GET
+[17-Nov-2025 09:53:36 UTC] API Operation: {"timestamp":"2025-11-17 09:53:36","api_version":"v1","operation":"search_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"search_term":"","category":"Restaurant"}}
+[17-Nov-2025 09:53:38 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[17-Nov-2025 09:53:38 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:53:38 UTC] API Debug - Final endpoint: business
+[17-Nov-2025 09:53:38 UTC] API Debug - Final id: null
+[17-Nov-2025 09:53:38 UTC] API Debug - Method: GET
+[17-Nov-2025 09:53:38 UTC] API Operation: {"timestamp":"2025-11-17 09:53:38","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[17-Nov-2025 09:53:44 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=search&q=Real&page=1&per_page=12
+[17-Nov-2025 09:53:44 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:53:44 UTC] API Debug - Final endpoint: search
+[17-Nov-2025 09:53:44 UTC] API Debug - Final id: null
+[17-Nov-2025 09:53:44 UTC] API Debug - Method: GET
+[17-Nov-2025 09:53:44 UTC] API Operation: {"timestamp":"2025-11-17 09:53:44","api_version":"v1","operation":"search_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"search_term":"Real","category":""}}
+[17-Nov-2025 09:54:00 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=search&q=saza&page=1&per_page=12
+[17-Nov-2025 09:54:00 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:54:00 UTC] API Debug - Final endpoint: search
+[17-Nov-2025 09:54:00 UTC] API Debug - Final id: null
+[17-Nov-2025 09:54:00 UTC] API Debug - Method: GET
+[17-Nov-2025 09:54:00 UTC] API Operation: {"timestamp":"2025-11-17 09:54:00","api_version":"v1","operation":"search_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"search_term":"saza","category":""}}
+[17-Nov-2025 09:54:05 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=search&q=real&page=1&per_page=12
+[17-Nov-2025 09:54:05 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:54:05 UTC] API Debug - Final endpoint: search
+[17-Nov-2025 09:54:05 UTC] API Debug - Final id: null
+[17-Nov-2025 09:54:05 UTC] API Debug - Method: GET
+[17-Nov-2025 09:54:05 UTC] API Operation: {"timestamp":"2025-11-17 09:54:05","api_version":"v1","operation":"search_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"search_term":"real","category":""}}
+[17-Nov-2025 09:54:32 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=31
+[17-Nov-2025 09:54:32 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:54:32 UTC] API Debug - Final endpoint: business
+[17-Nov-2025 09:54:32 UTC] API Debug - Final id: 31
+[17-Nov-2025 09:54:32 UTC] API Debug - Method: GET
+[17-Nov-2025 09:54:32 UTC] API Operation: {"timestamp":"2025-11-17 09:54:32","api_version":"v1","operation":"view_business","business_id":31,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[17-Nov-2025 09:54:49 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[17-Nov-2025 09:54:49 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:54:49 UTC] API Debug - Final endpoint: business
+[17-Nov-2025 09:54:49 UTC] API Debug - Final id: null
+[17-Nov-2025 09:54:49 UTC] API Debug - Method: GET
+[17-Nov-2025 09:54:49 UTC] API Operation: {"timestamp":"2025-11-17 09:54:49","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[17-Nov-2025 09:54:51 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=38
+[17-Nov-2025 09:54:51 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:54:51 UTC] API Debug - Final endpoint: business
+[17-Nov-2025 09:54:51 UTC] API Debug - Final id: 38
+[17-Nov-2025 09:54:51 UTC] API Debug - Method: GET
+[17-Nov-2025 09:54:51 UTC] API Operation: {"timestamp":"2025-11-17 09:54:51","api_version":"v1","operation":"view_business","business_id":38,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[17-Nov-2025 09:54:55 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[17-Nov-2025 09:54:55 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:54:55 UTC] API Debug - Final endpoint: business
+[17-Nov-2025 09:54:55 UTC] API Debug - Final id: null
+[17-Nov-2025 09:54:55 UTC] API Debug - Method: GET
+[17-Nov-2025 09:54:55 UTC] API Operation: {"timestamp":"2025-11-17 09:54:55","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[17-Nov-2025 09:55:00 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=40
+[17-Nov-2025 09:55:00 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:55:00 UTC] API Debug - Final endpoint: business
+[17-Nov-2025 09:55:00 UTC] API Debug - Final id: 40
+[17-Nov-2025 09:55:00 UTC] API Debug - Method: GET
+[17-Nov-2025 09:55:00 UTC] API Operation: {"timestamp":"2025-11-17 09:55:00","api_version":"v1","operation":"view_business","business_id":40,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[17-Nov-2025 09:55:00 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=40
+[17-Nov-2025 09:55:00 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:55:00 UTC] API Debug - Final endpoint: business
+[17-Nov-2025 09:55:00 UTC] API Debug - Final id: 40
+[17-Nov-2025 09:55:00 UTC] API Debug - Method: GET
+[17-Nov-2025 09:55:00 UTC] API Operation: {"timestamp":"2025-11-17 09:55:00","api_version":"v1","operation":"view_business","business_id":40,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[17-Nov-2025 09:55:04 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[17-Nov-2025 09:55:04 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:55:04 UTC] API Debug - Final endpoint: business
+[17-Nov-2025 09:55:04 UTC] API Debug - Final id: null
+[17-Nov-2025 09:55:04 UTC] API Debug - Method: GET
+[17-Nov-2025 09:55:04 UTC] API Operation: {"timestamp":"2025-11-17 09:55:04","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[17-Nov-2025 09:55:05 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=39
+[17-Nov-2025 09:55:05 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:55:05 UTC] API Debug - Final endpoint: business
+[17-Nov-2025 09:55:05 UTC] API Debug - Final id: 39
+[17-Nov-2025 09:55:05 UTC] API Debug - Method: GET
+[17-Nov-2025 09:55:05 UTC] API Operation: {"timestamp":"2025-11-17 09:55:05","api_version":"v1","operation":"view_business","business_id":39,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[17-Nov-2025 09:55:05 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=39
+[17-Nov-2025 09:55:05 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:55:05 UTC] API Debug - Final endpoint: business
+[17-Nov-2025 09:55:05 UTC] API Debug - Final id: 39
+[17-Nov-2025 09:55:05 UTC] API Debug - Method: GET
+[17-Nov-2025 09:55:05 UTC] API Operation: {"timestamp":"2025-11-17 09:55:05","api_version":"v1","operation":"view_business","business_id":39,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[17-Nov-2025 09:55:19 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=reactivate&id=39
+[17-Nov-2025 09:55:19 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:55:19 UTC] API Debug - Final endpoint: reactivate
+[17-Nov-2025 09:55:19 UTC] API Debug - Final id: 39
+[17-Nov-2025 09:55:19 UTC] API Debug - Method: PUT
+[17-Nov-2025 09:55:22 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[17-Nov-2025 09:55:22 UTC] API Debug - Path: /public/api-v1.php
+[17-Nov-2025 09:55:22 UTC] API Debug - Final endpoint: business
+[17-Nov-2025 09:55:22 UTC] API Debug - Final id: null
+[17-Nov-2025 09:55:22 UTC] API Debug - Method: GET
+[17-Nov-2025 09:55:22 UTC] API Operation: {"timestamp":"2025-11-17 09:55:22","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[18-Nov-2025 00:10:52 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[18-Nov-2025 00:10:52 UTC] API Debug - Path: /public/api-v1.php
+[18-Nov-2025 00:10:52 UTC] API Debug - Final endpoint: business
+[18-Nov-2025 00:10:52 UTC] API Debug - Final id: null
+[18-Nov-2025 00:10:52 UTC] API Debug - Method: GET
+[18-Nov-2025 00:10:52 UTC] API Operation: {"timestamp":"2025-11-18 00:10:52","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[18-Nov-2025 00:39:57 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[18-Nov-2025 00:39:57 UTC] API Debug - Path: /public/api-v1.php
+[18-Nov-2025 00:39:57 UTC] API Debug - Final endpoint: business
+[18-Nov-2025 00:39:57 UTC] API Debug - Final id: null
+[18-Nov-2025 00:39:57 UTC] API Debug - Method: GET
+[18-Nov-2025 00:39:57 UTC] API Operation: {"timestamp":"2025-11-18 00:39:57","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[18-Nov-2025 00:53:14 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=38
+[18-Nov-2025 00:53:14 UTC] API Debug - Path: /public/api-v1.php
+[18-Nov-2025 00:53:14 UTC] API Debug - Final endpoint: business
+[18-Nov-2025 00:53:14 UTC] API Debug - Final id: 38
+[18-Nov-2025 00:53:14 UTC] API Debug - Method: GET
+[18-Nov-2025 00:53:14 UTC] API Operation: {"timestamp":"2025-11-18 00:53:14","api_version":"v1","operation":"view_business","business_id":38,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[18-Nov-2025 00:53:15 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=38
+[18-Nov-2025 00:53:15 UTC] API Debug - Path: /public/api-v1.php
+[18-Nov-2025 00:53:15 UTC] API Debug - Final endpoint: business
+[18-Nov-2025 00:53:15 UTC] API Debug - Final id: 38
+[18-Nov-2025 00:53:15 UTC] API Debug - Method: GET
+[18-Nov-2025 00:53:15 UTC] API Operation: {"timestamp":"2025-11-18 00:53:15","api_version":"v1","operation":"view_business","business_id":38,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[18-Nov-2025 00:54:18 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=38
+[18-Nov-2025 00:54:18 UTC] API Debug - Path: /public/api-v1.php
+[18-Nov-2025 00:54:18 UTC] API Debug - Final endpoint: business
+[18-Nov-2025 00:54:18 UTC] API Debug - Final id: 38
+[18-Nov-2025 00:54:18 UTC] API Debug - Method: GET
+[18-Nov-2025 00:54:18 UTC] API Operation: {"timestamp":"2025-11-18 00:54:18","api_version":"v1","operation":"view_business","business_id":38,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[18-Nov-2025 00:54:22 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[18-Nov-2025 00:54:22 UTC] API Debug - Path: /public/api-v1.php
+[18-Nov-2025 00:54:22 UTC] API Debug - Final endpoint: business
+[18-Nov-2025 00:54:22 UTC] API Debug - Final id: null
+[18-Nov-2025 00:54:22 UTC] API Debug - Method: GET
+[18-Nov-2025 00:54:22 UTC] API Operation: {"timestamp":"2025-11-18 00:54:22","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[18-Nov-2025 00:56:32 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=2&per_page=12
+[18-Nov-2025 00:56:32 UTC] API Debug - Path: /public/api-v1.php
+[18-Nov-2025 00:56:32 UTC] API Debug - Final endpoint: business
+[18-Nov-2025 00:56:32 UTC] API Debug - Final id: null
+[18-Nov-2025 00:56:32 UTC] API Debug - Method: GET
+[18-Nov-2025 00:56:32 UTC] API Operation: {"timestamp":"2025-11-18 00:56:32","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[18-Nov-2025 00:56:34 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[18-Nov-2025 00:56:34 UTC] API Debug - Path: /public/api-v1.php
+[18-Nov-2025 00:56:34 UTC] API Debug - Final endpoint: business
+[18-Nov-2025 00:56:34 UTC] API Debug - Final id: null
+[18-Nov-2025 00:56:34 UTC] API Debug - Method: GET
+[18-Nov-2025 00:56:34 UTC] API Operation: {"timestamp":"2025-11-18 00:56:34","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[18-Nov-2025 01:08:54 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[18-Nov-2025 01:08:54 UTC] API Debug - Path: /public/api-v1.php
+[18-Nov-2025 01:08:54 UTC] API Debug - Final endpoint: business
+[18-Nov-2025 01:08:54 UTC] API Debug - Final id: null
+[18-Nov-2025 01:08:54 UTC] API Debug - Method: GET
+[18-Nov-2025 01:08:54 UTC] API Operation: {"timestamp":"2025-11-18 01:08:54","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[18-Nov-2025 07:26:55 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[18-Nov-2025 07:26:55 UTC] API Debug - Path: /public/api-v1.php
+[18-Nov-2025 07:26:55 UTC] API Debug - Final endpoint: business
+[18-Nov-2025 07:26:55 UTC] API Debug - Final id: null
+[18-Nov-2025 07:26:55 UTC] API Debug - Method: GET
+[18-Nov-2025 07:26:55 UTC] API Operation: {"timestamp":"2025-11-18 07:26:55","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"219.95.11.215","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[21-Nov-2025 02:04:19 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[21-Nov-2025 02:04:19 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:04:19 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:04:19 UTC] API Debug - Final id: null
+[21-Nov-2025 02:04:19 UTC] API Debug - Method: GET
+[21-Nov-2025 02:04:19 UTC] API Operation: {"timestamp":"2025-11-21 02:04:19","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[21-Nov-2025 02:04:22 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=42
+[21-Nov-2025 02:04:22 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:04:22 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:04:22 UTC] API Debug - Final id: 42
+[21-Nov-2025 02:04:22 UTC] API Debug - Method: DELETE
+[21-Nov-2025 02:04:22 UTC] BaseController getJsonInput - Content-Type: application/json, Raw Input Length: 0
+[21-Nov-2025 02:04:22 UTC] BaseController getJsonInput - JSON decode error: Syntax error
+[21-Nov-2025 02:04:22 UTC] API Operation: {"timestamp":"2025-11-21 02:04:22","api_version":"v1","operation":"deactivate_business","business_id":"42","user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[21-Nov-2025 02:04:22 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[21-Nov-2025 02:04:22 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:04:22 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:04:22 UTC] API Debug - Final id: null
+[21-Nov-2025 02:04:22 UTC] API Debug - Method: GET
+[21-Nov-2025 02:04:22 UTC] API Operation: {"timestamp":"2025-11-21 02:04:22","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[21-Nov-2025 02:04:24 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=43
+[21-Nov-2025 02:04:24 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:04:24 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:04:24 UTC] API Debug - Final id: 43
+[21-Nov-2025 02:04:24 UTC] API Debug - Method: DELETE
+[21-Nov-2025 02:04:24 UTC] BaseController getJsonInput - Content-Type: application/json, Raw Input Length: 0
+[21-Nov-2025 02:04:24 UTC] BaseController getJsonInput - JSON decode error: Syntax error
+[21-Nov-2025 02:04:24 UTC] API Operation: {"timestamp":"2025-11-21 02:04:24","api_version":"v1","operation":"deactivate_business","business_id":"43","user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[21-Nov-2025 02:04:24 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[21-Nov-2025 02:04:24 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:04:24 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:04:24 UTC] API Debug - Final id: null
+[21-Nov-2025 02:04:24 UTC] API Debug - Method: GET
+[21-Nov-2025 02:04:24 UTC] API Operation: {"timestamp":"2025-11-21 02:04:24","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[21-Nov-2025 02:04:53 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=2&per_page=12
+[21-Nov-2025 02:04:53 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:04:53 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:04:53 UTC] API Debug - Final id: null
+[21-Nov-2025 02:04:53 UTC] API Debug - Method: GET
+[21-Nov-2025 02:04:53 UTC] API Operation: {"timestamp":"2025-11-21 02:04:53","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[21-Nov-2025 02:04:55 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[21-Nov-2025 02:04:55 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:04:55 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:04:55 UTC] API Debug - Final id: null
+[21-Nov-2025 02:04:55 UTC] API Debug - Method: GET
+[21-Nov-2025 02:04:55 UTC] API Operation: {"timestamp":"2025-11-21 02:04:55","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[21-Nov-2025 02:05:16 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=2&per_page=12
+[21-Nov-2025 02:05:16 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:05:16 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:05:16 UTC] API Debug - Final id: null
+[21-Nov-2025 02:05:16 UTC] API Debug - Method: GET
+[21-Nov-2025 02:05:16 UTC] API Operation: {"timestamp":"2025-11-21 02:05:16","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[21-Nov-2025 02:05:20 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=24
+[21-Nov-2025 02:05:20 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:05:20 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:05:20 UTC] API Debug - Final id: 24
+[21-Nov-2025 02:05:20 UTC] API Debug - Method: GET
+[21-Nov-2025 02:05:20 UTC] API Operation: {"timestamp":"2025-11-21 02:05:20","api_version":"v1","operation":"view_business","business_id":24,"user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[21-Nov-2025 02:05:33 UTC] API Debug - Method override detected: POST -> PUT
+[21-Nov-2025 02:05:33 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=24
+[21-Nov-2025 02:05:33 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:05:33 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:05:33 UTC] API Debug - Final id: 24
+[21-Nov-2025 02:05:33 UTC] API Debug - Method: PUT
+[21-Nov-2025 02:05:33 UTC] === UPDATE METHOD CALLED ===
+[21-Nov-2025 02:05:33 UTC] REQUEST_METHOD: POST
+[21-Nov-2025 02:05:33 UTC] REQUEST_URI: /public/api-v1.php?endpoint=business&id=24
+[21-Nov-2025 02:05:33 UTC] QUERY_STRING: endpoint=business&id=24
+[21-Nov-2025 02:05:33 UTC] CONTENT_TYPE: multipart/form-data; boundary=----WebKitFormBoundarynfizAAekPYTBYYfT
+[21-Nov-2025 02:05:33 UTC] GET params: {"endpoint":"business","id":"24"}
+[21-Nov-2025 02:05:33 UTC] POST params: {"name":"Apploqic Technologies","contact":"apploqic@gmail.com","category":"IT Service","description":"test","_method":"PUT"}
+[21-Nov-2025 02:05:33 UTC] FILES: {"business_img":{"name":"apploqic-logo.png","full_path":"apploqic-logo.png","type":"image\/png","tmp_name":"\/tmp\/phpAtCW3W","error":0,"size":14167}}
+[21-Nov-2025 02:05:33 UTC] Raw input length: 0
+[21-Nov-2025 02:05:33 UTC] UPDATE: Processing form data - FILES: YES, POST: YES
+[21-Nov-2025 02:05:33 UTC] UPDATE: FILES content: {"business_img":{"name":"apploqic-logo.png","full_path":"apploqic-logo.png","type":"image\/png","tmp_name":"\/tmp\/phpAtCW3W","error":0,"size":14167}}
+[21-Nov-2025 02:05:33 UTC] UPDATE: POST content: {"name":"Apploqic Technologies","contact":"apploqic@gmail.com","category":"IT Service","description":"test","_method":"PUT"}
+[21-Nov-2025 02:05:33 UTC] BaseController getJsonInput - Multipart form detected, returning empty array
+[21-Nov-2025 02:05:33 UTC] UPDATE: All input sources - GET: {"endpoint":"business","id":"24"}, POST: {"name":"Apploqic Technologies","contact":"apploqic@gmail.com","category":"IT Service","description":"test","_method":"PUT"}, JSON: [], Final: {"name":"Apploqic Technologies","contact":"apploqic@gmail.com","category":"IT Service","description":"test"}
+[21-Nov-2025 02:05:33 UTC] handleImageUpload: Upload path: /home2/apploqic/public_html/apploqic.my/images/
+[21-Nov-2025 02:05:33 UTC] handleImageUpload: File type: image/png
+[21-Nov-2025 02:05:33 UTC] handleImageUpload: Delete old image '1763071324_6916555cabeab.png' result: failed
+[21-Nov-2025 02:05:33 UTC] handleImageUpload: Target file: /home2/apploqic/public_html/apploqic.my/images/1763690733_691fc8ed8be66.png
+[21-Nov-2025 02:05:33 UTC] handleImageUpload: Image name: 1763690733_691fc8ed8be66.png
+[21-Nov-2025 02:05:33 UTC] handleImageUpload: Successfully uploaded image: 1763690733_691fc8ed8be66.png
+[21-Nov-2025 02:05:33 UTC] UPDATE: File upload successful, new image: 1763690733_691fc8ed8be66.png
+[21-Nov-2025 02:05:33 UTC] UPDATE: Fields to be updated: {"business_img":"1763690733_691fc8ed8be66.png"}
+[21-Nov-2025 02:05:33 UTC] API Operation: {"timestamp":"2025-11-21 02:05:33","api_version":"v1","operation":"update_business","business_id":"24","user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":{"business_img":"1763690733_691fc8ed8be66.png"}}
+[21-Nov-2025 02:05:35 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[21-Nov-2025 02:05:35 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:05:35 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:05:35 UTC] API Debug - Final id: null
+[21-Nov-2025 02:05:35 UTC] API Debug - Method: GET
+[21-Nov-2025 02:05:35 UTC] API Operation: {"timestamp":"2025-11-21 02:05:35","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[21-Nov-2025 02:05:38 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=2&per_page=12
+[21-Nov-2025 02:05:38 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:05:38 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:05:38 UTC] API Debug - Final id: null
+[21-Nov-2025 02:05:38 UTC] API Debug - Method: GET
+[21-Nov-2025 02:05:38 UTC] API Operation: {"timestamp":"2025-11-21 02:05:38","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[21-Nov-2025 02:05:40 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[21-Nov-2025 02:05:40 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:05:40 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:05:40 UTC] API Debug - Final id: null
+[21-Nov-2025 02:05:40 UTC] API Debug - Method: GET
+[21-Nov-2025 02:05:40 UTC] API Operation: {"timestamp":"2025-11-21 02:05:40","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[21-Nov-2025 02:05:47 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=2&per_page=12
+[21-Nov-2025 02:05:47 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:05:47 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:05:47 UTC] API Debug - Final id: null
+[21-Nov-2025 02:05:47 UTC] API Debug - Method: GET
+[21-Nov-2025 02:05:47 UTC] API Operation: {"timestamp":"2025-11-21 02:05:47","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[21-Nov-2025 02:06:03 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=25
+[21-Nov-2025 02:06:03 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:06:03 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:06:03 UTC] API Debug - Final id: 25
+[21-Nov-2025 02:06:03 UTC] API Debug - Method: GET
+[21-Nov-2025 02:06:03 UTC] API Operation: {"timestamp":"2025-11-21 02:06:03","api_version":"v1","operation":"view_business","business_id":25,"user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[21-Nov-2025 02:06:03 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=25
+[21-Nov-2025 02:06:03 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:06:03 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:06:03 UTC] API Debug - Final id: 25
+[21-Nov-2025 02:06:03 UTC] API Debug - Method: GET
+[21-Nov-2025 02:06:03 UTC] API Operation: {"timestamp":"2025-11-21 02:06:03","api_version":"v1","operation":"view_business","business_id":25,"user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[21-Nov-2025 02:06:41 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[21-Nov-2025 02:06:41 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:06:41 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:06:41 UTC] API Debug - Final id: null
+[21-Nov-2025 02:06:41 UTC] API Debug - Method: GET
+[21-Nov-2025 02:06:41 UTC] API Operation: {"timestamp":"2025-11-21 02:06:41","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[21-Nov-2025 02:06:51 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=2&per_page=12
+[21-Nov-2025 02:06:51 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:06:51 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:06:51 UTC] API Debug - Final id: null
+[21-Nov-2025 02:06:51 UTC] API Debug - Method: GET
+[21-Nov-2025 02:06:51 UTC] API Operation: {"timestamp":"2025-11-21 02:06:51","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[21-Nov-2025 02:06:53 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=24
+[21-Nov-2025 02:06:53 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:06:53 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:06:53 UTC] API Debug - Final id: 24
+[21-Nov-2025 02:06:53 UTC] API Debug - Method: GET
+[21-Nov-2025 02:06:53 UTC] API Operation: {"timestamp":"2025-11-21 02:06:53","api_version":"v1","operation":"view_business","business_id":24,"user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[21-Nov-2025 02:06:53 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=24
+[21-Nov-2025 02:06:53 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:06:53 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:06:53 UTC] API Debug - Final id: 24
+[21-Nov-2025 02:06:53 UTC] API Debug - Method: GET
+[21-Nov-2025 02:06:53 UTC] API Operation: {"timestamp":"2025-11-21 02:06:53","api_version":"v1","operation":"view_business","business_id":24,"user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[21-Nov-2025 02:06:59 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[21-Nov-2025 02:06:59 UTC] API Debug - Path: /public/api-v1.php
+[21-Nov-2025 02:06:59 UTC] API Debug - Final endpoint: business
+[21-Nov-2025 02:06:59 UTC] API Debug - Final id: null
+[21-Nov-2025 02:06:59 UTC] API Debug - Method: GET
+[21-Nov-2025 02:06:59 UTC] API Operation: {"timestamp":"2025-11-21 02:06:59","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"49.50.237.132","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/142.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[25-Jan-2026 10:54:36 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[25-Jan-2026 10:54:36 UTC] API Debug - Path: /public/api-v1.php
+[25-Jan-2026 10:54:36 UTC] API Debug - Final endpoint: business
+[25-Jan-2026 10:54:36 UTC] API Debug - Final id: null
+[25-Jan-2026 10:54:36 UTC] API Debug - Method: GET
+[25-Jan-2026 10:54:36 UTC] API Operation: {"timestamp":"2026-01-25 10:54:36","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"180.74.174.254","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/143.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[25-Jan-2026 10:54:41 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=43
+[25-Jan-2026 10:54:41 UTC] API Debug - Path: /public/api-v1.php
+[25-Jan-2026 10:54:41 UTC] API Debug - Final endpoint: business
+[25-Jan-2026 10:54:41 UTC] API Debug - Final id: 43
+[25-Jan-2026 10:54:41 UTC] API Debug - Method: DELETE
+[25-Jan-2026 10:54:42 UTC] BaseController getJsonInput - Content-Type: application/json, Raw Input Length: 0
+[25-Jan-2026 10:54:42 UTC] BaseController getJsonInput - JSON decode error: Syntax error
+[25-Jan-2026 10:54:42 UTC] API Operation: {"timestamp":"2026-01-25 10:54:42","api_version":"v1","operation":"deactivate_business","business_id":"43","user_ip":"180.74.174.254","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/143.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[25-Jan-2026 10:54:42 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[25-Jan-2026 10:54:42 UTC] API Debug - Path: /public/api-v1.php
+[25-Jan-2026 10:54:42 UTC] API Debug - Final endpoint: business
+[25-Jan-2026 10:54:42 UTC] API Debug - Final id: null
+[25-Jan-2026 10:54:42 UTC] API Debug - Method: GET
+[25-Jan-2026 10:54:42 UTC] API Operation: {"timestamp":"2026-01-25 10:54:42","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"180.74.174.254","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/143.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[25-Jan-2026 10:54:53 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=2&per_page=12
+[25-Jan-2026 10:54:53 UTC] API Debug - Path: /public/api-v1.php
+[25-Jan-2026 10:54:53 UTC] API Debug - Final endpoint: business
+[25-Jan-2026 10:54:53 UTC] API Debug - Final id: null
+[25-Jan-2026 10:54:53 UTC] API Debug - Method: GET
+[25-Jan-2026 10:54:53 UTC] API Operation: {"timestamp":"2026-01-25 10:54:53","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"180.74.174.254","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/143.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[25-Jan-2026 10:55:09 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[25-Jan-2026 10:55:09 UTC] API Debug - Path: /public/api-v1.php
+[25-Jan-2026 10:55:09 UTC] API Debug - Final endpoint: business
+[25-Jan-2026 10:55:09 UTC] API Debug - Final id: null
+[25-Jan-2026 10:55:09 UTC] API Debug - Method: GET
+[25-Jan-2026 10:55:09 UTC] API Operation: {"timestamp":"2026-01-25 10:55:09","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"180.74.174.254","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/143.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[25-Jan-2026 11:09:32 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[25-Jan-2026 11:09:32 UTC] API Debug - Path: /public/api-v1.php
+[25-Jan-2026 11:09:32 UTC] API Debug - Final endpoint: business
+[25-Jan-2026 11:09:32 UTC] API Debug - Final id: null
+[25-Jan-2026 11:09:32 UTC] API Debug - Method: GET
+[25-Jan-2026 11:09:32 UTC] API Operation: {"timestamp":"2026-01-25 11:09:32","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"180.74.174.254","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/143.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[25-Jan-2026 11:09:46 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[25-Jan-2026 11:09:46 UTC] API Debug - Path: /public/api-v1.php
+[25-Jan-2026 11:09:46 UTC] API Debug - Final endpoint: business
+[25-Jan-2026 11:09:46 UTC] API Debug - Final id: null
+[25-Jan-2026 11:09:46 UTC] API Debug - Method: GET
+[25-Jan-2026 11:09:46 UTC] API Operation: {"timestamp":"2026-01-25 11:09:46","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"180.74.174.254","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/143.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[25-Jan-2026 11:09:49 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=2&per_page=12
+[25-Jan-2026 11:09:49 UTC] API Debug - Path: /public/api-v1.php
+[25-Jan-2026 11:09:49 UTC] API Debug - Final endpoint: business
+[25-Jan-2026 11:09:49 UTC] API Debug - Final id: null
+[25-Jan-2026 11:09:49 UTC] API Debug - Method: GET
+[25-Jan-2026 11:09:49 UTC] API Operation: {"timestamp":"2026-01-25 11:09:49","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"180.74.174.254","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/143.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[25-Jan-2026 11:09:51 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&id=24
+[25-Jan-2026 11:09:51 UTC] API Debug - Path: /public/api-v1.php
+[25-Jan-2026 11:09:51 UTC] API Debug - Final endpoint: business
+[25-Jan-2026 11:09:51 UTC] API Debug - Final id: 24
+[25-Jan-2026 11:09:51 UTC] API Debug - Method: DELETE
+[25-Jan-2026 11:09:51 UTC] BaseController getJsonInput - Content-Type: application/json, Raw Input Length: 0
+[25-Jan-2026 11:09:51 UTC] BaseController getJsonInput - JSON decode error: Syntax error
+[25-Jan-2026 11:09:51 UTC] API Operation: {"timestamp":"2026-01-25 11:09:51","api_version":"v1","operation":"deactivate_business","business_id":"24","user_ip":"180.74.174.254","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/143.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[25-Jan-2026 11:09:51 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=2&per_page=12
+[25-Jan-2026 11:09:51 UTC] API Debug - Path: /public/api-v1.php
+[25-Jan-2026 11:09:51 UTC] API Debug - Final endpoint: business
+[25-Jan-2026 11:09:51 UTC] API Debug - Final id: null
+[25-Jan-2026 11:09:51 UTC] API Debug - Method: GET
+[25-Jan-2026 11:09:51 UTC] API Operation: {"timestamp":"2026-01-25 11:09:51","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"180.74.174.254","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/143.0.0.0 Safari\/537.36","is_admin":true,"data":null}
+[25-Jan-2026 11:09:53 UTC] API Debug - Full URI: /public/api-v1.php?endpoint=business&page=1&per_page=12
+[25-Jan-2026 11:09:53 UTC] API Debug - Path: /public/api-v1.php
+[25-Jan-2026 11:09:53 UTC] API Debug - Final endpoint: business
+[25-Jan-2026 11:09:53 UTC] API Debug - Final id: null
+[25-Jan-2026 11:09:53 UTC] API Debug - Method: GET
+[25-Jan-2026 11:09:53 UTC] API Operation: {"timestamp":"2026-01-25 11:09:53","api_version":"v1","operation":"list_businesses","business_id":null,"user_ip":"180.74.174.254","user_agent":"Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/143.0.0.0 Safari\/537.36","is_admin":true,"data":null}

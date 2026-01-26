@@ -1,353 +1,369 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Business Directory</title>
+<?php
+/**
+ * cPanel Compatible API Entry Point
+ * 
+ * This file handles API routing for cPanel deployments where PATH_INFO
+ * is not supported. It uses query parameters instead.
+ * 
+ * Usage Examples:
+ * GET  index.php?endpoint=business - Get all businesses
+ * POST index.php?endpoint=business - Create new business
+ * GET  index.php?endpoint=business&id=123 - Get specific business
+ * PUT  index.php?endpoint=business&id=123 - Update business
+ * DELETE index.php?endpoint=business&id=123 - Delete business
+ * GET  index.php?endpoint=search&name=test - Search businesses
+ */
 
-  <!-- Bootstrap CSS -->
-  <link 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-    rel="stylesheet" 
-  />
+// Enhanced CORS headers for all environments
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With");
+header("Access-Control-Max-Age: 3600");
 
-  <!-- Bootstrap Icons -->
-  <link 
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" 
-    rel="stylesheet" 
-  />
+// Handle preflight OPTIONS requests
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit();
+}
 
-  <style>
-    /* Base Page */
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      background-color: #E0F2FE;
+// Error reporting for development (disable in production)
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+// Ensure output buffering is off for API responses
+if (ob_get_level()) {
+    ob_end_clean();
+}
+
+// Include required files
+require_once __DIR__ . "/app/config/database.php";
+require_once __DIR__ . "/app/controllers/v1/BusinessController.php";
+
+try {
+    // Initialize database connection
+    $database = new Database();
+    $db = $database->getConnection();
+    $controller = new BusinessControllerV1($db);
+
+    // Parse the request
+    $method = $_SERVER['REQUEST_METHOD'];
+    
+    // Get endpoint from query parameter (cPanel compatible)
+    $endpoint = $_GET['endpoint'] ?? '';
+    $id = $_GET['id'] ?? null;
+    $version = $_GET['version'] ?? 'v1';
+    
+    // If no endpoint in query, try to parse from PATH_INFO (local dev fallback)
+    if (empty($endpoint) && isset($_SERVER['PATH_INFO'])) {
+        $path = trim($_SERVER['PATH_INFO'], '/');
+        $pathParts = explode('/', $path);
+        
+        // Handle v1 API structure: /api/v1/endpoint or /api/v1/endpoint/id
+        if (count($pathParts) >= 3 && $pathParts[0] === 'api' && $pathParts[1] === 'v1') {
+            $endpoint = $pathParts[2] ?? '';
+            // Only override ID if not already set in query params and exists in path
+            $id = !empty($_GET['id']) ? $_GET['id'] : ($pathParts[3] ?? $id);
+            $version = 'v1';
+        }
+        // Handle direct API structure: /api/endpoint or /api/endpoint/id  
+        elseif (count($pathParts) >= 2 && $pathParts[0] === 'api') {
+            $endpoint = $pathParts[1] ?? '';
+            // Only override ID if not already set in query params and exists in path  
+            $id = !empty($_GET['id']) ? $_GET['id'] : ($pathParts[2] ?? $id);
+        }
+        // Fallback for simple structure
+        else {
+            $endpoint = $pathParts[0] ?? '';
+            $id = $pathParts[1] ?? $id;
+        }
+    }
+    
+    // Debug logging for troubleshooting
+    error_log("API Debug - Endpoint: '$endpoint', Method: $method, ID: $id, Version: $version");
+    error_log("API Debug - GET params: " . json_encode($_GET));
+    error_log("API Debug - REQUEST_URI: " . $_SERVER['REQUEST_URI']);
+    error_log("API Debug - PATH_INFO: " . ($_SERVER['PATH_INFO'] ?? 'not_set'));
+    
+    // Default route - show client frontend if no endpoint specified
+    if (empty($endpoint) && $method === 'GET') {
+        include __DIR__ . '/views/client/index.php';
+        exit();
+    }
+    
+    // Set content type for API responses
+    header('Content-Type: application/json; charset=utf-8');
+    
+    // Route to appropriate endpoint
+    switch ($endpoint) {
+        case '':
+        case 'info':
+            // API Information
+            echo json_encode([
+                'status' => 200,
+                'message' => 'Apploqic Business Directory API - cPanel Compatible',
+                'version' => '1.0.0',
+                'endpoints' => [
+                    'GET /api/business' => 'Get all businesses',
+                    'POST /api/business' => 'Create new business',
+                    'GET /api/business/{id}' => 'Get specific business',
+                    'PUT /api/business/{id}' => 'Update business',
+                    'DELETE /api/business/{id}' => 'Delete business',
+                    'GET /api/search?name={query}' => 'Search businesses',
+                    'GET index.php?endpoint=business' => 'Get all businesses (direct)',
+                    'GET index.php?endpoint=business&id={id}' => 'Get specific business (direct)'
+                ],
+                'base_url' => 'http' . (isset($_SERVER['HTTPS']) ? 's' : '') . '://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME']),
+                'timestamp' => date('Y-m-d H:i:s'),
+                'deployment' => 'cPanel',
+                'debug' => [
+                    'received_endpoint' => $endpoint,
+                    'received_id' => $id,
+                    'method' => $method,
+                    'get_params' => $_GET,
+                    'request_uri' => $_SERVER['REQUEST_URI']
+                ]
+            ]);
+            break;
+
+        case 'business':
+            business_case: // Label for goto
+            // Business endpoint
+            
+            // Enhanced debugging for production environment
+            error_log("=== INDEX.PHP BUSINESS ROUTING ===");
+            error_log("Method: $method");
+            error_log("ID: " . var_export($id, true));
+            error_log("Endpoint: $endpoint");
+            error_log("Request URI: " . $_SERVER['REQUEST_URI']);
+            error_log("GET params: " . json_encode($_GET));
+            error_log("POST params: " . json_encode($_POST));
+            error_log("Raw input: " . file_get_contents('php://input'));
+            
+            // Handle placeholder {id} in URL path - this should return an error
+            if ($id === '{id}' || $id === '%7Bid%7D') {
+                http_response_code(400);
+                echo json_encode([
+                    'status' => 'error',
+                    'message' => 'Invalid business ID: placeholder detected',
+                    'received_id' => $id,
+                    'expected' => 'Numeric ID (e.g., /api/v1/business/123)',
+                    'api_version' => 'v1'
+                ]);
+                break;
+            }
+            
+            if ($id && $method === 'GET') {
+                // Validate ID is numeric
+                if (!is_numeric($id)) {
+                    http_response_code(400);
+                    echo json_encode([
+                        'status' => 'error',
+                        'message' => 'Invalid business ID format',
+                        'received_id' => $id,
+                        'expected' => 'Numeric ID',
+                        'api_version' => 'v1'
+                    ]);
+                    break;
+                }
+                // Get specific business
+                $controller->show($id);
+            } elseif ($id && $method === 'PUT') {
+                // Update business - set ID in $_GET for controller compatibility
+                $_GET['id'] = $id;
+                $_POST['id'] = $id; // Also set in POST for form compatibility
+                $controller->update();
+            } elseif ($id && $method === 'POST') {
+                // Update business via POST (for frontend compatibility)
+                error_log("INDEX.PHP: POST with ID detected - treating as UPDATE");
+                $_GET['id'] = $id;
+                $_POST['id'] = $id; // Also set in POST for form compatibility
+                $controller->update();
+            } elseif ($method === 'GET') {
+                // Get all businesses (no ID provided)
+                $controller->index();
+            } elseif ($method === 'POST') {
+                // Create new business (no ID) - check for data in multiple formats
+                $hasFormData = !empty($_POST) || !empty($_FILES);
+                $jsonInput = json_decode(file_get_contents('php://input'), true);
+                $hasJsonData = !empty($jsonInput);
+                
+                if (!$hasFormData && !$hasJsonData) {
+                    // No data provided at all
+                    http_response_code(400);
+                    echo json_encode([
+                        'status' => 'error',
+                        'message' => 'Missing required fields for business creation',
+                        'required_fields' => ['business_name', 'business_contact'],
+                        'alternative_fields' => ['name', 'contact'],
+                        'optional_fields' => ['business_description', 'business_category', 'business_img', 'is_featured'],
+                        'example' => [
+                            'business_name' => 'Business Name',
+                            'business_contact' => '123-456-7890',
+                            'business_description' => 'Business description',
+                            'business_category' => 'retail'
+                        ],
+                        'formats_accepted' => ['form-data', 'application/json'],
+                        'api_version' => 'v1'
+                    ]);
+                    break;
+                }
+                
+                // If we have JSON data, populate $_POST for controller compatibility
+                if ($hasJsonData && !$hasFormData) {
+                    foreach ($jsonInput as $key => $value) {
+                        $_POST[$key] = $value;
+                    }
+                    
+                    // Handle field name mapping for backward compatibility
+                    if (isset($jsonInput['name']) && !isset($_POST['business_name'])) {
+                        $_POST['business_name'] = $jsonInput['name'];
+                    }
+                    if (isset($jsonInput['contact']) && !isset($_POST['business_contact'])) {
+                        $_POST['business_contact'] = $jsonInput['contact'];
+                    }
+                    if (isset($jsonInput['description']) && !isset($_POST['business_description'])) {
+                        $_POST['business_description'] = $jsonInput['description'];
+                    }
+                    if (isset($jsonInput['category']) && !isset($_POST['business_category'])) {
+                        $_POST['business_category'] = $jsonInput['category'];
+                    }
+                }
+                
+                $controller->store();
+            } elseif ($method === 'DELETE') {
+                // DELETE /api/v1/business - ID should come from request body (according to documentation)
+                $controller->delete();
+            } elseif ($method === 'PUT' && !$id) {
+                // PUT without ID
+                http_response_code(400);
+                echo json_encode([
+                    'status' => 'error',
+                    'message' => 'Business ID is required for update operation',
+                    'required_format' => 'PUT /api/v1/business/{id}',
+                    'example' => 'PUT /api/v1/business/123',
+                    'api_version' => 'v1'
+                ]);
+            } else {
+                http_response_code(405);
+                echo json_encode([
+                    'status' => 'error',
+                    'message' => 'Method not allowed for this endpoint',
+                    'endpoint' => $endpoint,
+                    'method' => $method,
+                    'id' => $id,
+                    'allowed_methods' => ['GET', 'POST', 'PUT', 'DELETE'],
+                    'examples' => [
+                        'GET /api/v1/business' => 'Get all businesses',
+                        'GET /api/v1/business/{id}' => 'Get specific business',
+                        'POST /api/v1/business' => 'Create new business',
+                        'PUT /api/v1/business/{id}' => 'Update business',
+                        'DELETE /api/v1/business/{id}' => 'Delete business'
+                    ]
+                ]);
+            }
+            break;
+
+        case 'search':
+            // Search businesses
+            $controller->search();
+            break;
+
+        case 'analytics':
+            // Analytics endpoint
+            if ($method === 'GET') {
+                // Use the controller's analytics method
+                $controller->analytics();
+            } else {
+                http_response_code(405);
+                echo json_encode([
+                    'status' => 'error',
+                    'message' => 'Method not allowed for analytics endpoint',
+                    'allowed_methods' => ['GET']
+                ]);
+            }
+            break;
+
+        case 'reactivate':
+            // Reactivate business endpoint
+            if ($method === 'PUT') {
+                // Handle placeholder {id} in URL path
+                if ($id === '{id}' || $id === '%7Bid%7D') {
+                    $id = null; // Treat placeholder as empty
+                }
+                
+                if (!$id) {
+                    http_response_code(400);
+                    echo json_encode([
+                        'status' => 'error',
+                        'message' => 'Business ID is required for reactivation',
+                        'required_format' => 'PUT /api/v1/reactivate/{id}',
+                        'example' => 'PUT /api/v1/reactivate/123'
+                    ]);
+                    break;
+                }
+                
+                // Set ID in $_GET for controller compatibility
+                $_GET['id'] = $id;
+                $controller->reactivate();
+            } else {
+                http_response_code(405);
+                echo json_encode([
+                    'status' => 'error',
+                    'message' => 'Method not allowed for reactivate endpoint',
+                    'allowed_methods' => ['PUT'],
+                    'required_format' => 'PUT /api/v1/reactivate/{id}'
+                ]);
+            }
+            break;
+
+        default:
+            // Check if this might be a misrouted API call
+            if ($endpoint === 'api' && isset($_GET['id'])) {
+                // This suggests a URL like /api?id=6 was accessed
+                // Redirect to the business endpoint
+                error_log("API Debug - Detected misrouted API call, redirecting to business endpoint");
+                $endpoint = 'business';
+                $id = $_GET['id'];
+                // Fall through to business case
+                goto business_case;
+            }
+            
+            // Serve the frontend if no API endpoint is specified
+            if (empty($endpoint) && $method === 'GET' && !isset($_GET['endpoint'])) {
+                // Serve the main index.html
+                if (file_exists(__DIR__ . '/index.html')) {
+                    header('Content-Type: text/html; charset=UTF-8');
+                    readfile(__DIR__ . '/index.html');
+                    exit();
+                }
+            }
+            
+            http_response_code(404);
+            echo json_encode([
+                'status' => 'error',
+                'message' => 'Endpoint not found',
+                'available_endpoints' => ['business', 'search', 'info', 'analytics', 'reactivate'],
+                'received_endpoint' => $endpoint,
+                'method' => $method,
+                'query_params' => $_GET,
+                'debug_info' => [
+                    'request_uri' => $_SERVER['REQUEST_URI'],
+                    'path_info' => $_SERVER['PATH_INFO'] ?? 'not_set',
+                    'script_name' => $_SERVER['SCRIPT_NAME'],
+                    'version' => $version,
+                    'suggestion' => $endpoint === 'api' ? 'Try using index.php?endpoint=business&id=' . ($_GET['id'] ?? '{id}') : 'Use one of the available endpoints'
+                ]
+            ]);
+            break;
     }
 
-    /* Hero Section */
-    .hero {
-      min-height: 40vh;
-      padding-top: 7rem;
-      position: relative;
-      background:
-        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url('images/Banner2.png') center center / cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 5rem 1rem;
-      border-bottom-left-radius: 2rem;
-      border-bottom-right-radius: 2rem;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-    }
-
-    .hero h1 {
-      font-weight: 700;
-      font-size: 2.5rem;
-      margin: 0;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      margin-top: 0.5rem;
-      margin-bottom: 0;
-    }
-
-    .hero .container {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-radius: 1rem;
-      padding: 2rem;
-      display: inline-block;
-      margin-top: 5rem;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Business Cards */
-    .card {
-      border: none;
-      border-radius: 1rem;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .business-img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      height: 200px;
-      border-top-left-radius: 1rem;
-      border-top-right-radius: 1rem;
-      object-fit: cover;
-    }
-
-    /* Navbar */
-    .navbar {
-      transition: top 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-      top: 0; /* initial position */
-      position: fixed; /* already fixed */
-      width: 100%;
-      z-index: 1030;
-      padding-top: 0.05rem;
-      padding-bottom: 0.05rem;
-    }
-
-    .transparent-navbar {
-      background-color: transparent;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .navbar.scrolled {
-      background-color: #1E3A8A;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    @media (max-width: 400px) {
-      .business-img {
-        height: 160px;
-      }
-    }
-
-    /* Glass Modal */
-    .glass-modal {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-radius: 1rem;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      opacity: 0;
-      transform: translateY(-20px);
-      transition: opacity 0.4s ease, transform 0.4s ease;
-    }
-
-    .modal.show .glass-modal {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Glass Button */
-    .btn-glass {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-radius: 1rem;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      color: #fff;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-
-    .btn-glass:hover {
-      background: rgba(255, 255, 255, 0.2);
-      color: #1E3A8A;
-      border-color: rgba(255, 255, 255, 0.5);
-    }
-
-    /* Highlighted Scroll Buttons */
-    .scroll-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255, 255, 255, 0.8);
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-      transition: background 0.3s ease;
-      z-index: 10;
-    }
-
-    .scroll-btn:hover {
-      background: rgba(255, 255, 255, 1);
-    }
-
-    .scroll-btn.left {
-      left: -15px;
-    }
-
-    .scroll-btn.right {
-      right: -15px;
-    }
-
-    /* Scroll Container */
-    #highlightedContainer::-webkit-scrollbar {
-      height: 8px;
-    }
-
-    #highlightedContainer::-webkit-scrollbar-thumb {
-      background: #ccc;
-      border-radius: 4px;
-    }
-
-    #highlightedContainer::-webkit-scrollbar-thumb:hover {
-      background: #999;
-    }
-
-  </style>
-</head>
-<body>
-
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top transparent-navbar">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img 
-          src="images/APPLOQIC-LOGO-HORIZONTAL---WHITE.png" 
-          alt="Apploqic Logo" 
-          width="197" 
-          height="67" 
-          class="me-2"
-        />
-      </a>
-
-      <button 
-        class="navbar-toggler" 
-        type="button" 
-        data-bs-toggle="collapse" 
-        data-bs-target="#mainNav"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-        <button 
-          type="button" 
-          class="btn btn-glass fw-bold" 
-          data-bs-toggle="modal" 
-          data-bs-target="#contactModal"
-        >
-          Contact
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="container">
-      <h1>Apploqic Business Directory</h1>
-      <p>Discover the best businesses in Sabah.</p>
-    </div>
-  </section>
-
-  <!-- CONTENT SECTION -->
-  <div class="container py-4">
-    <div class="container bg-white border border-secondary-subtle rounded-4 shadow-sm p-4 p-md-5 my-5">
-
-      <!-- Lists Title -->
-      <h2 class="mb-4">Lists of Businesses</h2>
-
-      <!-- Category Filter + Search Bar -->
-      <div class="row justify-content-center mb-4">
-        <div class="col-md-10 col-lg-8">
-          <div class="row g-2">
-            <!-- Category Dropdown -->
-            <div class="col-md-4">
-              <select id="categorySelect" class="form-select shadow-sm">
-                <option value="">All Categories</option>
-                <option value="Restaurant">Restaurant</option>
-                <option value="Retail">Retail</option>
-                <option value="IT Service">IT Service</option>
-                <option value="Healthcare">Healthcare</option>
-                <option value="Education">Education</option>
-                <option value="Entertainment">Entertainment</option>
-                <option value="Professional Services">Professional Services</option>
-                <option value="Automotive">Automotive</option>
-                <option value="Beauty & Wellness">Beauty & Wellness</option>
-                <option value="Real Estate">Real Estate</option>
-              </select>
-            </div>
-
-            <!-- Search Input -->
-            <div class="col-md-8">
-              <div class="input-group shadow-sm">
-                <span class="input-group-text bg-white border-end-0">
-                  <i class="bi bi-search text-secondary"></i>
-                </span>
-                <input 
-                  id="searchInput" 
-                  type="search" 
-                  class="form-control border-start-0" 
-                  placeholder="Search businesses..." 
-                  aria-label="Search businesses"
-                />
-                <button id="searchBtn" class="btn btn-primary">Search</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Business Cards -->
-      <div id="businessList" class="row"></div>
-
-      <!-- Pagination -->
-      <nav>
-        <ul id="pagination" class="pagination justify-content-center mt-4"></ul>
-      </nav>
-    </div>
-  </div>
-
-  <!-- CONTACT MODAL -->
-  <div 
-    class="modal fade" 
-    id="contactModal" 
-    tabindex="-1" 
-    aria-labelledby="contactModalLabel" 
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content glass-modal p-4">
-        <div class="modal-header border-0">
-          <h5 class="modal-title text-white" id="contactModalLabel">
-            Contact Us
-          </h5>
-          <button 
-            type="button" 
-            class="btn-close btn-close-white" 
-            data-bs-dismiss="modal" 
-            aria-label="Close"
-          ></button>
-        </div>
-
-        <div class="modal-body text-white">
-          <p><strong>Phone:</strong> +60 12-345 6789</p>
-          <p><strong>Email:</strong> info@apploqic.my</p>
-          <p><strong>Address:</strong> 123 Business Street, Kuala Lumpur, Malaysia</p>
-          <p>Feel free to reach out for inquiries or collaborations!</p>
-        </div>
-
-        <div class="modal-footer border-0">
-          <button 
-            type="button" 
-            class="btn btn-light fw-bold text-primary" 
-            data-bs-dismiss="modal"
-          >
-            Close
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer class="text-center text-white py-4 mt-5" style="background: #0b2e6b;">
-    &copy; <?= date('Y') ?> Apploqic Business Directory. All rights reserved.
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="scriptv1.js"></script>
-</body>
-</html>
+} catch (Exception $e) {
+    http_response_code(500);
+    echo json_encode([
+        'status' => 'error',
+        'message' => 'Internal server error',
+        'error' => $e->getMessage(),
+        'trace' => $e->getTraceAsString()
+    ]);
+}
+?>
